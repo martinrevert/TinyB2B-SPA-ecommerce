@@ -1,0 +1,22 @@
+{
+  "name": "materialSerin",
+  "authors": [
+    "martin <martinrevert@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-indexedDB": "angular-indexed-db#^1.1.3",
+    "angular-material": "^1.0.8"
+  }
+}
