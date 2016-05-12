@@ -1,7 +1,7 @@
 /**
  * Created by martin on 10/05/16.
  */
-var app = angular.module('app', []);
+var app = angular.module('app');
 
 // Service definition
 app.service('productosSrv', function () {
