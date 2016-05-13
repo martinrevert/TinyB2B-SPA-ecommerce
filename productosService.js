@@ -4,20 +4,21 @@
 var app = angular.module('app');
 
 // Service definition
-app.service('productosSrv', function () {
+app.service('productosSrv', function ($http) {
 
     this.getProducts = function (usuario, pass, cliente, tipo, cadena) {
 
         // Habría que configurar como constante global la URL base
 
-        $http.get("http://200.43.222.67:8080/servicios/eikon.asmx/Busca_Productos?usuario=" + usuario + "&pass=" + pass + "&cliente=" + cliente +
+        $http.get("http://200.43.222.67:8080/servicios/eikon.asmx/Busca_Producto?usuario=" + usuario + "&pass=" + pass + "&cliente=" + cliente +
             "&tipo=" + tipo + "&cadena=" + cadena)
             .then(function (response) {
-                console.log(data);
+                console.log(response.data);
                 return productos = response.data;
             }).then(function (response) {
+            console.log(response.status);
             return response.status;
-            console.log(status);
+
         });
 
 
