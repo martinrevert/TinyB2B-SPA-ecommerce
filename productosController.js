@@ -4,13 +4,10 @@
 
 angular.module('app').controller('productosCtrl', function ($scope, productosSrv) {
 
-    /*  // Consulta de cabeceras de NV para controlador de consulta de Notas de Venta
-     $http.get("http://200.43.222.67:8080/servicios/eikon.asmx/Consulta_NV_Cabecera?usuario=vallejo&pass=Kmo73700&viaje=&fecha=")
-     .then(function(response) {
-     $scope.data = response.data;
-     }); */
+    // Aqui hay que llamar a un servicio para recuperar usuario, pass y cliente de la session.
 
-    $scope.fromService = productosSrv.getProducts("martin", "dycsa", "1799", "T", "");
-
-
+    //  $scope.productos = productosSrv.async().getProducts("martin", "dycsa", "1799", "T", "");
+    productosSrv.async("martin", "dycsa", "1799", "T", "").then(function (d){
+        $scope.productos = d.data;
+    });
 });

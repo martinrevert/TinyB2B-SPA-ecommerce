@@ -8,7 +8,6 @@
     <link href="bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet"
           type="text/css"/>
     <link rel="stylesheet" href="app.css">
-
 </head>
 <body layout="row" ng-cloak ng-controller="indexCtrl">
 
@@ -39,7 +38,7 @@
 
 
 </md-sidenav>
-<div layout="column" layout-fill="">
+<div layout="column" layout-fill>
     <md-toolbar>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
@@ -58,7 +57,7 @@
 
     </md-toolbar>
 
-    <div layout="row" layout-sm="column">
+    <div layout="row" layout-sm="column" layout-fill>
         <md-content>
             <div flex class="productos">
 
