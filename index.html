@@ -39,7 +39,7 @@
 
 </md-sidenav>
 <div layout="column" layout-fill>
-    <md-toolbar>
+    <md-toolbar class="md-tall">
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
                 <md-icon md-svg-src="menu.svg"></md-icon>
@@ -57,8 +57,8 @@
 
     </md-toolbar>
 
-    <div layout="row" layout-sm="column" layout-fill>
-        <md-content>
+    <div layout="row" layout-fill>
+
             <div flex class="productos">
 
                 <md-content layout-padding>
@@ -75,8 +75,10 @@
                         <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1"
                              md-swipe-left="tabs.next()"
                              md-swipe-right="tabs.previous()" ng-controller="productosCtrl">
+                            <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span>
                             <md-item ng-repeat="producto in productos">
                                 <md-item-content>
+
                                     <div class="md-tile-left">
                                         <img ng-src="" alt="{{}}"/>
                                     </div>
@@ -140,11 +142,13 @@
             <!-- Este div es para el carro de productos del Cliente -->
 
             <div flex class="itemspedido">
-                Item pedido
-                Item pedido
-                Item pedido
+                <ul>
+                    <li>Item pedido</li>
+                    <li>Item pedido</li>
+                    <li>Item pedido</li>
+                </ul>
             </div>
-        </md-content>
+
     </div>
 </div>
 
@@ -153,12 +157,15 @@
 <script src="bower_components/angular-material-data-table/dist/md-data-table.min.js" type="text/javascript"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/spin.js/spin.js"></script>
+<script src="bower_components/angular-spinner/angular-spinner.js"></script>
 
 <script>
     'use strict';
 
-    angular.module('app', ['ngMaterial', 'md.data.table'])
+    angular.module('app', ['ngMaterial', 'md.data.table','angularSpinner'])
             .controller('indexCtrl', ['$scope', '$mdSidenav', function ($scope, $mdSidenav) {
+
                 // Sidenav toggle
                 $scope.toggleSidenav = function (menuId) {
                     $mdSidenav(menuId).toggle();

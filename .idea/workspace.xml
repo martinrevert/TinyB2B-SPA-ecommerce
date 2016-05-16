@@ -2,333 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03cfdbbc-0493-4086-8c23-f021b9ca17c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/annotation/test_annotation-magFactor.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/annotation/test_annotation.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/bootstrap/img/glyphicons-halflings-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/bootstrap/img/glyphicons-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-icons_222222_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-icons_2e83ff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-icons_454545_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-icons_888888_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/images/ui-icons_cd0a0a_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/images/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/24_bit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/32_bit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/RGBA_16bpc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/RGB_16bpc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/grayscale_16bpc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/grayscale_8bpc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/grayscale_alpha_16_bpc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/grayscale_alpha_8bpc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/jpg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/png8_flat.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/png8_trans.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images/tiny_png_indexed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/null-logo-trans.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/octocat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/octocat.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/outline/test_outline.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/thinking-monkey.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/compress/compiler.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/compress/yuicompressor-2.4.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/demo/alpha-arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/java/classes/js.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/jsdebug.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/jsrun.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/ISSUE_TEMPLATE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/MIT-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/SUMMARY.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/bower.json.bak" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/dist/jspdf.debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/dist/jspdf.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/files.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/plugins/from_html.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/FontObject.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/PubSub.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/_global_.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/jsPDF-PubSub.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/jsPDF-jsPDF.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/jsPDF.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/jsPDFClass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/src/c__work_jsPDF_jspdf.js.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/src/c__work_jsPDF_tools_jspdf.js.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/doc/symbols/src/jspdf.js.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/docs/getting_started.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/annotation/test_annotation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/annotation/test_annotation_2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/basic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/bootstrap/css/bootstrap-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/bootstrap/css/bootstrap-responsive.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/context2d/test_context2d.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/context2d/test_context2d_paths.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/editor.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/css/smoothness/jquery-ui-1.8.17.custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/downloadify.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/auto_break.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/examples.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/lists.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/page_break.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/pdf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/pdf2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/showcase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/showcase_supported_html.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/simple.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/tables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/html2pdf/total_mess.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/images.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/jaxer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/AcroForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/circles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/editor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/font-faces.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/font-size.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/from-html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/html2canvas.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/images.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/jquery/jquery-1.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/jquery/jquery-ui-1.8.17.custom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/kitchen-sink.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/landscape.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/lines.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/rectangles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/string-splitting.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/test_harness.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/text-colors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/theme-ambiance.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/triangles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/two-page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/js/user-input.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/outline/test_outline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/runner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/test_from_html.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/test_from_html_css_page_breaks.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/test_insert_page.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/jspdf/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/README/COPYRIGHT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/README/INSTALL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/README/bsd.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/README/gpl-2.0.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/README/gpl-3.0.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/browserTest/browserTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/browserTest/browserUtil.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/browserTest/entropy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/browserTest/nodeUtil.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/browserTest/test.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/compress/compress_with_closure.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/compress/compress_with_yui.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/compress/dewindowize.pl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/compress/digitize.pl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/compress/opacify.pl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/compress/remove_constants.pl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/config.mk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/configure" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/aes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/bitArray.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/bn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/cbc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/ccm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/ccmArrayBuffer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/codecArrayBuffer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/codecBase32.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/codecBase64.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/codecBytes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/codecHex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/codecString.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/convenience.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/ecc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/gcm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/hmac.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/ocb2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/pbkdf2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/random.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/ripemd160.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/sha1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/sha256.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/sha512.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/sjcl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/core/srp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/demo/example.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/demo/example.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/demo/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/demo/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame/Chain.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame/Dumper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame/Hash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame/Link.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame/Namespace.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame/Opt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame/Reflection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame/String.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/frame/Testrun.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/handlers/FOODOC.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/handlers/XMLDOC.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/handlers/XMLDOC/DomReader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/handlers/XMLDOC/XMLDoc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/handlers/XMLDOC/XMLParse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/DocComment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/DocTag.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/JsDoc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/JsPlate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/Lang.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/Parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/PluginManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/Symbol.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/SymbolSet.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/TextStream.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/Token.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/TokenReader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/TokenStream.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/Util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/lib/JSDOC/Walker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/plugins/commentSrcJson.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/plugins/frameworkPrototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/plugins/functionCall.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/plugins/publishSrcHilite.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/plugins/symbolLink.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/plugins/tagParamConfig.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/plugins/tagSynonyms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/run.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/t/TestDoc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/t/runner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/addon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/anon_inner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/augments.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/augments2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/borrows.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/borrows2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/constructs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/encoding.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/encoding_other.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/exports.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/functions_anon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/functions_nested.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/global.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/globals.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/ignore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/inner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/jsdoc_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/lend.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/memberof.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/memberof2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/memberof3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/memberof_constructor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/multi_methods.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/name.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/namespace_nested.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/nocode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/oblit_anon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/overview.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/param_inline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/params_optional.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/prototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/prototype_nested.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/prototype_oblit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/prototype_oblit_constructor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/public.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/scripts/code.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/scripts/notcode.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/shared.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/shared2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/shortcuts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/static_this.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/synonyms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/tosource.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/app/test/variable_redefine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/changes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/conf/sample.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/java/build.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/java/build_1.4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/java/src/JsDebugRun.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/java/src/JsRun.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/jsrun.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/templates/codeview/allclasses.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/templates/codeview/allfiles.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/templates/codeview/class.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/templates/codeview/css/default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/templates/codeview/index.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/templates/codeview/publish.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/templates/codeview/static/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/templates/codeview/static/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/jsdoc_toolkit-2.3.3-beta/templates/codeview/symbol.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/lint/coding_guidelines.pl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/lint/jslint_rhino.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/sjcl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/aes_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/aes_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/bitArray_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/bitArray_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/bn_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/bn_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/cbc_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/cbc_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ccm_arraybuffer_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ccm_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ccm_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/codec_arraybuffer_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ecc_conv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ecdh_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ecdsa_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ecdsa_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/gcm_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/gcm_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/hmac_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/hmac_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/json_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ocb2_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ocb2_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/pbkdf2_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ripemd160_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/ripemd160_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/run_tests_browser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/run_tests_node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/sha1_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/sha1_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/sha256_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/sha256_test_brute_force.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/sha256_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/sha512_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/sha512_test_brute_force.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/sha512_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/srp_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/srp_vectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/sjcl/test/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/angular-spinner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/angular-spinner.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/angular-spinner.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-spinner/tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/.spmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/jquery.spin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/spin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/spin.js/spin.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productosController.js" afterPath="$PROJECT_DIR$/productosController.js" />
     </list>
     <ignored path="materialSerin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -373,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productosController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productosController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/productosController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="8" column="96" selection-start-line="8" selection-start-column="96" selection-end-line="8" selection-end-column="96" />
+            <state relative-caret-position="36">
+              <caret line="4" column="101" selection-start-line="4" selection-start-column="101" selection-end-line="4" selection-end-column="101" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -385,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="2020">
+              <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -414,8 +117,8 @@
         <option value="$PROJECT_DIR$/marcasController.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/productosService.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/productosController.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -612,7 +315,7 @@
       <workItem from="1462983697633" duration="502000" />
       <workItem from="1462985260561" duration="6143000" />
       <workItem from="1462993804324" duration="611000" />
-      <workItem from="1462994438772" duration="28009000" />
+      <workItem from="1462994438772" duration="36185000" />
     </task>
     <task id="LOCAL-00001" summary="- Commit inicial">
       <created>1462994259038</created>
@@ -649,11 +352,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463186885359</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- Se agrega librería jspdf para implementar confección de lista total de precios&#10;- Se agrega encriptador/desencriptador sjcl">
+      <created>1463187087425</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1463187087425</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59760000" />
+    <option name="totallyTimeSpent" value="67936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -662,7 +372,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39929327" sideWeight="0.5035389" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.49646106" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3392226" sideWeight="0.49646106" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23144877" sideWeight="0.49646106" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -700,7 +410,8 @@
     <MESSAGE value="- Correccion sidenav que tiraba abajo el area main&#10;- Fix funcionamiento de menu hamburguesa" />
     <MESSAGE value="- Corrección servicio de consulta de productos que no disparaba respuesta.&#10;- Corrección controler de prueba de productos para recibir el resultado del disparo del servicio." />
     <MESSAGE value="- Corrección servicio de productos, ahora solo entrega promise y el controlador es el encargado de abriri los datos del promise result.data o d.data.&#10;- Se agraga librería jspdf para implementar confección de lista total de precios&#10;- Se agrega encriptador sjcl" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Corrección servicio de productos, ahora solo entrega promise y el controlador es el encargado de abriri los datos del promise result.data o d.data.&#10;- Se agraga librería jspdf para implementar confección de lista total de precios&#10;- Se agrega encriptador sjcl" />
+    <MESSAGE value="- Se agrega librería jspdf para implementar confección de lista total de precios&#10;- Se agrega encriptador/desencriptador sjcl" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Se agrega librería jspdf para implementar confección de lista total de precios&#10;- Se agrega encriptador/desencriptador sjcl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -898,14 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/marcasController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -934,13 +637,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/sjcl/sjcl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/productosController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="96" selection-start-line="8" selection-start-column="96" selection-end-line="8" selection-end-column="96" />
+        <state relative-caret-position="36">
+          <caret line="4" column="101" selection-start-line="4" selection-start-column="101" selection-end-line="4" selection-end-column="101" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2020">
+          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
