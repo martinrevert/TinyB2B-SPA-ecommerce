@@ -12,7 +12,6 @@ app.factory('productosSrv', function ($http) {
     };
 });
 
-
 /*
  // Service definition
  app.service('productosSrv', function ($http) {
