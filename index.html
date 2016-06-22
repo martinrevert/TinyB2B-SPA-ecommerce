@@ -3,13 +3,14 @@
 <head>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta charset="utf-8">
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link href="bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet"
           type="text/css"/>
     <link rel="stylesheet" href="app.css">
 </head>
-<body layout="row" ng-cloak ng-controller="indexCtrl">
+<body ng-cloak ng-controller="indexCtrl">
+<div layout="row">
 
 <md-sidenav layout="column" layout-fill class="md-sidenav-left md-whiteframe-z2 md-navigation-drawer"
             md-component-id="left"
@@ -18,7 +19,7 @@
     <md-toolbar class="md-hue-2 md-tall">
         <span flex></span>
         <div layout="row" layout-align="start center">
-          <!--  <md-icon class="md-avatar" md-svg-icon="avatars:svg-1"></md-icon> -->
+            <!--  <md-icon class="md-avatar" md-svg-icon="avatars:svg-1"></md-icon> -->
             <span flex></span>
         </div>
         <span flex></span>
@@ -27,9 +28,10 @@
     </md-toolbar>
 
     <md-list>
-        <md-list-item class="md-2-line" ng-repeat="item in menu" role="link" ng-click="toggleSidenav('left')">
+        <md-list-item class="md-2-line" href="{{item.href}}" ng-repeat="item in menu" role="link" ng-click="toggleSidenav('left')">
             <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
             <div class="md-list-item-text">
+                <!-- aqui va link menu hacia ruta en ngRoute -->
                 <span class="md-body-2">{{item.title}}</span>
             </div>
         </md-list-item>
@@ -38,94 +40,13 @@
 
 
 </md-sidenav>
-<div layout="column" layout-fill ng-controller="productosCtrl">
-    <md-toolbar class="md-tall">
-        <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
-                <md-icon md-svg-src="menu.svg"></md-icon>
-            </md-button>
-            <h1>Pedido de productos</h1>
-            <span flex></span>
+<div layout-fill>
+<!-- Aqui deberia ir la directiva ng-view -->
+<div ng-view>
 
-        </div>
-
-        <md-tabs md-selected="tabs.selectedIndex">
-            <md-tab id="tab1" aria-controls="tab1-content" md-on-select="selectTab(0)">Por categorías</md-tab>
-            <md-tab id="tab2" aria-controls="tab2-content" md-on-select="selectTab(1)">Por descripción</md-tab>
-            <md-tab id="tab3" aria-controls="tab3-content" md-on-select="selectTab(2)">Por código</md-tab>
-        </md-tabs>
-
-    </md-toolbar>
-
-    <div layout="row" layout-fill>
-
-        <div flex class="productos">
-
-            <md-content layout-padding>
-                <ng-switch on="tabs.selectedIndex" class="tabpanel-container">
-                    <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0"
-                         md-swipe-left="tabs.next()"
-                         md-swipe-right="tabs.previous()"
-                    >
-
-                    </div>
-
-                    <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1"
-                         md-swipe-left="tabs.next()"
-                         md-swipe-right="tabs.previous()"
-                    >
-                        <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span>
-                        <md-item ng-repeat="producto in productos">
-                            <md-item-content>
-
-                                <div class="md-tile-content">
-                                    {{producto.descripcion}}
-                                </div>
-                            </md-item-content>
-                        </md-item>
-                    </div>
-
-                    <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2"
-                         md-swipe-left="tabs.next()"
-                         md-swipe-right="tabs.previous()">
-                    </div>
-                </ng-switch>
-            </md-content>
-
-        </div>
-
-        <!-- Este div es para el carro de productos del Cliente -->
-
-        <div flex class="itemspedido">
-            <ul>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-            </ul>
-            <div ng-style={"background-color":"red","color":"white"}>
-                <md-icon md-svg-src="ic_shopping_cart_white_24px.svg"></md-icon>
-                TOTALES
-            </div>
-        </div>
-
-    </div>
 </div>
-
+<!--Aqui deberia terminar la directiva ng-view-->
+</div>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="bower_components/angular-material/angular-material.js"></script>
@@ -138,7 +59,32 @@
 <script>
     'use strict';
 
-    angular.module('app', ['ngMaterial', 'md.data.table', 'angularSpinner'])
+    angular.module('app', ['ngMaterial', 'md.data.table', 'angularSpinner','ngRoute'])
+            .config(function($routeProvider) {
+                $routeProvider
+                        .when('/', {
+                          /* REEMPLAZAR ESTA RUTA AL COMENZAR A ENSAMBLAR RUTAS,SESIONES CON EL LOGIN
+                            templateUrl : 'views/login.html',
+                            controller  : 'loginController'*/
+                            templateUrl : 'views/pedido.html',
+                            controller  : 'pedidoCtrl'
+                        })
+                        .when('/pedido', {
+                            templateUrl : 'views/pedido.html',
+                            controller  : 'pedidoCtrl'
+                        })
+                        .when('/consultadepedidos', {
+                            templateUrl : 'views/consultadepedidos.html',
+                            controller  : 'consCtrl'
+                        })
+                        .when('/resumendecuenta', {
+                            templateUrl : 'views/resumendecuenta.html',
+                            controller  : 'resuCtrl'
+                        })
+                        .otherwise({
+                            redirectTo: '/'
+                        });
+            })
             .controller('indexCtrl', ['$scope', '$mdSidenav', function ($scope, $mdSidenav) {
 
                 // Sidenav toggle
@@ -148,19 +94,19 @@
 
                 $scope.menu = [
                     {
-                        link: '',
+                        href: '#/pedido',
                         title: 'Pedidos',
                         icon: 'ic_add_shopping_cart_black_24px.svg'
 
                     },
                     {
-                        link: '',
+                        href: '#/consultadepedidos',
                         title: 'Consulta de pedidos',
                         icon: 'ic_assignment_black_24px.svg'
 
                     },
                     {
-                        link: '',
+                        href: '#/resumendecuenta',
                         title: 'Resumen de cuenta',
                         icon: 'ic_account_balance_black_24px.svg'
 
@@ -169,10 +115,11 @@
             }]);
 
 </script>
-<script src="marcasController.js"></script>
-<script src="productosController.js"></script>
-<script src="productosService.js"></script>
-<script src="notadeventaService.js"></script>
+
+<script src="controllers/pedidoController.js"></script>
+<script src="services/productosService.js"></script>
+<script src="services/notadeventaService.js"></script>
+<script src="services/marcasService.js"></script>
 <script src="Pedido.js"></script>
 <script src="ItemPedido.js"></script>
 

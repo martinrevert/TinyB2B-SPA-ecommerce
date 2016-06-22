@@ -307,27 +307,27 @@ JSDOC.Symbol.prototype.setTags = function() {
 	}
 	
 	/*t:
-		var sym = new JSDOC.Symbol("foo", [{type: "array", name: "pages"}], "FUNCTION", new JSDOC.DocComment("/**Description.*"+"/"));
+		var sym = new JSDOC.Symbol("foo", [{type: "array", name: "views"}], "FUNCTION", new JSDOC.DocComment("/**Description.*"+"/"));
 		is(sym.params.length, 1, "parser defined param is found.");
 		
-		sym = new JSDOC.Symbol("foo", [], "FUNCTION", new JSDOC.DocComment("/**Description.\n@param {array} pages*"+"/"));
+		sym = new JSDOC.Symbol("foo", [], "FUNCTION", new JSDOC.DocComment("/**Description.\n@param {array} views*"+"/"));
 		is(sym.params.length, 1, "user defined param is found.");
 		is(sym.params[0].type, "array", "user defined param type is found.");
-		is(sym.params[0].name, "pages", "user defined param name is found.");
+		is(sym.params[0].name, "views", "user defined param name is found.");
 		
-		sym = new JSDOC.Symbol("foo", [{type: "array", name: "pages"}], "FUNCTION", new JSDOC.DocComment("/**Description.\n@param {string} uid*"+"/"));
+		sym = new JSDOC.Symbol("foo", [{type: "array", name: "views"}], "FUNCTION", new JSDOC.DocComment("/**Description.\n@param {string} uid*"+"/"));
 		is(sym.params.length, 1, "user defined param overwrites parser defined param.");
 		is(sym.params[0].type, "string", "user defined param type overwrites parser defined param type.");
 		is(sym.params[0].name, "uid", "user defined param name overwrites parser defined param name.");
 	
-		sym = new JSDOC.Symbol("foo", [{type: "array", name: "pages"}, {type: "number", name: "count"}], "FUNCTION", new JSDOC.DocComment("/**Description.\n@param {string} uid*"+"/"));
+		sym = new JSDOC.Symbol("foo", [{type: "array", name: "views"}, {type: "number", name: "count"}], "FUNCTION", new JSDOC.DocComment("/**Description.\n@param {string} uid*"+"/"));
 		is(sym.params.length, 2, "user defined params  overlay parser defined params.");
 		is(sym.params[1].type, "number", "user defined param type overlays parser defined param type.");
 		is(sym.params[1].name, "count", "user defined param name overlays parser defined param name.");
 
-		sym = new JSDOC.Symbol("foo", [], "FUNCTION", new JSDOC.DocComment("/**Description.\n@param {array} pages The pages description.*"+"/"));
+		sym = new JSDOC.Symbol("foo", [], "FUNCTION", new JSDOC.DocComment("/**Description.\n@param {array} views The views description.*"+"/"));
 		is(sym.params.length, 1, "user defined param with description is found.");
-		is(sym.params[0].desc, "The pages description.", "user defined param description is found.");
+		is(sym.params[0].desc, "The views description.", "user defined param description is found.");
 	*/
 	
 	// @constructor

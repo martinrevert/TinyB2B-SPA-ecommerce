@@ -10,7 +10,7 @@ Article.prototype = {
 	},
 	
 	init: function(pages) {
-		/** the value of the pages of the Article instance */
+		/** the value of the views of the Article instance */
 		this.pages = pages;
 	}
 }

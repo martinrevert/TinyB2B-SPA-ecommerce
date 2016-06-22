@@ -1,0 +1,100 @@
+<div layout="column" layout-fill">
+    <md-toolbar class="md-tall">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
+                <md-icon md-svg-src="menu.svg"></md-icon>
+            </md-button>
+            <h1>Pedido de productos</h1>
+            <span flex></span>
+
+        </div>
+
+        <md-tabs md-selected="tabs.selectedIndex">
+            <md-tab id="tab1" aria-controls="tab1-content" md-on-select="selectTab(0)">Por categorías</md-tab>
+            <md-tab id="tab2" aria-controls="tab2-content" md-on-select="selectTab(1)">Por descripción</md-tab>
+            <md-tab id="tab3" aria-controls="tab3-content" md-on-select="selectTab(2)">Por código</md-tab>
+        </md-tabs>
+
+    </md-toolbar>
+
+    <div layout="row" layout-fill>
+
+        <div flex class="productos" layout-fill ng-style={"overflow-y":"scroll"}>
+
+            <md-content layout-padding>
+                <ng-switch on="tabs.selectedIndex" class="tabpanel-container">
+                    <!-- PANEL CATEGORIAS -->
+                    <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0"
+                         md-swipe-left="tabs.next()"
+                         md-swipe-right="tabs.previous()"
+                    >
+                        <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span>
+
+                        <md-card
+                                ng-repeat="tile in marcas"
+                                ng-click="prodspormarca(tile.Codigo)">
+                            <!--  ng-style="{'background': tile.color}" -->
+                            {{tile.Descripcion}}
+                            <!--
+                            md-colspan-gt-sm="{{tile.colspan}}"
+                            md-rowspan-gt-sm="{{tile.rowspan}}">
+                            -->
+                        </md-card>
+
+                    </div>
+                    <!-- PANEL DESCRIPCION -->
+                    <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1"
+                         md-swipe-left="tabs.next()"
+                         md-swipe-right="tabs.previous()"
+                    >
+                        <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span>
+                        <md-item ng-repeat="producto in productos">
+                            <md-item-content>
+
+                                <div class="md-tile-content">
+                                    {{producto.descripcion}}
+                                </div>
+                            </md-item-content>
+                        </md-item>
+                    </div>
+                    <!-- PANEL CODIGO -->
+                    <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2"
+                         md-swipe-left="tabs.next()"
+                         md-swipe-right="tabs.previous()">
+                    </div>
+                </ng-switch>
+            </md-content>
+
+        </div>
+
+        <!-- Este div es para el carro de productos del Cliente -->
+
+        <div flex class="itemspedido">
+            <ul>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+                <li>Item pedido</li>
+            </ul>
+            <div ng-style={"background-color":"red","color":"white"}>
+                <md-icon md-svg-src="ic_shopping_cart_white_24px.svg"></md-icon>
+                TOTALES
+            </div>
+        </div>
+
+    </div>
+</div>

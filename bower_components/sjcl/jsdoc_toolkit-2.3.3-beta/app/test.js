@@ -53,7 +53,7 @@ var testCases = [
 		
 		is('symbols.getSymbol("Article").name', "Article", 'Oblit set to constructor prototype with inner constructor name is found.');
 		is('symbols.getSymbol("Article#init").name', "init", 'The initializer method name of prototype oblit is correct.');
-		is('symbols.getSymbol("Article").hasMember("pages")', true, 'Property set by initializer method "this" is on the outer constructor.');
+		is('symbols.getSymbol("Article").hasMember("views")', true, 'Property set by initializer method "this" is on the outer constructor.');
 		is('symbols.getSymbol("Article#Title").name', "Title", 'Name of the inner constructor name is found.');
 		is('symbols.getSymbol("Article#Title").memberOf', "Article", 'The memberOf of the inner constructor name is found.');
 		is('symbols.getSymbol("Article#Title").isa', "CONSTRUCTOR", 'The isa of the inner constructor name is constructor.');

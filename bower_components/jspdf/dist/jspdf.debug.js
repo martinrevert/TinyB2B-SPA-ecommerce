@@ -171,7 +171,7 @@ var jsPDF = (function (global) {
             lineHeightProportion = options.lineHeight || 1.15,
             lineWidth = options.lineWidth || 0.200025, // 2mm
             objectNumber = 2,  // 'n' Current object number
-            outToPages = !1,  // switches where out() prints. outToPages true = push to pages obj. outToPages false = doc builder content
+            outToPages = !1,  // switches where out() prints. outToPages true = push to views obj. outToPages false = doc builder content
             offsets = [],  // List of offsets. Activated and reset by buildDocument(). Pupulated by various calls buildDocument makes.
             fonts = {},  // collection of font objects, where key is fontKey - a dynamically created label for a given font.
             fontmap = {},  // mapping structure fontName > fontStyle > font key - performance layer. See addFont()
@@ -181,7 +181,7 @@ var jsPDF = (function (global) {
             page = 0,
             currentPage,
             pages = [],
-            pagesContext = [], // same index as pages and pagedim
+            pagesContext = [], // same index as views and pagedim
             pagedim = [],
             content = [],
             additionalObjects = [],
@@ -232,9 +232,9 @@ var jsPDF = (function (global) {
                 out(objectNumber + ' 0 obj');
                 return objectNumber;
             },
-        // Does not output the object until after the pages have been output.
+        // Does not output the object until after the views have been output.
         // Returns an object containing the objectId and content.
-        // All pages have been added so the object ID can be estimated to start right after.
+        // All views have been added so the object ID can be estimated to start right after.
         // This does not modify the current objectNumber;  It must be updated after the newObjects are output.
             newAdditionalObject = function () {
                 var objId = pages.length * 2 + 1;
@@ -6722,7 +6722,7 @@ AcroForm.internal.setBitPosition = function (variable, position, value) {
 					if ((" " + spans[i].className + " ").replace(/[\n\t]/g, " ").indexOf(" pageCounter ") > -1) {
 						spans[i].innerHTML = pageNumber;
 					}
-					//if we find some span element with class totalPages, set a variable which is replaced after rendering of all pages
+					//if we find some span element with class totalPages, set a variable which is replaced after rendering of all views
 					if ((" " + spans[i].className + " ").replace(/[\n\t]/g, " ").indexOf(" totalPages ") > -1) {
 						spans[i].innerHTML = '###jsPDFVarTotalPages###';
 					}
