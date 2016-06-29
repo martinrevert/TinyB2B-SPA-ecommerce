@@ -3,11 +3,11 @@
  */
 var app = angular.module('app');
 
-app.factory('notadeventaSrv', function ($http) {
+app.factory('notadeventaSrv', function ($http, config) {
     return {
         async: function (notadeventa) {
             return $http.post({
-                url: 'http://200.43.222.67:8080/servicios/eikon.asmx/RecibeNotadeVenta2',
+                url: config.apiUrl + '/RecibeNotadeVenta2',
                 data: notadeventa,
                 cache: false
             });  //1. this returns promise

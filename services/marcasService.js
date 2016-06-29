@@ -5,10 +5,10 @@
 
 var app = angular.module('app');
 
-app.factory('marcasSrv', function ($http) {
+app.factory('marcasSrv', function ($http, config) {
     return {
         async: function (usuario,pass) {
-            return $http.get("http://200.43.222.67:8080/servicios/eikon.asmx/Busca_Marcas?usuario=" + usuario +"&pass=" + pass);  //this returns promise
+            return $http.get(config.apiUrl + "/Busca_Marcas?usuario=" + usuario +"&pass=" + pass);  //this returns promise
         }
     };
 });

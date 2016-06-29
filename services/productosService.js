@@ -3,10 +3,10 @@
  */
 var app = angular.module('app');
 
-app.factory('productosSrv', function ($http) {
+app.factory('productosSrv', function ($http, config) {
     return {
         async: function (usuario, pass, cliente, tipo, cadena) {
-            return $http.get("http://200.43.222.67:8080/servicios/eikon.asmx/Busca_Producto?usuario=" + usuario + "&pass=" + pass + "&cliente=" + cliente +
+            return $http.get(config.apiUrl + "/Busca_Producto?usuario=" + usuario + "&pass=" + pass + "&cliente=" + cliente +
                 "&tipo=" + tipo + "&cadena=" + cadena);  //1. this returns promise
         }
     };
