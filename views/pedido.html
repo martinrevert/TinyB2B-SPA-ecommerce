@@ -24,29 +24,15 @@
                         md-swipe-right="tabs.previous()"
             >
                 <!--   <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span> -->
-
-                <!--    <md-card
-                            ng-repeat="tile in marcas"
-                            ng-click="prodspormarca(tile.Codigo)">
-                         ng-style="{'background': tile.color}"
-                        {{tile.Descripcion}}
-
-                        md-colspan-gt-sm="{{tile.colspan}}"
-                        md-rowspan-gt-sm="{{tile.rowspan}}">
-
-                    </md-card>
-                  -->
-
-
-                <md-grid-list layout-margin md-cols-sm="2" md-cols-xs="2" md-cols-gt-sm="3" md-gutter="1em" md-row-height="2rem">
-                    <md-grid-tile md-ink-ripple class="tile" ng-repeat="tile in marcas"
-                                  ng-click="prodspormarca(tile.Codigo)"
-                                  ng-style="{
-            'background': tile.color
-          }">
+                <md-grid-list ng-show="mostrarmarcas" md-cols-sm="2" md-cols-xs="2" md-cols-gt-sm="3" md-gutter="1em"
+                              md-row-height="3rem">
+                    <md-grid-tile md-ink-ripple class="tile" ng-repeat="tile in marcas | orderBy: 'Descripcion'"
+                                  ng-style="{'background-color': marcacolor}" ng-click="prodspormarca(tile.Codigo)">
                         {{tile.Descripcion}}
                     </md-grid-tile>
                 </md-grid-list>
+
+                <div ng-include="'views/producto.html'"></div>
 
             </md-content>
             <!-- PANEL DESCRIPCION -->
@@ -61,13 +47,9 @@
                            search>
                 </md-input-container>
 
-                <md-item ng-repeat="producto in productos">
-                    <md-item-content>
-                        <div class="md-tile-content">
-                            {{producto.descripcion}}
-                        </div>
-                    </md-item-content>
-                </md-item>
+                <div ng-include="'views/producto.html'"></div>
+
+
             </md-content>
             <!-- PANEL CODIGO -->
             <md-content role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2"
@@ -80,14 +62,7 @@
                            search>
                 </md-input-container>
 
-                <md-item ng-repeat="producto in productos">
-                    <md-item-content>
-                        <div class="md-tile-content">
-                            {{producto.descripcion}}
-                        </div>
-                    </md-item-content>
-                </md-item>
-
+                <div ng-include="'views/producto.html'"></div>
 
             </md-content>
         </ng-switch>
@@ -98,29 +73,10 @@
     <div flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" layout="column">
         <div ng-style={"background-color":"red","color":"white"}>
             <md-icon md-svg-src="img/ic_shopping_cart_white_24px.svg"></md-icon>
-            TOTALES
+            NETO, TOTALES, IVA y PESO (en construcción)
         </div>
         <md-content hide show-gt-xs class="itemspedido">
-            <ul>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-                <li>Item pedido</li>
-            </ul>
+            <div ng-include="'views/itempedido.html'"></div>
         </md-content>
 
     </div>

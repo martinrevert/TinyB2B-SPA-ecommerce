@@ -3,7 +3,7 @@
  */
 var app = angular.module('app');
 
-app.factory('notadeventaSrv', function ($http, config) {
+app.factory('enviarpedidoSrv', function ($http, config) {
     return {
         async: function (notadeventa) {
             return $http.post({

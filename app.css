@@ -1,25 +1,31 @@
-body{
+body {
     font-family: 'Roboto', sans-serif;
+    background: #f7f7f7;
 }
 
-.tile{
-    font-size : small;
+.tile {
+    font-size: small;
     font-style: bold;
-    vertical-align:top;
+    vertical-align: top;
     text-align: center;
-    background-color: #00FFFF;
+
+}
+
+.itempedido input[type="number"] {
+
+    width: 100px;
+
 }
 
 md-content.md-default-theme, md-content {
-  /*  background-color: lightgrey; */
+    /*  background-color: lightgrey; */
 }
-
 
 div.productos {
 
-   /* background-color: red;
-    overflow: auto;
-*/
+    /* background-color: red;
+     overflow: auto;
+ */
 }
 
 

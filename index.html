@@ -41,7 +41,7 @@
 
 </md-sidenav>
 <!-- Aqui va la directiva ng-view -->
-<ng-view layout-fill style="overflow: none"></ng-view>
+<ng-view layout-fill></ng-view>
 <!--Aqui termina la directiva ng-view-->
 
 <script src="bower_components/angular/angular.min.js"></script>
@@ -53,6 +53,7 @@
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/spin.js/spin.min.js"></script>
 <script src="bower_components/angular-spinner/angular-spinner.min.js"></script>
+<script src="bower_components/randomcolor/randomColor.js"></script>
 
 <script>
     'use strict';
@@ -66,12 +67,13 @@
                 return function ($scope, element) {
                     element.bind("keyup", function (event) {
                         var val = element.val();
-                        if(val.length > 3) {
+                        if (val.length > 3) {
                             $scope.search(val);
                         }
                     });
                 };
             })
+
             .config(function ($routeProvider) {
                 $routeProvider
                         .when('/', {
@@ -118,7 +120,7 @@
                     {
                         href: '#/checkout',
                         title: 'Carro de compras',
-                        icon: 'img/ic_add_shopping_cart_black_24px.svg'
+                        icon: 'img/ic_shopping_cart_black_24px.svg'
 
                     },
                     {
@@ -141,10 +143,12 @@
 
 <script src="controllers/pedidoController.js"></script>
 <script src="controllers/consuController.js"></script>
+<script src="controllers/checkoutController.js"></script>
 <script src="controllers/resuController.js"></script>
 <script src="services/productosService.js"></script>
-<script src="services/notadeventaService.js"></script>
+<script src="services/enviarpedidoService.js"></script>
 <script src="services/marcasService.js"></script>
+<script src="services/cartService.js"></script>
 
 </body>
 </html>

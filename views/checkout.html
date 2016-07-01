@@ -1,0 +1,18 @@
+<div layout="column" layout-fill">
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
+            <md-icon md-svg-src="img/menu.svg"></md-icon>
+        </md-button>
+        <h1>Carro de compras</h1>
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-content class="itemspedido">
+    <div ng-include="'views/itempedido.html'"></div>
+</md-content>
+
+<md-button md-raise ng-click="checkout()" layout-align="end end">Enviar pedido</md-button>
+
+</div>
