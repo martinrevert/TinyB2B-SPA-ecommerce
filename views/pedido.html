@@ -70,11 +70,11 @@
 
 
         <!-- Este div es para el carro de productos del Cliente -->
-        <div flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" layout="column">
-            <div ng-style={"background-color":"red","color":"white"}>
+        <div flex-order-xs="-2" layout="column">
+            <md-content ng-style={"background-color":"red","color":"white"}>
                 <md-icon md-svg-src="img/ic_shopping_cart_white_24px.svg"></md-icon>
                 NETO, TOTALES, IVA y PESO (en construcción)
-            </div>
+            </md-content>
             <md-content hide show-gt-xs class="itemspedido">
                 <div ng-include="'views/itempedido.html'"></div>
             </md-content>
