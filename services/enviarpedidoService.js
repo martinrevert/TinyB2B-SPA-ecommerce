@@ -4,40 +4,22 @@
 var app = angular.module('app');
 
 app.factory('enviarpedidoSrv', function ($http, config) {
+
     return {
         async: function (notadeventa) {
-            return $http.post({
-                url: config.apiUrl + '/RecibeNotadeVenta2',
-                data: notadeventa,
-                cache: false
-            });  //1. this returns promise
+            var data = angular.copy(notadeventa);
+            var conf = {cache: false};
+            var url = config.apiUrl + "/RecibeNotadeVenta2";
+
+            return $http.post(
+                url,
+                data,
+                conf
+            ).then(function successCallback(response) {
+                // ok
+            }, function errorCallback(response) {
+                console.log(data);
+            });  //This returns promise
         }
     };
 });
-
-/*
- // Service definition
- app.service('productosSrv', function ($http) {
-
- this.getProducts = function (usuario, pass, cliente, tipo, cadena) {
-
- // Habría que configurar como constante global la URL base
-
- $http.get("http://200.43.222.67:8080/servicios/eikon.asmx/Busca_Producto?usuario=" + usuario + "&pass=" + pass + "&cliente=" + cliente +
- "&tipo=" + tipo + "&cadena=" + cadena)
- .then(function (response) {
- console.log(response.data);
- return response.data;
- });
-
- };
- });
- */
-
-
-// AngularJS Controller that uses the service
-/*
- function HelloCtrl($scope, testService) {
- $scope.fromService = testService.sayHello("World");
-
- }*/

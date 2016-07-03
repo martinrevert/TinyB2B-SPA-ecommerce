@@ -4,11 +4,13 @@
 
 angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, enviarpedidoSrv) {
 
+    console.log(cartSrv.getProducts());
+
     $scope.cart = cartSrv.getProducts();
 
     $scope.eliminarItem = function(){
-        cartSrv.removeProduct()
-    }
+        cartSrv.removeProduct();
+    };
     
     $scope.checkout = function(){
         var pedido = cartSrv.getPedido();

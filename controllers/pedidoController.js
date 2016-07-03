@@ -11,15 +11,15 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
     $scope.cart = cartSrv.getProducts();
 
     $scope.eliminarItem = function(){
-        cartSrv.removeProduct()
-    }
+        cartSrv.removeProduct();
+    };
 
-    $scope.marcacolor = '#F7F7F7';
+    $scope.marcacolor = '#00FFFF';
         // randomColor({luminosity: 'dark'});
     //randomColor({luminosity: 'dark', count: 27});
 
-    $scope.addProduct = function(codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa){
-        cartSrv.addProduct(codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa);
+    $scope.addProduct = function(codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa){
+        cartSrv.addProduct(codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa);
     };
 
     $scope.buscarpordescripcion = function () {

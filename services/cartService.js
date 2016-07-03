@@ -16,7 +16,7 @@ app.factory("cartSrv", function () {
             "observacionservet": null,
             "ordendecompraserin": null,
             "ordendecompraservet": null,
-            "usuario": "martin",
+            "usuario": "roberto",
             "productos": []
         }
     };
@@ -24,7 +24,8 @@ app.factory("cartSrv", function () {
 
     return {
 
-        addProduct: function (codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa) {
+        addProduct: function (codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipoprecio, uvent) {
+
             var addedToExistingItem = false;
             console.log("Producto " + codigo + " agregado a cart");
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
@@ -36,11 +37,12 @@ app.factory("cartSrv", function () {
                 }
             }
             if (!addedToExistingItem) {
+              
                 cartData.pedido.productos.push({
                     cantidad: cantidad, codigo: codigo, descripcion: descripcion, bonif: bonif, bonifmax: bonifmax,
                     emp: emp, factor: factor, iva: iva, medida: medida, medida1: medida1, medida2: medida2, peso: peso,
                     precioFinalConIva: precioFinalConIva, preneto: preneto, prenetoConDescuento: prenetoConDescuento,
-                    tipò_precio: tipo_precio, uventa: uventa
+                    tipo_precio: tipoprecio, uventa: uvent
                 });
             }
         },
@@ -60,7 +62,7 @@ app.factory("cartSrv", function () {
 
 
         getPedido: function () {
-            return cartData.pedido;
+            return cartData;
         }
     }
-});
+});;
