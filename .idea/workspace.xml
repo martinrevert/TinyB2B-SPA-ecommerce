@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="03cfdbbc-0493-4086-8c23-f021b9ca17c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pedido.html" afterPath="$PROJECT_DIR$/views/pedido.html" />
     </list>
     <ignored path="materialSerin.iws" />
@@ -34,11 +35,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pedido.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pedido.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pedido.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+            <state relative-caret-position="18">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#0;n#md-content#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-252">
+              <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -83,7 +96,6 @@
         <option value="$PROJECT_DIR$/views/cardItemPedido.html" />
         <option value="$PROJECT_DIR$/cart.js" />
         <option value="$PROJECT_DIR$/app.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/views/itempedido.html" />
         <option value="$PROJECT_DIR$/views/checkout.html" />
         <option value="$PROJECT_DIR$/services/enviarpedidoService.js" />
@@ -91,6 +103,7 @@
         <option value="$PROJECT_DIR$/services/cartService.js" />
         <option value="$PROJECT_DIR$/views/producto.html" />
         <option value="$PROJECT_DIR$/controllers/pedidoController.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/views/pedido.html" />
       </list>
     </option>
@@ -399,7 +412,7 @@
       <workItem from="1466891297772" duration="18029000" />
       <workItem from="1467060273271" duration="6289000" />
       <workItem from="1467131660405" duration="23930000" />
-      <workItem from="1467264202511" duration="55862000" />
+      <workItem from="1467264202511" duration="57430000" />
     </task>
     <task id="LOCAL-00001" summary="- Commit inicial">
       <created>1462994259038</created>
@@ -506,11 +519,18 @@
       <option name="project" value="LOCAL" />
       <updated>1467539485872</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="- Buscadores animados y que ocupan la columna&#10;&#10;&#10;&#10;">
+      <created>1467540373439</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1467540373439</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248126000" />
+    <option name="totallyTimeSpent" value="249694000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,7 +549,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39929327" sideWeight="0.5035389" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32624114" sideWeight="0.49646106" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44680852" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20744681" sideWeight="0.49646106" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34219858" sideWeight="0.49646106" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2925532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -578,7 +598,8 @@
     <MESSAGE value="- Marcas como list of tiles&#10;- Cajas de busqueda descripcion y codigo&#10;- Previsión de checkout separado &#10;&#10;" />
     <MESSAGE value="- Cart armado (fallo en envío)&#10;- Definición de cards producto e itemproducto&#10;- Incorporación librería randomcolor&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Cart --&gt; Solucionado problema de comunicación con Web Service de recepción de pedido&#10;&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Cart --&gt; Solucionado problema de comunicación con Web Service de recepción de pedido&#10;&#10;&#10;&#10;" />
+    <MESSAGE value="- Buscadores animados y que ocupan la columna&#10;&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Buscadores animados y que ocupan la columna&#10;&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -866,14 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-661">
-          <caret line="55" column="62" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/enviarpedidoService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -924,8 +937,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pedido.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+        <state relative-caret-position="18">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#md-content#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding />
         </state>
       </provider>

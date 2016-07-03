@@ -1,82 +1,86 @@
-<md-toolbar class="md-tall">
-    <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
-            <md-icon md-svg-src="img/menu.svg"></md-icon>
-        </md-button>
-        <h1>Pedido de productos</h1>
-        <span flex></span>
+<md-content flex style="border: 1px solid firebrick;" layout="column">
+    <md-toolbar class="md-tall">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
+                <md-icon md-svg-src="img/menu.svg"></md-icon>
+            </md-button>
+            <h1>Pedido de productos</h1>
+            <span flex></span>
 
-    </div>
-
-    <md-tabs md-selected="tabs.selectedIndex">
-        <md-tab id="tab1" aria-controls="tab1-content" md-on-select="selectTab(0)">Por categorías</md-tab>
-        <md-tab id="tab2" aria-controls="tab2-content" md-on-select="selectTab(1)">Por descripción</md-tab>
-        <md-tab id="tab3" aria-controls="tab3-content" md-on-select="selectTab(2)">Por código</md-tab>
-    </md-tabs>
-</md-toolbar>
-<div layout-xs="column" layout="row" style="overflow: none">
-    <div flex-gt-xs="50" flex-xs="100" flex-order-xs="-1" style="overflow: auto; height: 80%;" class="productos">
-        <!-- ng-style={"overflow-y":"scroll"} -->
-        <ng-switch on="tabs.selectedIndex" class="tabpanel-container">
-            <!-- PANEL CATEGORIAS -->
-            <md-content layout-padding role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0"
-                        md-swipe-left="tabs.next()"
-                        md-swipe-right="tabs.previous()"
-            >
-                <!--   <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span> -->
-                <md-grid-list ng-show="mostrarmarcas" md-cols-sm="2" md-cols-xs="2" md-cols-gt-sm="3" md-gutter="1em"
-                              md-row-height="3rem">
-                    <md-grid-tile md-ink-ripple class="tile" ng-repeat="tile in marcas | orderBy: 'Descripcion'"
-                                  ng-style="{'background-color': marcacolor}" ng-click="prodspormarca(tile.Codigo)">
-                        {{tile.Descripcion}}
-                    </md-grid-tile>
-                </md-grid-list>
-
-                <div ng-include="'views/producto.html'"></div>
-
-            </md-content>
-            <!-- PANEL DESCRIPCION -->
-            <md-content role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1"
-                        md-swipe-left="tabs.next()"
-                        md-swipe-right="tabs.previous()"
-            >
-                <!-- <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span> -->
-                <md-input-container class="md-block">
-                    <label>Busque su producto por descripción</label>
-                    <input type="text"
-                           search>
-                </md-input-container>
-
-                <div ng-include="'views/producto.html'"></div>
-
-
-            </md-content>
-            <!-- PANEL CODIGO -->
-            <md-content role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2"
-                        md-swipe-left="tabs.next()"
-                        md-swipe-right="tabs.previous()">
-
-                <md-input-container class="md-block">
-                    <label>Busque su producto por código</label>
-                    <input type="text" search>
-                </md-input-container>
-
-                <div ng-include="'views/producto.html'"></div>
-
-            </md-content>
-        </ng-switch>
-    </div>
-
-
-    <!-- Este div es para el carro de productos del Cliente -->
-    <div flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" layout="column">
-        <div ng-style={"background-color":"red","color":"white"}>
-            <md-icon md-svg-src="img/ic_shopping_cart_white_24px.svg"></md-icon>
-            NETO, TOTALES, IVA y PESO (en construcción)
         </div>
-        <md-content hide show-gt-xs class="itemspedido">
-            <div ng-include="'views/itempedido.html'"></div>
+
+        <md-tabs md-selected="tabs.selectedIndex">
+            <md-tab id="tab1" aria-controls="tab1-content" md-on-select="selectTab(0)">Por categorías</md-tab>
+            <md-tab id="tab2" aria-controls="tab2-content" md-on-select="selectTab(1)">Por descripción</md-tab>
+            <md-tab id="tab3" aria-controls="tab3-content" md-on-select="selectTab(2)">Por código</md-tab>
+        </md-tabs>
+    </md-toolbar>
+    <md-content flex layout-xs="column" layout="row" layout-align="center">
+        <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-1" class="productos">
+             <ng-switch on="tabs.selectedIndex" class="tabpanel-container">
+                <!-- PANEL CATEGORIAS -->
+                <div layout-padding role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0"
+                            md-swipe-left="tabs.next()"
+                            md-swipe-right="tabs.previous()"
+                >
+                    <!--   <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span> -->
+                    <md-grid-list ng-show="mostrarmarcas" md-cols-sm="2" md-cols-xs="2" md-cols-gt-sm="3"
+                                  md-gutter="1em"
+                                  md-row-height="3rem">
+                        <md-grid-tile md-ink-ripple class="tile" ng-repeat="tile in marcas | orderBy: 'Descripcion'"
+                                      ng-style="{'background-color': marcacolor}" ng-click="prodspormarca(tile.Codigo)">
+                            {{tile.Descripcion}}
+                        </md-grid-tile>
+                    </md-grid-list>
+
+                    <div ng-include="'views/producto.html'"></div>
+
+                </div>
+                <!-- PANEL DESCRIPCION -->
+                <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1"
+                            md-swipe-left="tabs.next()"
+                            md-swipe-right="tabs.previous()"
+                >
+                    <!-- <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span> -->
+                    <md-input-container class="md-block">
+                        <label>Busque su producto por descripción</label>
+                        <input type="text"
+                               search>
+                    </md-input-container>
+
+                    <div ng-include="'views/producto.html'"></div>
+
+
+                </div>
+                <!-- PANEL CODIGO -->
+                <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2"
+                            md-swipe-left="tabs.next()"
+                            md-swipe-right="tabs.previous()">
+
+                    <md-input-container class="md-block">
+                        <label>Busque su producto por código</label>
+                        <input type="text" search>
+                    </md-input-container>
+
+                    <div ng-include="'views/producto.html'"></div>
+
+                </div>
+            </ng-switch>
         </md-content>
 
-    </div>
-</div>
+
+        <!-- Este div es para el carro de productos del Cliente -->
+        <div flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" layout="column">
+            <div ng-style={"background-color":"red","color":"white"}>
+                <md-icon md-svg-src="img/ic_shopping_cart_white_24px.svg"></md-icon>
+                NETO, TOTALES, IVA y PESO (en construcción)
+            </div>
+            <md-content hide show-gt-xs class="itemspedido">
+                <div ng-include="'views/itempedido.html'"></div>
+            </md-content>
+
+        </div>
+    </md-content>
+
+
+</md-content>
