@@ -41,9 +41,9 @@
                         md-swipe-right="tabs.previous()"
             >
                 <!-- <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span> -->
-                <md-input-container>
-                    <label>Busque su producto</label>
-                    <input type="text" placeholder="¿Descripción?"
+                <md-input-container class="md-block">
+                    <label>Busque su producto por descripción</label>
+                    <input type="text"
                            search>
                 </md-input-container>
 
@@ -56,10 +56,9 @@
                         md-swipe-left="tabs.next()"
                         md-swipe-right="tabs.previous()">
 
-                <md-input-container>
-                    <label>Busque su producto</label>
-                    <input type="text" placeholder="¿Código?"
-                           search>
+                <md-input-container class="md-block">
+                    <label>Busque su producto por código</label>
+                    <input type="text" search>
                 </md-input-container>
 
                 <div ng-include="'views/producto.html'"></div>

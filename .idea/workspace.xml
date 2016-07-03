@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="03cfdbbc-0493-4086-8c23-f021b9ca17c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/checkoutController.js" afterPath="$PROJECT_DIR$/controllers/checkoutController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/pedidoController.js" afterPath="$PROJECT_DIR$/controllers/pedidoController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/cartService.js" afterPath="$PROJECT_DIR$/services/cartService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/enviarpedidoService.js" afterPath="$PROJECT_DIR$/services/enviarpedidoService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/producto.html" afterPath="$PROJECT_DIR$/views/producto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pedido.html" afterPath="$PROJECT_DIR$/views/pedido.html" />
     </list>
     <ignored path="materialSerin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,91 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pedidoController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/pedidoController.js">
+      <file leaf-file-name="resumendecuenta.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/resumendecuenta.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pedido.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pedido.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pedido.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1422">
-              <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="itempedido.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/itempedido.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="producto.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/producto.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkoutController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/checkoutController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cartService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/cartService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enviarpedidoService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/enviarpedidoService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="marcasService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/marcasService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="32" />
+            <state relative-caret-position="140">
+              <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -159,13 +85,13 @@
         <option value="$PROJECT_DIR$/app.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/views/itempedido.html" />
-        <option value="$PROJECT_DIR$/views/pedido.html" />
         <option value="$PROJECT_DIR$/views/checkout.html" />
         <option value="$PROJECT_DIR$/services/enviarpedidoService.js" />
         <option value="$PROJECT_DIR$/controllers/checkoutController.js" />
         <option value="$PROJECT_DIR$/services/cartService.js" />
         <option value="$PROJECT_DIR$/views/producto.html" />
         <option value="$PROJECT_DIR$/controllers/pedidoController.js" />
+        <option value="$PROJECT_DIR$/views/pedido.html" />
       </list>
     </option>
   </component>
@@ -231,20 +157,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="materialSerin">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="services">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -487,7 +399,7 @@
       <workItem from="1466891297772" duration="18029000" />
       <workItem from="1467060273271" duration="6289000" />
       <workItem from="1467131660405" duration="23930000" />
-      <workItem from="1467264202511" duration="54967000" />
+      <workItem from="1467264202511" duration="55862000" />
     </task>
     <task id="LOCAL-00001" summary="- Commit inicial">
       <created>1462994259038</created>
@@ -587,11 +499,18 @@
       <option name="project" value="LOCAL" />
       <updated>1467409551401</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="- Cart --&gt; Solucionado problema de comunicación con Web Service de recepción de pedido&#10;&#10;&#10;&#10;">
+      <created>1467539485872</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1467539485872</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247231000" />
+    <option name="totallyTimeSpent" value="248126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -610,7 +529,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39929327" sideWeight="0.5035389" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32624114" sideWeight="0.49646106" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44680852" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2606383" sideWeight="0.49646106" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20744681" sideWeight="0.49646106" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2925532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -658,7 +577,8 @@
     <MESSAGE value="- Implementación de ngRoute&#10;- Adaptación de vistas y controladores por ruta&#10;- Se implementa funcionalidad de rutas y menú (sin sesion aun)&#10;- Primer aproximación de recuperacion de marcas por click&#10;- Update general de librerias&#10;&#10;" />
     <MESSAGE value="- Marcas como list of tiles&#10;- Cajas de busqueda descripcion y codigo&#10;- Previsión de checkout separado &#10;&#10;" />
     <MESSAGE value="- Cart armado (fallo en envío)&#10;- Definición de cards producto e itemproducto&#10;- Incorporación librería randomcolor&#10;&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Cart armado (fallo en envío)&#10;- Definición de cards producto e itemproducto&#10;- Incorporación librería randomcolor&#10;&#10;&#10;&#10;" />
+    <MESSAGE value="- Cart --&gt; Solucionado problema de comunicación con Web Service de recepción de pedido&#10;&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Cart --&gt; Solucionado problema de comunicación con Web Service de recepción de pedido&#10;&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -874,14 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/resumendecuenta.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/resuController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -954,14 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pedido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-661">
@@ -1006,6 +910,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/resumendecuenta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pedido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
           <folding />
         </state>
       </provider>
