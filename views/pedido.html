@@ -16,12 +16,12 @@
         </md-tabs>
     </md-toolbar>
     <md-content flex layout-xs="column" layout="row" layout-align="center">
-        <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-1" class="productos">
-             <ng-switch on="tabs.selectedIndex" class="tabpanel-container">
+        <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" class="productos">
+            <ng-switch on="tabs.selectedIndex" class="tabpanel-container">
                 <!-- PANEL CATEGORIAS -->
                 <div layout-padding role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0"
-                            md-swipe-left="tabs.next()"
-                            md-swipe-right="tabs.previous()"
+                     md-swipe-left="tabs.next()"
+                     md-swipe-right="tabs.previous()"
                 >
                     <!--   <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span> -->
                     <md-grid-list ng-show="mostrarmarcas" md-cols-sm="2" md-cols-xs="2" md-cols-gt-sm="3"
@@ -38,12 +38,13 @@
                 </div>
                 <!-- PANEL DESCRIPCION -->
                 <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1"
-                            md-swipe-left="tabs.next()"
-                            md-swipe-right="tabs.previous()"
+                     md-swipe-left="tabs.next()"
+                     md-swipe-right="tabs.previous()"
                 >
                     <!-- <span us-spinner spinner-key="spinner-1" spinner-start-active="true"></span> -->
                     <md-input-container class="md-block">
                         <label>Busque su producto por descripción</label>
+                        <md-icon md-svg-src="img/ic_search_black_24px.svg"></md-icon>
                         <input type="text"
                                search>
                     </md-input-container>
@@ -54,11 +55,12 @@
                 </div>
                 <!-- PANEL CODIGO -->
                 <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2"
-                            md-swipe-left="tabs.next()"
-                            md-swipe-right="tabs.previous()">
+                     md-swipe-left="tabs.next()"
+                     md-swipe-right="tabs.previous()">
 
                     <md-input-container class="md-block">
                         <label>Busque su producto por código</label>
+                        <md-icon md-svg-src="img/ic_search_black_24px.svg"></md-icon>
                         <input type="text" search>
                     </md-input-container>
 
@@ -70,13 +72,20 @@
 
 
         <!-- Este div es para el carro de productos del Cliente -->
-        <md-content flex-xs="none" flex-gt-xs="50" flex-order-xs="-2" layout="column">
-            <md-content flex="none" ng-style={"background-color":"red","color":"white"}>
-                <md-icon md-svg-src="img/ic_shopping_cart_white_24px.svg"></md-icon>
-                NETO, TOTALES, IVA y PESO (en construcción)
-            </md-content>
+        <md-content flex-xs="none" flex-gt-xs="50" layout-align="end" flex-order-xs="-1" layout="column">
             <md-content flex hide show-gt-xs class="itemspedido">
                 <div ng-include="'views/itempedido.html'"></div>
+            </md-content>
+
+
+            <md-content layout-padding flex="none" ng-style={"background-color":"red","color":"white"}>
+
+                <span ng-model="preneto">Neto: {{preneto | currency}}</span>
+                <span ng-model="iva">IVA: {{iva | currency}}</span>
+                <span ng-model="itemsummary">Items: {{itemsummary}}</span>
+                <span ng-model="total">Total: {{total | currency}}</span>
+                <md-icon md-svg-src="img/ic_shopping_cart_white_24px.svg"></md-icon>
+
             </md-content>
 
         </md-content>

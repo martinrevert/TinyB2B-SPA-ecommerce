@@ -8,4 +8,34 @@
         <span flex></span>
     </div>
 </md-toolbar>
+
+<md-table-container>
+    <table md-table md-row-select ng-model="selected" md-progress="promise">
+        <thead md-head>
+        <tr md-row>
+            <th md-column><span><b>EMPRESA</b></span></th>
+            <th md-column md-numeric><span><b>NUMERO</b></span></th>
+            <th md-column><b>FECHA</b></th>
+            <th md-column><b>VTO</b></th>
+            <th md-column md-numeric><b>IMPORTE</b></th>
+            <th md-column md-numeric><b>SALDO</b></th>
+            <th md-column md-numeric><b>DESCUENTO</b></th>
+        </tr>
+        </thead>
+        <tbody md-body>
+        <tr md-row ng-repeat="comprobante in comprobantes">
+            <td md-cell>{{comprobante.empresa}}</td>
+            <td md-cell>{{comprobante.numero}}</td>
+            <td md-cell>{{comprobante.fecha}}</td>
+            <td md-cell>{{comprobante.vto}}</td>
+            <td md-cell>{{comprobante.importe | currency}}</td>
+            <td md-cell>{{comprobante.saldo | currency}}</td>
+            <td md-cell>{{comprobante.descuento | currency}}</td>
+        </tr>
+        </tbody>
+    </table>
+</md-table-container>
+
+
+
 </div>

@@ -37,7 +37,7 @@ app.factory("cartSrv", function () {
                 }
             }
             if (!addedToExistingItem) {
-              
+
                 cartData.pedido.productos.push({
                     cantidad: cantidad, codigo: codigo, descripcion: descripcion, bonif: bonif, bonifmax: bonifmax,
                     emp: emp, factor: factor, iva: iva, medida: medida, medida1: medida1, medida2: medida2, peso: peso,
@@ -63,6 +63,53 @@ app.factory("cartSrv", function () {
 
         getPedido: function () {
             return cartData;
+        },
+
+        getItems: function () {
+            var ittot = cartData.pedido.productos.length;
+            console.log("items totales servicio: " + ittot);
+            return ittot;
+
+        },
+
+        getPrecioTotalDescuento: function (){
+
+            var total = 0;
+            for (var i = 0; i < cartData.pedido.productos.length; i++) {
+                if(cartData.pedido.productos[i].uventa == '1') {
+                    total += (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].cantidad);
+                }else{
+                    total += (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad);
+                }
+            }
+            return total;
+
+        },
+        getPrecioNeto: function (){
+
+            var total = 0;
+            for (var i = 0; i < cartData.pedido.productos.length; i++) {
+                if(cartData.pedido.productos[i].uventa == '1') {
+                    total += (cartData.pedido.productos[i].preneto* cartData.pedido.productos[i].cantidad);
+                }else{
+                    total += (cartData.pedido.productos[i].preneto * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad);
+                }
+            }
+            return total;
+
+        },
+        getIva: function (){
+
+            var total = 0;
+            for (var i = 0; i < cartData.pedido.productos.length; i++) {
+                if(cartData.pedido.productos[i].uventa == '1') {
+                    total += ((cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].cantidad) - (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].cantidad));
+                }else{
+                    total += ((cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad) - (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad));
+                }
+            }
+            return total;
+
         }
     }
-});;
+});

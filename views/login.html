@@ -1,0 +1,29 @@
+<md-content class="well">
+
+    <div class="alert alert-info" ng-hide="authenticationError">
+        Ingrese su usuario y password para ingresar
+    </div>
+
+    <div class="alert alert-danger" ng-show="authenticationError">
+        Error Autenticacion ({{authenticationError.status}}). Pruebe de nuevo.
+    </div>
+
+    <form name="authForm" layout-align="center center" novalidate>
+        <md-input-container  class="md-block">
+            <label>Username</label>
+            <input type="text" name="usuario" class="form-control" ng-model="usuario" required />
+       </md-input-container>
+        <md-input-container layout-align="center center" class="md-block">
+            <label>Password</label>
+            <input name="password" type="password" class="form-control"
+                   ng-model="password" required />
+        </md-input-container>
+        <div class="text-center">
+            <md-button ng-click="authenticate(usuario, password)"
+                    ng-disabled="authForm.$invalid"
+                    class="md-raised">
+                Log In
+            </md-button>
+        </div>
+    </form>
+</md-content>

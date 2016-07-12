@@ -10,16 +10,39 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
 
     $scope.cart = cartSrv.getProducts();
 
-    $scope.eliminarItem = function(){
+    $scope.eliminarItem = function () {
         cartSrv.removeProduct();
+        $scope.itemsummary = cartSrv.getItems();
+        $scope.total = cartSrv.getPrecioTotalDescuento();
+        $scope.preneto = cartSrv.getPrecioNeto();
+        $scope.iva = cartSrv.getIva();
     };
 
     $scope.marcacolor = '#00FFFF';
-        // randomColor({luminosity: 'dark'});
+    // randomColor({luminosity: 'dark'});
     //randomColor({luminosity: 'dark', count: 27});
 
-    $scope.addProduct = function(codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa){
+    //Inicialización totales
+    $scope.itemsummary = cartSrv.getItems();
+    $scope.total = cartSrv.getPrecioTotalDescuento();
+    $scope.preneto = cartSrv.getPrecioNeto();
+    $scope.iva = cartSrv.getIva();
+
+    $scope.updatetotales = function(){
+        $scope.itemsummary = cartSrv.getItems();
+        $scope.total = cartSrv.getPrecioTotalDescuento();
+        $scope.preneto = cartSrv.getPrecioNeto();
+        $scope.iva = cartSrv.getIva();
+    };
+
+
+    $scope.addProduct = function (codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa) {
         cartSrv.addProduct(codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa);
+        $scope.itemsummary = cartSrv.getItems();
+        $scope.total = cartSrv.getPrecioTotalDescuento();
+        $scope.preneto = cartSrv.getPrecioNeto();
+        $scope.iva = cartSrv.getIva();
+
     };
 
     $scope.buscarpordescripcion = function () {
@@ -49,7 +72,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         marcasSrv.async("martin", "dycsa").then(function (d) {
             /* $scope.stopSpin = function () {
              usSpinnerService.stop('spinner-1');
-                          };*/
+             };*/
 
             $scope.marcas = d.data;
         });

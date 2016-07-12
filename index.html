@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="app">
 <head>
+  <!--  <base href="/materialSerin/" /> -->
+    <base href="http://martinrevert.com.ar/materialSerin/" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
@@ -11,7 +13,8 @@
 </head>
 <body ng-cloak layout="row" ng-controller="indexCtrl">
 
-<md-sidenav layout="column" layout-fill class="md-sidenav-left md-whiteframe-z2 md-navigation-drawer"
+<md-sidenav ng-if="showSidebar()" layout="column" layout-fill
+            class="md-sidenav-left md-whiteframe-z2 md-navigation-drawer"
             md-component-id="left"
             md-is-locked-open="$mdMedia('gt-md')">
 
@@ -35,10 +38,7 @@
                 <span class="md-body-2">{{item.title}}</span>
             </div>
         </md-list-item>
-
     </md-list>
-
-
 </md-sidenav>
 <!-- Aqui va la directiva ng-view -->
 <ng-view layout="column" layout-fill></ng-view>
@@ -55,92 +55,8 @@
 <script src="bower_components/angular-spinner/angular-spinner.min.js"></script>
 <script src="bower_components/randomcolor/randomColor.js"></script>
 
-<script>
-    'use strict';
-
-    angular.module('app', ['ngMaterial', 'md.data.table', 'angularSpinner', 'ngRoute'])
-            .constant('config',
-                    {
-                        apiUrl: 'http://gruposerin.dyndns.org:8080/servicios/eikon.asmx'
-                    })
-            .directive('search', function () {
-                return function ($scope, element) {
-                    element.bind("keyup", function (event) {
-                        var val = element.val();
-                        if (val.length > 3) {
-                            $scope.search(val);
-                        }
-                    });
-                };
-            })
-
-            .config(function ($routeProvider) {
-                $routeProvider
-                        .when('/', {
-                            /* REEMPLAZAR ESTA RUTA AL COMENZAR A ENSAMBLAR RUTAS,SESIONES CON EL LOGIN
-                             templateUrl : 'views/login.html',
-                             controller  : 'loginController'*/
-                            templateUrl: 'views/pedido.html',
-                            controller: 'pedidoCtrl'
-                        })
-                        .when('/pedido', {
-                            templateUrl: 'views/pedido.html',
-                            controller: 'pedidoCtrl'
-                        })
-                        .when('/checkout', {
-                            templateUrl: 'views/checkout.html',
-                            controller: 'checkoutCtrl'
-                        })
-                        .when('/consultadepedidos', {
-                            templateUrl: 'views/consultadepedidos.html',
-                            controller: 'consuCtrl'
-                        })
-                        .when('/resumendecuenta', {
-                            templateUrl: 'views/resumendecuenta.html',
-                            controller: 'resuCtrl'
-                        })
-                        .otherwise({
-                            redirectTo: '/'
-                        });
-            })
-            .controller('indexCtrl', ['$scope', '$mdSidenav', function ($scope, $mdSidenav) {
-
-                // Sidenav toggle
-                $scope.toggleSidenav = function (menuId) {
-                    $mdSidenav(menuId).toggle();
-                };
-
-                $scope.menu = [
-                    {
-                        href: '#/pedido',
-                        title: 'Pedidos',
-                        icon: 'img/ic_add_shopping_cart_black_24px.svg'
-
-                    },
-                    {
-                        href: '#/checkout',
-                        title: 'Carro de compras',
-                        icon: 'img/ic_shopping_cart_black_24px.svg'
-
-                    },
-                    {
-                        href: '#/consultadepedidos',
-                        title: 'Consulta de pedidos',
-                        icon: 'img/ic_assignment_black_24px.svg'
-
-                    },
-                    {
-                        href: '#/resumendecuenta',
-                        title: 'Resumen de cuenta',
-                        icon: 'img/ic_account_balance_black_24px.svg'
-
-                    }
-
-                ];
-            }]);
-
-</script>
-
+<script src="app.js"></script>
+<script src="controllers/loginController.js"></script>
 <script src="controllers/pedidoController.js"></script>
 <script src="controllers/consuController.js"></script>
 <script src="controllers/checkoutController.js"></script>
@@ -149,6 +65,7 @@
 <script src="services/enviarpedidoService.js"></script>
 <script src="services/marcasService.js"></script>
 <script src="services/cartService.js"></script>
+<script src="services/resuService.js"></script>
 
 </body>
 </html>
