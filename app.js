@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['ngMaterial', 'md.data.table', 'angularSpinner', 'ngRoute'])
+angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageModule'])
     .constant('config',
         {
             apiUrl: 'http://gruposerin.dyndns.org:8080/servicios/eikon.asmx'
@@ -17,8 +17,6 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'angularSpinner', 'ngRoute
     })
 
     .config(function ($routeProvider, $locationProvider, $sceProvider) {
-
-
 
         $routeProvider
             .when('/', {
@@ -45,8 +43,8 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'angularSpinner', 'ngRoute
                 templateUrl: 'views/pedidoofertas.html',
                 controller: 'pedidoCtrl'
             })
-            .when('/pedidopormiscomprasfrecuentes', {
-                templateUrl: 'views/pedidopormiscomprasfrecuentes.html',
+            .when('/pedidomiscomprasfrecuentes', {
+                templateUrl: 'views/pedidomiscomprasfrecuentes.html',
                 controller: 'pedidoCtrl'
             })
             .when('/checkout', {
@@ -68,11 +66,14 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'angularSpinner', 'ngRoute
         $locationProvider.html5Mode(true);
         //$sceProvider.enabled(false);
     })
-    .controller('indexCtrl', ['$scope', '$mdSidenav', function ($scope, $mdSidenav, $route, $routeParams, $location) {
+    .controller('indexCtrl', ['$scope', '$mdSidenav', '$routeParams', '$route', function ($scope, $mdSidenav, $route, $routeParams) {
 
             $scope.showSidebar = function () {
-                console.log($routeParams);
-                if ($routeParams == '/login') {
+
+                var ruta = $routeParams;
+                console.log(ruta.current.loadedTemplateUrl);
+
+                if (ruta.current.loadedTemplateUrl == 'views/login.html') {
                     return false;
                 } else {
                     return true;
@@ -85,7 +86,7 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'angularSpinner', 'ngRoute
 
             $scope.menu = [
                 {
-                    href: './pedidoporcategorias',
+                    href: './pedidoporcategoria',
                     title: 'Pedidos por categoria',
                     icon: 'img/ic_add_shopping_cart_black_24px.svg'
 

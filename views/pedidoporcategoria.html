@@ -1,4 +1,4 @@
-<md-content flex style="border: 1px solid firebrick;" layout="column">
+<md-content flex style="border: 1px solid firebrick;" layout="column" data-ng-init="buscarporcategorias()">
     <md-toolbar>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
@@ -23,3 +23,26 @@
 
             <div ng-include="'views/producto.html'"></div>
 </md-content>
+
+
+        <!-- Este div es para el carro de productos del Cliente -->
+        <md-content flex-xs="none" flex-gt-xs="50" layout-align="end" flex-order-xs="-1" layout="column">
+            <md-content flex hide show-gt-xs class="itemspedido">
+                <div ng-include="'views/itempedido.html'"></div>
+            </md-content>
+
+
+            <md-content layout-padding flex="none" ng-style={"background-color":"red","color":"white"}>
+
+                <span ng-model="preneto">Neto: {{preneto | currency}}</span>
+                <span ng-model="iva">IVA: {{iva | currency}}</span>
+                <span ng-model="itemsummary">Items: {{itemsummary}}</span>
+                <span ng-model="total">Total: {{total | currency}}</span>
+                <md-icon md-svg-src="img/ic_shopping_cart_white_24px.svg"></md-icon>
+
+            </md-content>
+
+        </md-content><!-- fin carro cliente -->
+
+        </md-content>
+    </md-content>

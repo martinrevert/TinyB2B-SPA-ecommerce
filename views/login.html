@@ -1,7 +1,7 @@
 <md-content class="well">
 
     <div class="alert alert-info" ng-hide="authenticationError">
-        Ingrese su usuario y password para ingresar
+        Ingrese su usuario y password
     </div>
 
     <div class="alert alert-danger" ng-show="authenticationError">
@@ -10,7 +10,7 @@
 
     <form name="authForm" layout-align="center center" novalidate>
         <md-input-container  class="md-block">
-            <label>Username</label>
+            <label>Usuario</label>
             <input type="text" name="usuario" class="form-control" ng-model="usuario" required />
        </md-input-container>
         <md-input-container layout-align="center center" class="md-block">

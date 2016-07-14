@@ -2,7 +2,7 @@
  * Created by martin on 09/05/16.
  */
 
-angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, marcasSrv, usSpinnerService, cartSrv) {
+angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, marcasSrv, cartSrv) {
 
     // Aqui hay que llamar a un servicio para recuperar usuario, pass y cliente de la session.
 
@@ -28,7 +28,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
     $scope.preneto = cartSrv.getPrecioNeto();
     $scope.iva = cartSrv.getIva();
 
-    $scope.updatetotales = function(){
+    $scope.updatetotales = function () {
         $scope.itemsummary = cartSrv.getItems();
         $scope.total = cartSrv.getPrecioTotalDescuento();
         $scope.preneto = cartSrv.getPrecioNeto();
@@ -65,15 +65,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.productos = [];
         $scope.mostrarmarcas = true;
 
-        /*  $scope.startSpin = function () {
-         usSpinnerService.spin('spinner-1');
-         }; */
-
         marcasSrv.async("martin", "dycsa").then(function (d) {
-            /* $scope.stopSpin = function () {
-             usSpinnerService.stop('spinner-1');
-             };*/
-
             $scope.marcas = d.data;
         });
 
@@ -81,9 +73,6 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
             console.log(codigo);
             $scope.mostrarmarcas = false;
             productosSrv.async("martin", "dycsa", "1799", "M", codigo).then(function (d) {
-                $scope.stopSpin = function () {
-                    usSpinnerService.stop('spinner-1');
-                };
                 $scope.productos = d.data;
             });
         };
@@ -95,32 +84,11 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.productos = [];
         $scope.search = function (val) {
             productosSrv.async("martin", "dycsa", "1799", "C", val).then(function (d) {
-                $scope.stopSpin = function () {
-                    usSpinnerService.stop('spinner-1');
-                };
+
+
                 $scope.productos = d.data;
             });
         }
 
     };
-
-
-    $scope.selectTab = function (tab) {
-        console.log(tab);
-        switch (tab) {
-            case 0:
-                $scope.buscarporcategorias();
-                break;
-            case 1:
-                $scope.buscarpordescripcion();
-                break;
-            case 2:
-                $scope.buscarporcodigo();
-                break;
-            default:
-            //DEFAULT
-        }
-
-    };
-
 });
