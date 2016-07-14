@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageModule'])
+angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageModule', 'angular-loading-bar', 'ngAnimate'])
     .constant('config',
         {
             apiUrl: 'http://gruposerin.dyndns.org:8080/servicios/eikon.asmx'
@@ -15,7 +15,9 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
             });
         };
     })
-
+    .config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
+        cfpLoadingBarProvider.includeSpinner = false;
+    }])
     .config(function ($routeProvider, $locationProvider, $sceProvider) {
 
         $routeProvider

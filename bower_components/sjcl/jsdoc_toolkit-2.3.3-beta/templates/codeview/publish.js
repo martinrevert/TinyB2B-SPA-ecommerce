@@ -73,7 +73,7 @@ function publish(symbolSet) {
 	Link.base = "../";
  	publish.classesIndex = classesTemplate.process(classes); // kept in memory
 	
-	// create each of the class views
+	// create each of the class pages
 	for (var i = 0, l = classes.length; i < l; i++) {
 		var symbol = classes[i];
 		
@@ -86,7 +86,7 @@ function publish(symbolSet) {
 		IO.saveFile(publish.conf.outDir+"symbols/", ((JSDOC.opt.u)? Link.filemap[symbol.alias] : symbol.alias) + publish.conf.ext, output);
 	}
 	
-	// regenerate the index with different relative links, used in the index views
+	// regenerate the index with different relative links, used in the index pages
 	Link.base = "";
 	publish.classesIndex = classesTemplate.process(classes);
 	

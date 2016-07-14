@@ -47,15 +47,10 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
 
     $scope.buscarpordescripcion = function () {
         $scope.productos = [];
-        /*   $scope.startSpin = function () {
-         usSpinnerService.spin('spinner-1');
-         }; */
 
         $scope.search = function (val) {
             productosSrv.async("martin", "dycsa", "1799", "N", val).then(function (d) {
-                $scope.stopSpin = function () {
-                    usSpinnerService.stop('spinner-1');
-                };
+                
                 $scope.productos = d.data;
             });
         }
