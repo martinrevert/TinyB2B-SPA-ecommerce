@@ -1,6 +1,12 @@
+/*
 body {
     font-family: 'Roboto', sans-serif;
     background: #f7f7f7;
+}*/
+
+md-sidenav {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: smaller;
 }
 
 md-sidenav.md-locked-open {
@@ -10,11 +16,14 @@ md-sidenav.md-locked-open {
 }
 
 .tile {
-    font-size: small;
     font-style: bold;
     vertical-align: top;
     text-align: center;
-
+    border-radius: 25px;
+    background-color: #3F51B5;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: small;
+    color: #ffffff;
 }
 
 .itempedido input[type="number"] {
