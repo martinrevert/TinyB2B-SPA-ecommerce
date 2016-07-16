@@ -11,7 +11,12 @@
 
     </md-toolbar>
     <md-content flex layout-xs="column" layout="row" layout-align="center">
+        <md-button ng-show="mostrarfloat" class="md-fab md-primary md-fab-bottom-right" aria-label="Ver categorias">
+            <md-icon md-svg-src="img/icons/android.svg"></md-icon>
+        </md-button>
+
         <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" class="productos" layout-margin>
+
             <md-grid-list ng-show="mostrarmarcas" md-cols-sm="2" md-cols-xs="2" md-cols-gt-sm="3"
                           md-gutter="1em"
                           md-row-height="3rem">
@@ -22,9 +27,9 @@
             </md-grid-list>
 
             <div ng-include="'views/producto.html'"></div>
+
+
         </md-content>
-
-
         <!-- Este div es para el carro de productos del Cliente -->
         <md-content flex-xs="none" flex-gt-xs="50" layout-align="end" flex-order-xs="-1" layout="column">
             <md-content flex hide show-gt-xs class="itemspedido">
@@ -45,4 +50,3 @@
         </md-content><!-- fin carro cliente -->
 
     </md-content>
-</md-content>

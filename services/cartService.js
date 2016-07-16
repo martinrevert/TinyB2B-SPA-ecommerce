@@ -98,6 +98,19 @@ app.factory("cartSrv", function () {
             return total;
 
         },
+        getPrecioTotalDescuentoIVA: function (){
+
+            var total = 0;
+            for (var i = 0; i < cartData.pedido.productos.length; i++) {
+                if(cartData.pedido.productos[i].uventa == '1') {
+                    total += (cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].cantidad);
+                }else{
+                    total += (cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad);
+                }
+            }
+            return total;
+
+        },
         getIva: function (){
 
             var total = 0;

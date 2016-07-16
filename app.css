@@ -4,6 +4,8 @@ body {
     background: #f7f7f7;
 }*/
 
+
+
 md-sidenav {
     font-family: 'Archivo Narrow', sans-serif;
     font-size: smaller;
@@ -20,8 +22,8 @@ md-sidenav.md-locked-open {
     vertical-align: top;
     text-align: center;
     border-radius: 25px;
-    background-color: #3F51B5;
-    font-family: 'Archivo Narrow', sans-serif;
+    background-color: #C06605;
+    font-family: 'Roboto', sans-serif;
     font-size: small;
     color: #ffffff;
 }
@@ -36,11 +38,6 @@ md-content.md-default-theme, md-content {
     /*  background-color: lightgrey; */
 }
 
-div.productos {
 
-    /* background-color: red;
-     overflow: auto;
- */
-}
 
 
