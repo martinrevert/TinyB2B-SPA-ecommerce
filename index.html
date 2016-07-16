@@ -18,7 +18,8 @@
 <md-sidenav ng-if="showSidebar()" layout="column" layout-fill
             class="md-sidenav-left md-whiteframe-z2 md-navigation-drawer"
             md-component-id="left"
-            md-is-locked-open="$mdMedia('gt-md')">
+            md-is-locked-open="$mdMedia('gt-md')"
+            ng-cloak>
 
     <md-toolbar class="md-hue-2 md-tall">
         <span flex></span>
@@ -43,7 +44,7 @@
     </md-list>
 </md-sidenav>
 <!-- Aqui va la directiva ng-view -->
-<ng-view layout="column" layout-fill></ng-view>
+<ng-view ng-cloak layout="column" layout-fill></ng-view>
 <!--Aqui termina la directiva ng-view-->
 
 <script src="bower_components/angular/angular.min.js"></script>
@@ -60,7 +61,7 @@
 <script src="app.js"></script>
 <script src="controllers/loginController.js"></script>
 <script src="controllers/pedidoController.js"></script>
-<script src="controllers/consuController.js"></script>
+<script src="controllers/oldndvController.js"></script>
 <script src="controllers/checkoutController.js"></script>
 <script src="controllers/resuController.js"></script>
 <script src="services/productosService.js"></script>

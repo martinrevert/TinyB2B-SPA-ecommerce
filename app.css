@@ -3,8 +3,9 @@ body {
     font-family: 'Roboto', sans-serif;
     background: #f7f7f7;
 }*/
-
-
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
 
 md-sidenav {
     font-family: 'Archivo Narrow', sans-serif;
