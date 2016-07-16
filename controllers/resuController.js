@@ -7,11 +7,17 @@
 
 angular.module('app').controller('resuCtrl', function ($scope, resuSrv) {
 
+    $scope.selected = [];
     resuSrv.async("roberto", "dycsa", "1799").then(function (d) {
 
             $scope.comprobantes = d.data;
         }
     );
-
+    $scope.getPdf = function(numero){
+      console.log(numero);
+    };
+   /* if($scope.selected.length > 0) {
+        console.log(selected);
+    }*/
 
 });
