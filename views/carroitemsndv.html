@@ -1,0 +1,11 @@
+<md-content flex hide show-gt-xs class="itemspedido">
+    <div ng-include="'views/itempedido.html'"></div>
+</md-content>
+
+<md-content class="totales" layout-padding flex="none">
+
+    <span ng-model="preneto">Neto: {{preneto | currency}}</span>
+    <span ng-model="iva">IVA: {{iva | currency}}</span>
+    <span ng-model="total">Total: {{total | currency}}</span>
+
+</md-content>

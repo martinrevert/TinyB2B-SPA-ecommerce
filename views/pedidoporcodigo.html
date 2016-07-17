@@ -4,8 +4,12 @@
             <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
                 <md-icon md-svg-src="img/menu.svg"></md-icon>
             </md-button>
-            <h1>Pedido de productos por código</h1>
+            <h2>Por código</h2>
             <span flex></span>
+            <md-button md-fab md-primary href="./checkout">
+                <md-icon class="badge" data-badge="{{itemsummary}}"
+                         md-svg-src="img/ic_shopping_cart_white_24px.svg"></md-icon>
+            </md-button>
 
         </div>
 
@@ -20,30 +24,17 @@
                        search>
             </md-input-container>
 
-            <div layout="column" layout-fill layout-align="center center" ng-if="productos == 0">No hay productos para mostrar</div>
+            <div layout="column" layout-fill layout-align="center center" ng-if="productos == 0">No hay productos para
+                mostrar
+            </div>
 
             <div ng-include="'views/producto.html'"></div>
         </md-content>
 
+        <md-content ng-include="'views/carroitemsndv.html'" flex-xs="none" flex-gt-xs="50" layout-align="end"
+                    flex-order-xs="-1" layout="column">
 
-        <!-- Este div es para el carro de productos del Cliente -->
-        <md-content flex-xs="none" flex-gt-xs="50" layout-align="end" flex-order-xs="-1" layout="column">
-            <md-content flex hide show-gt-xs class="itemspedido">
-                <div ng-include="'views/itempedido.html'"></div>
-            </md-content>
-
-
-            <md-content layout-padding flex="none" ng-style={"background-color":"red","color":"white"}>
-
-                <span ng-model="preneto">Neto: {{preneto | currency}}</span>
-                <span ng-model="iva">IVA: {{iva | currency}}</span>
-                <span ng-model="itemsummary">Items: {{itemsummary}}</span>
-                <span ng-model="total">Total: {{total | currency}}</span>
-                <md-icon md-svg-src="img/ic_shopping_cart_white_24px.svg"></md-icon>
-
-            </md-content>
-
-        </md-content><!-- fin carro cliente -->
+        </md-content>
 
     </md-content>
 </md-content>

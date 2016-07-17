@@ -7,6 +7,32 @@ body {
     display: none !important;
 }
 
+.totales {
+    background-color: red;
+    color: white;
+    font-size: 0.6em;
+}
+
+.badge {
+    position: relative;
+}
+
+.badge[data-badge]:after {
+    content: attr(data-badge);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: .7em;
+    background: red;
+    color: white;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #333;
+}
+
 md-sidenav {
     font-family: 'Archivo Narrow', sans-serif;
     font-size: smaller;
