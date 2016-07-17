@@ -1,12 +1,66 @@
-<div layout="column" layout-fill">
 <md-toolbar>
     <div class="md-toolbar-tools">
         <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
             <md-icon md-svg-src="img/menu.svg"></md-icon>
         </md-button>
-        <h1>Consulta de pedidos</h1>
+        <h2>Consulta de pedidos</h2>
         <span flex></span>
-
     </div>
 </md-toolbar>
+<div layout="row" layout-xs="column" layout-fill>
+
+<md-table-container flex>
+    <table md-table >
+        <thead md-head>
+        <tr md-row>
+            <th md-column><span><b>EMPRESA</b></span></th>
+            <th md-column><span><b>NUMERO</b></span></th>
+            <th md-column><b>FECHA</b></th>
+            <th md-column><b>PRECIO TOTAL</b></th>
+            <th md-column md-numeric><b>PESO KG.</b></th>
+
+        </tr>
+        </thead>
+        <tbody md-body>
+        <tr md-row  ng-click="getItems(pedido.emp, pedido.numero)" ng-repeat="pedido in ndvs">
+            <td md-cell>{{pedido.emp}}</td>
+            <td md-cell>{{pedido.numero}}</td>
+            <td md-cell>{{pedido.fecha | limitTo : 10 : 0 }}</td>
+            <td md-cell>{{pedido.total | currency}}</td>
+            <td md-cell>{{pedido.kilos}}</td>
+
+        </tr>
+        </tbody>
+    </table>
+</md-table-container>
+
+    <hr></hr>
+
+<md-table-container flex>
+    <table md-table>
+        <thead md-head>
+        <tr md-row>
+            <th md-column><span><b>PRODUCTO</b></span></th>
+            <th md-column><span><b>DESCRIPCION</b></span></th>
+            <th md-column><b>CANT.</b></th>
+            <th md-column><b>PRECIO</b></th>
+           <!--      <th md-column md-numeric><b>IMPORTE</b></th>
+                 <th md-column md-numeric><b>SALDO</b></th>
+                 <th md-column md-numeric><b>DESCUENTO</b></th> -->
+        </tr>
+        </thead>
+        <tbody md-body>
+        <tr md-row ng-repeat="item in items">
+            <td md-cell>{{item.producto}}</td>
+            <td md-cell>{{item.descripcion}}</td>
+            <td md-cell>{{item.cantfact}}</td>
+            <td md-cell>{{item.precio | currency}}</td>
+           <!--    <td md-cell>{{comprobante.importe | currency}}</td>
+               <td md-cell>{{comprobante.saldo | currency}}</td>
+               <td md-cell>{{comprobante.descuento | currency}}</td> -->
+        </tr>
+        </tbody>
+    </table>
+</md-table-container>
+
 </div>

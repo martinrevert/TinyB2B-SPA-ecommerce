@@ -59,7 +59,7 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
             })
             .when('/consultadepedidos', {
                 templateUrl: 'views/consultadepedidos.html',
-                controller: 'consuCtrl'
+                controller: 'oldndvCtrl'
             })
             .when('/resumendecuenta', {
                 templateUrl: 'views/resumendecuenta.html',

@@ -7,6 +7,14 @@ body {
     display: none !important;
 }
 
+table.md-table th.md-column {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+
+}
+
 .totales {
     background-color: red;
     color: white;
