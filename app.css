@@ -12,7 +12,7 @@ table.md-table th.md-column {
     font-size: 12px;
     font-weight: bold;
     white-space: nowrap;
-
+/* Aqui se puede cambiar el color del HD de las tablas */
 }
 
 .totales {
