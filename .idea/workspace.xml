@@ -205,16 +205,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/pdfjs-dist/web/images/annotation-paragraph.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/pdfjs-dist/web/pdf_viewer.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/pdfjs-dist/web/pdf_viewer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/oldndvService.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/controllers/consuController.js" afterPath="$PROJECT_DIR$/controllers/oldndvController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.css" afterPath="$PROJECT_DIR$/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-material-data-table/dist/md-data-table.css" afterPath="$PROJECT_DIR$/bower_components/angular-material-data-table/dist/md-data-table.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/consultadepedidos.html" afterPath="$PROJECT_DIR$/views/consultadepedidos.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pedidoporcategoria.html" afterPath="$PROJECT_DIR$/views/pedidoporcategoria.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/resumendecuenta.html" afterPath="$PROJECT_DIR$/views/resumendecuenta.html" />
     </list>
     <ignored path="materialSerin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -724,7 +716,7 @@
       <workItem from="1468425169174" duration="688000" />
       <workItem from="1468437462971" duration="1303000" />
       <workItem from="1468438793925" duration="8918000" />
-      <workItem from="1468532351122" duration="41954000" />
+      <workItem from="1468532351122" duration="42080000" />
     </task>
     <task id="LOCAL-00001" summary="- Commit inicial">
       <created>1462994259038</created>
@@ -915,11 +907,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468740866001</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="- Implementación consulta de ndv históricas&#10;&#10;&#10;&#10;&#10;">
+      <created>1468788961235</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1468788961235</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383588000" />
+    <option name="totallyTimeSpent" value="383714000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -996,7 +995,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="- Correccion sidenav que tiraba abajo el area main&#10;- Fix funcionamiento de menu hamburguesa" />
     <MESSAGE value="- Corrección servicio de consulta de productos que no disparaba respuesta.&#10;- Corrección controler de prueba de productos para recibir el resultado del disparo del servicio." />
     <MESSAGE value="- Corrección servicio de productos, ahora solo entrega promise y el controlador es el encargado de abriri los datos del promise result.data o d.data.&#10;- Se agraga librería jspdf para implementar confección de lista total de precios&#10;- Se agrega encriptador sjcl" />
     <MESSAGE value="- Se agrega librería jspdf para implementar confección de lista total de precios&#10;- Se agrega encriptador/desencriptador sjcl" />
@@ -1021,7 +1019,8 @@
     <MESSAGE value="- Resumen de cuenta: Seleccion y pasaje de comprobante a scope. Falta servicio para conectar a descarga pdf y ver cómo se decodifica (si es que hace falta).&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Implementación tentativa de set empty en busquedas de productos y llamadas con posibilidad de lista vacía&#10;- ng-cloak implementado de acuerdo a documentación&#10;&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Modularizacion items carro y totales&#10;- Achicado font totales&#10;- Button carro en Toolbar&#10;&#10;&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Modularizacion items carro y totales&#10;- Achicado font totales&#10;- Button carro en Toolbar&#10;&#10;&#10;&#10;&#10;" />
+    <MESSAGE value="- Implementación consulta de ndv históricas&#10;&#10;&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implementación consulta de ndv históricas&#10;&#10;&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
