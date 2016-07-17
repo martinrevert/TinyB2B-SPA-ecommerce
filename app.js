@@ -49,9 +49,9 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
                 templateUrl: 'views/pedidomiscomprasfrecuentes.html',
                 controller: 'pedidoCtrl'
             })
-            .when('/listadeprecios', {
-                templateUrl: 'views/listadeprecios.html',
-                controller: 'listadepreciosCtrl'
+            .when('/listaprecios', {
+                templateUrl: 'views/listaprecios.html',
+                controller: 'listapreciosCtrl'
             })
             .when('/checkout', {
                 templateUrl: 'views/checkout.html',
@@ -122,7 +122,7 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
 
                 },
                 {
-                    href: './listadeprecios',
+                    href: './listaprecios',
                     title: 'Lista de precios',
                     icon: 'img/ic_attach_money_black_24px.svg'
 

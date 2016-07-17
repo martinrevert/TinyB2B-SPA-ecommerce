@@ -1,0 +1,42 @@
+<div layout="column" layout-fill">
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
+            <md-icon md-svg-src="img/menu.svg"></md-icon>
+        </md-button>
+        <h2>Lista de precios</h2>
+        <span flex></span>
+    </div>
+</md-toolbar>
+<md-content>
+
+    <md-table-container>
+        <table md-table>
+            <thead md-head>
+            <tr md-row>
+                <th md-column><span><b>EMPRESA</b></span></th>
+                <th md-column><span><b>CODIGO</b></span></th>
+                <th md-column><b>DESCRIPCION</b></th>
+                <th md-column><b>NETO</b></th>
+                <th md-column><b>DESCUENTO</b></th>
+                <th md-column><b>PRECIO FINAL</b></th>
+
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row  ng-repeat="producto in productos">
+                <td md-cell>{{producto.emp}}</td>
+                <td md-cell>{{producto.codigo}}</td>
+                <td md-cell>{{producto.descripcion}}</td>
+                <td md-cell>{{producto.preneto | currency}}</td>
+                <td md-cell>{{producto.bonif}}</td>
+                <td md-cell>{{producto.preneto_con_descuento | currency}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+
+</md-content>
+</div>
