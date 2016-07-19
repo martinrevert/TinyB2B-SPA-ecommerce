@@ -10,6 +10,14 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
+      <webServer id="15fd90a1-3ecd-43a6-8054-9bec1c9b2250" name="Serin" url="http://200.58.118.189">
+        <fileTransfer host="200.58.118.189" port="21" username="gruposer">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

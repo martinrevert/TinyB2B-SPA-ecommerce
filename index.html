@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link href="bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet"
           type="text/css"/>
-    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.min.css" type="text/css"
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" type="text/css"
           media="all"/>
     <link rel="stylesheet" href="app.css">
 </head>
@@ -23,12 +23,11 @@
 
     <md-toolbar class="md-hue-2 md-tall">
         <span flex></span>
-        <div layout="row" layout-align="start center">
-            <!--  <md-icon class="md-avatar" md-svg-icon="avatars:svg-1"></md-icon> -->
-            <span flex></span>
+        <div layout="row" layout-align="center center">
+            <img class="logo" src="img/logo_grupo_serin.png"></img>
         </div>
         <span flex></span>
-        <div class="md-body-2">Usuario</div>
+        <div class="md-body-2" layout="row" layout-align="center end">Usuario</div>
 
     </md-toolbar>
 
@@ -37,15 +36,15 @@
                       ng-click="toggleSidenav('left')">
             <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
             <div class="md-list-item-text">
-                <!-- aqui va link menu hacia ruta en ngRoute -->
                 <span class="md-body-2">{{item.title}}</span>
             </div>
+            <md-divider></md-divider>
         </md-list-item>
     </md-list>
 </md-sidenav>
-<!-- Aqui va la directiva ng-view -->
+<!-- ng-view -->
 <ng-view ng-cloak layout="column" layout-fill></ng-view>
-<!--Aqui termina la directiva ng-view-->
+<!-- ng-view -->
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>

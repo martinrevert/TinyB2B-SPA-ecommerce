@@ -77,7 +77,6 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
             $scope.showSidebar = function () {
 
                 var ruta = $routeParams;
-                console.log(ruta.current.loadedTemplateUrl);
 
                 if (ruta.current.loadedTemplateUrl == 'views/login.html') {
                     return false;
@@ -89,6 +88,7 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
             $scope.toggleSidenav = function (menuId) {
                 $mdSidenav(menuId).toggle();
             };
+
 
             $scope.menu = [
                 {

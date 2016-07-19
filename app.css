@@ -7,6 +7,26 @@ body {
     display: none !important;
 }
 
+img {
+    display: block;
+    width: 20% !important;
+    height: 20% !important;
+}
+
+.producto > div.descripcion{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.producto > div.codigo{
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+.producto div .md-button{
+    font-size: 0.7rem;
+}
+
 table.md-table th.md-column {
     color: rgba(0, 0, 0, 0.54);
     font-size: 12px;
@@ -16,9 +36,13 @@ table.md-table th.md-column {
 }
 
 .totales {
+    font-family: 'Archivo Narrow', sans-serif;
     background-color: red;
     color: white;
-    font-size: 0.6em;
+    font-size: 0.8rem;
+    font-weight: bold;
+    word-wrap: break-word;
+
 }
 
 .badge {
@@ -59,7 +83,7 @@ md-sidenav.md-locked-open {
     border-radius: 25px;
     background-color: #C06605;
     font-family: 'Roboto', sans-serif;
-    font-size: small;
+    font-size: 0.8rem;
     color: #ffffff;
 }
 

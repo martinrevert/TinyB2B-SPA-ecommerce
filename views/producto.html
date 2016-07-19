@@ -1,9 +1,9 @@
-<md-card class="producto" ng-repeat="producto in productos">
+<div class="producto" ng-repeat="producto in productos">
 
-        <p><b>{{producto.descripcion}}</b></p>
-        <p>Código {{producto.codigo}}</p>
+    <div class="descripcion">{{producto.descripcion}}</div>
+    <div class="codigo">Código {{producto.codigo}}</div>
 
-    <md-card-actions layout="column" layout-align="end end">
+    <div layout="row" layout-align="end end">
         <md-button
                 ng-click="addProduct(producto.codigo, producto.descripcion, producto.bonif, producto.bonif, 1, producto.emp, producto.factor, producto.iva, producto.medida1, producto.medida1, producto.medida2, producto.peso, producto.precio_final_con_iva, producto.preneto, producto.preneto_con_descuento, producto.tipo_precio, producto.uventa)"
                 ng-if="producto.uventa == '1'" class="md-raised">Comprar x {{producto.medida1}}:
@@ -24,6 +24,7 @@
                 ng-if="producto.uventa == '3'" class="md-raised">Comprar x {{producto.medida2}}:
             {{producto.preneto_con_descuento * producto.factor | currency}}
         </md-button>
-    </md-card-actions>
+    </div>
+    <md-divider></md-divider>
+</div>
 
-</md-card>

@@ -28,11 +28,13 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
     $scope.preneto = cartSrv.getPrecioTotalDescuento();
     $scope.iva = cartSrv.getIva();
 
+
     $scope.updatetotales = function () {
         $scope.itemsummary = cartSrv.getItems();
         $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
         $scope.preneto = cartSrv.getPrecioTotalDescuento();
         $scope.iva = cartSrv.getIva();
+
     };
 
 
@@ -42,6 +44,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
         $scope.preneto = cartSrv.getPrecioTotalDescuento();
         $scope.iva = cartSrv.getIva();
+
 
     };
 

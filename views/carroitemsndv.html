@@ -2,10 +2,10 @@
     <div ng-include="'views/itempedido.html'"></div>
 </md-content>
 
-<md-content class="totales" layout-padding flex="none">
+<md-content class="totales"  layout="row" layout-padding flex="none">
 
-    <span ng-model="preneto">Neto: {{preneto | currency}}</span>
-    <span ng-model="iva">IVA: {{iva | currency}}</span>
-    <span ng-model="total">Total: {{total | currency}}</span>
+    <div ng-model="preneto" flex="33">Neto: {{preneto | currency}}</div>
+    <div ng-model="iva" flex="33" >IVA: {{iva | currency}}</div>
+    <div ng-model="total" flex="33">Total: {{total | currency}}</div>
 
 </md-content>

@@ -1,6 +1,10 @@
-<md-content class="well">
+<md-content layout="column">
 
-    <div class="alert alert-info" ng-hide="authenticationError">
+    <div layout="row" layout-align="center center" layout-gt-xs="">
+        <img layout-padding src="img/logo_grupo_serin_g.png"></img>
+    </div>
+
+    <div flex class="alert alert-info" ng-hide="authenticationError">
         Ingrese su usuario y password
     </div>
 
@@ -8,21 +12,21 @@
         Error Autenticacion ({{authenticationError.status}}). Pruebe de nuevo.
     </div>
 
-    <form name="authForm" layout-align="center center" novalidate>
-        <md-input-container  class="md-block">
+    <form name="authForm" flex layout-align="center center" novalidate>
+        <md-input-container class="md-block">
             <label>Usuario</label>
-            <input type="text" name="usuario" class="form-control" ng-model="usuario" required />
-       </md-input-container>
+            <input type="text" name="usuario" class="form-control" ng-model="usuario" required/>
+        </md-input-container>
         <md-input-container layout-align="center center" class="md-block">
             <label>Password</label>
             <input name="password" type="password" class="form-control"
-                   ng-model="password" required />
+                   ng-model="password" required/>
         </md-input-container>
-        <div class="text-center">
+        <div layout="row" layout-align="center center">
             <md-button ng-click="authenticate(usuario, password)"
-                    ng-disabled="authForm.$invalid"
-                    class="md-raised">
-                Log In
+                       ng-disabled="authForm.$invalid"
+                       class="md-raised">
+                INGRESAR
             </md-button>
         </div>
     </form>
