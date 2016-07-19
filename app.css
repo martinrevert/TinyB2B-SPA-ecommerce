@@ -6,12 +6,20 @@ body {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
 }
+/*
+.login div{
+    display: block;
+    height: 30%;
+    width: 30%;
+}
 
-img {
+.login div img {
     display: block;
     width: 20% !important;
     height: 20% !important;
 }
+
+*/
 
 .producto > div.descripcion{
     font-size: 0.8rem;
