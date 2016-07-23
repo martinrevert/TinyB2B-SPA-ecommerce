@@ -1,14 +1,18 @@
 /**
  * Created by martin on 22/06/16.
  */
-//Todo lógica sidebar
-//Todo service para consumir servicio de resumen
+
 //Todo service para decodificar PDFs
 
-angular.module('app').controller('resuCtrl', function ($scope, resuSrv) {
+angular.module('app').controller('resuCtrl', function ($scope, resuSrv, $storage) {
+
+    var tablausuario = $storage('tablaUsuario');
+    var usuario = tablausuario.getItem('usuario');
+    var pass = tablausuario.getItem('pass');
+    var cliente = tablausuario.getItem('cliente');
 
     $scope.selected = [];
-    resuSrv.async("roberto", "dycsa", "1799").then(function (d) {
+    resuSrv.async(usuario, pass, cliente).then(function (d) {
 
             $scope.comprobantes = d.data;
         }

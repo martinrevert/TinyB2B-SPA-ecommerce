@@ -8,15 +8,28 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
 
     $scope.cart = cartSrv.getProducts();
 
-    $scope.eliminarItem = function(){
+    $scope.eliminarItem = function () {
         cartSrv.removeProduct();
+        $scope.itemsummary = cartSrv.getItems();
+        $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
+        $scope.preneto = cartSrv.getPrecioTotalDescuento();
+        $scope.iva = cartSrv.getIva();
     };
-    
-    $scope.checkout = function(){
+
+    $scope.updatetotales = function () {
+        $scope.itemsummary = cartSrv.getItems();
+        $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
+        $scope.preneto = cartSrv.getPrecioTotalDescuento();
+        $scope.iva = cartSrv.getIva();
+        cartSrv.changeQuantity();
+
+    };
+
+    $scope.checkout = function () {
         var pedido = cartSrv.getPedido();
 
         enviarpedidoSrv.async(pedido);
-    }
+    };
 
 
 });

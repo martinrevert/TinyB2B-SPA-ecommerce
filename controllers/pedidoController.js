@@ -2,9 +2,12 @@
  * Created by martin on 09/05/16.
  */
 
-angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, marcasSrv, cartSrv) {
+angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, marcasSrv, cartSrv, $storage) {
 
-    // Aqui hay que llamar a un servicio para recuperar usuario, pass y cliente de la session.
+    var tablausuario = $storage('tablaUsuario');
+    var usuario = tablausuario.getItem('usuario');
+    var pass = tablausuario.getItem('pass');
+    var cliente = tablausuario.getItem('cliente');
 
     console.log(cartSrv.getProducts());
 
@@ -28,15 +31,14 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
     $scope.preneto = cartSrv.getPrecioTotalDescuento();
     $scope.iva = cartSrv.getIva();
 
-
     $scope.updatetotales = function () {
         $scope.itemsummary = cartSrv.getItems();
         $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
         $scope.preneto = cartSrv.getPrecioTotalDescuento();
         $scope.iva = cartSrv.getIva();
+        cartSrv.changeQuantity();
 
     };
-
 
     $scope.addProduct = function (codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa) {
         cartSrv.addProduct(codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa);
@@ -45,14 +47,13 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.preneto = cartSrv.getPrecioTotalDescuento();
         $scope.iva = cartSrv.getIva();
 
-
     };
 
     $scope.buscarpordescripcion = function () {
         $scope.productos = [];
 
         $scope.search = function (val) {
-            productosSrv.async("martin", "dycsa", "1799", "N", val).then(function (d) {
+            productosSrv.async(usuario, pass, cliente, "N", val).then(function (d) {
 
                 $scope.productos = d.data;
             });
@@ -64,7 +65,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.mostrarmarcas = true;
         $scope.mostrarfloat = false;
 
-        marcasSrv.async("martin", "dycsa").then(function (d) {
+        marcasSrv.async(usuario, pass).then(function (d) {
             $scope.marcas = d.data;
         });
 
@@ -72,7 +73,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
             console.log(codigo);
             $scope.mostrarmarcas = false;
             $scope.mostrarfloat = true;
-            productosSrv.async("martin", "dycsa", "1799", "M", codigo).then(function (d) {
+            productosSrv.async(usuario, pass, cliente, "M", codigo).then(function (d) {
                 $scope.productos = d.data;
             });
         };
@@ -83,7 +84,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
     $scope.buscarporcodigo = function () {
         $scope.productos = [];
         $scope.search = function (val) {
-            productosSrv.async("martin", "dycsa", "1799", "C", val).then(function (d) {
+            productosSrv.async(usuario, pass, cliente, "C", val).then(function (d) {
                 $scope.productos = d.data;
             });
         }
@@ -94,7 +95,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
 
         $scope.productos = [];
 
-        productosSrv.async("martin", "dycsa", "1799", "O", "A").then(function (d) {
+        productosSrv.async(usuario, pass, cliente, "O", "A").then(function (d) {
             $scope.productos = d.data;
         });
     };
@@ -103,7 +104,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
 
         $scope.productos = [];
 
-        productosSrv.async("martin", "dycsa", "1799", "P", "A").then(function (d) {
+        productosSrv.async(usuario, pass, cliente, "P", "A").then(function (d) {
             $scope.productos = d.data;
         });
     };

@@ -1,26 +1,38 @@
 var app = angular.module('app');
 
-app.factory("cartSrv", function () {
+app.factory("cartSrv", function ($storage) {
 
-    // var cartData = [];
-    var cartData = {
-        "pedido": {
-            "anticipo": null,
-            "area": "C",
-            "codigocliente": "1799",
-            "direccionentrega": "AVELLANEDA 3183 Bº ALTA CORDOBA CORDOBA - CORDOBA CORDOBA",
-            "fechaentrega": "09/06/2016",
-            "fechaenvio": "09/06/2016",
-            "fpago": "2",
-            "observacionserin": null,
-            "observacionservet": null,
-            "ordendecompraserin": null,
-            "ordendecompraservet": null,
-            "usuario": "roberto",
-            "productos": []
-        }
-    };
+    var tablausuario = $storage('tablaUsuario');
+    var tablanotadeventa = $storage('tablanotadeventa');
+    var usuario = tablausuario.getItem('usuario');
+    var cliente = tablausuario.getItem('cliente');
+    var direccion = tablausuario.getItem('direccion');
+    var fpagocli = tablausuario.getItem('fpago');
 
+    if (tablanotadeventa.getItem('cartData') == null) {
+
+        var cartData = {
+            "pedido": {
+                "anticipo": null,
+                "area": "C",
+                "codigocliente": cliente,
+                "direccionentrega": direccion,
+                "fechaentrega": null,
+                "fechaenvio": null,
+                "fpago": fpagocli,
+                "observacionserin": null,
+                "observacionservet": null,
+                "ordendecompraserin": null,
+                "ordendecompraservet": null,
+                "usuario": usuario,
+                "productos": []
+            }
+        };
+        tablanotadeventa.setItem('cartData', cartData);
+
+    } else {
+        var cartData = tablanotadeventa.getItem('cartData');
+    }
 
     return {
 
@@ -44,6 +56,8 @@ app.factory("cartSrv", function () {
                     precioFinalConIva: precioFinalConIva, preneto: preneto, prenetoConDescuento: prenetoConDescuento,
                     tipo_precio: tipoprecio, uventa: uvent
                 });
+
+                tablanotadeventa.setItem('cartData', cartData);
             }
         },
 
@@ -51,9 +65,16 @@ app.factory("cartSrv", function () {
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
                 if (cartData.pedido.productos.codigo == id) {
                     cartData.pedido.productos.splice(i, 1);
+                    tablanotadeventa.setItem('cartData', cartData);
                     break;
                 }
             }
+        },
+
+        changeQuantity: function () {
+
+            tablanotadeventa.setItem('cartData', cartData);
+    
         },
 
         getProducts: function () {
@@ -72,52 +93,52 @@ app.factory("cartSrv", function () {
 
         },
 
-        getPrecioTotalDescuento: function (){
+        getPrecioTotalDescuento: function () {
 
             var total = 0;
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
-                if(cartData.pedido.productos[i].uventa == '1') {
+                if (cartData.pedido.productos[i].uventa == '1') {
                     total += (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].cantidad);
-                }else{
+                } else {
                     total += (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad);
                 }
             }
             return total;
 
         },
-        getPrecioNeto: function (){
+        getPrecioNeto: function () {
 
             var total = 0;
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
-                if(cartData.pedido.productos[i].uventa == '1') {
-                    total += (cartData.pedido.productos[i].preneto* cartData.pedido.productos[i].cantidad);
-                }else{
+                if (cartData.pedido.productos[i].uventa == '1') {
+                    total += (cartData.pedido.productos[i].preneto * cartData.pedido.productos[i].cantidad);
+                } else {
                     total += (cartData.pedido.productos[i].preneto * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad);
                 }
             }
             return total;
 
         },
-        getPrecioTotalDescuentoIVA: function (){
+        getPrecioTotalDescuentoIVA: function () {
 
             var total = 0;
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
-                if(cartData.pedido.productos[i].uventa == '1') {
+                if (cartData.pedido.productos[i].uventa == '1') {
                     total += (cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].cantidad);
-                }else{
+                } else {
                     total += (cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad);
                 }
             }
             return total;
 
         },
-        getIva: function (){
+        getIva: function () {
 
             var total = 0;
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
-                if(cartData.pedido.productos[i].uventa == '1') {
+                if (cartData.pedido.productos[i].uventa == '1') {
                     total += ((cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].cantidad) - (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].cantidad));
-                }else{
+                } else {
                     total += ((cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad) - (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad));
                 }
             }
