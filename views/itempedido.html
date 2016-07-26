@@ -1,6 +1,6 @@
-<md-card class="itempedido" ng-repeat="itempedido in cart">
-    <p><b>{{itempedido.descripcion}}</b></p>
-    <p>Código {{itempedido.codigo}}</p>
+<div class="itempedido" ng-repeat="itempedido in cart">
+    <div class="descr">{{itempedido.descripcion}}</div>
+    <div class="codig">Código {{itempedido.codigo}}</div>
 
     <md-content layout-align="start">
         <input class="cantidad" ng-model="itempedido.cantidad" ng-change="updatetotales()" type="number" min="1" max="99999"></input>
@@ -9,7 +9,10 @@
         <span ng-if="itempedido.uventa == '2'">{{itempedido.prenetoConDescuento * itempedido.factor * itempedido.cantidad| currency}}</span>
     </md-content>
 
-    <md-card-actions layout="column" layout-align="end end">
-        <md-button ng-click="eliminarItem($index)" class="md-raised">Eliminar</md-button>
-    </md-card-actions>
-</md-card>
+    <div layout="column" layout-align="end end">
+        <md-button ng-click="eliminarItem(itempedido.codigo)" class="md-raised">
+            <md-icon md-svg-icon="img/ic_delete_forever_black_24px.svg" aria-label="Eliminar"></md-icon>
+        </md-button>
+            </div>
+    <md-divider></md-divider>
+</div>

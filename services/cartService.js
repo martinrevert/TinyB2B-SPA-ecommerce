@@ -63,7 +63,9 @@ app.factory("cartSrv", function ($storage) {
 
         removeProduct: function (id) {
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
-                if (cartData.pedido.productos.codigo == id) {
+                if (cartData.pedido.productos[i].codigo == id) {
+                    console.log(id);
+                    console.log(cartData.pedido.productos[i].codigo);
                     cartData.pedido.productos.splice(i, 1);
                     tablanotadeventa.setItem('cartData', cartData);
                     break;

@@ -35,6 +35,24 @@ body {
     font-size: 0.7rem;
 }
 
+.itempedido input[type="number"] {
+
+    width: 100px;
+
+}
+
+.itempedido > div.descr{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.itempedido > div.codig{
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+
+
 table.md-table th.md-column {
     color: rgba(0, 0, 0, 0.54);
     font-size: 12px;
@@ -95,11 +113,7 @@ md-sidenav.md-locked-open {
     color: #ffffff;
 }
 
-.itempedido input[type="number"] {
 
-    width: 100px;
-
-}
 
 md-content.md-default-theme, md-content {
     /*  background-color: lightgrey; */

@@ -13,8 +13,8 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
 
     $scope.cart = cartSrv.getProducts();
 
-    $scope.eliminarItem = function () {
-        cartSrv.removeProduct();
+    $scope.eliminarItem = function (id) {
+        cartSrv.removeProduct(id);
         $scope.itemsummary = cartSrv.getItems();
         $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
         $scope.preneto = cartSrv.getPrecioTotalDescuento();
