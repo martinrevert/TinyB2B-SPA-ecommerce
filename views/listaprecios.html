@@ -24,13 +24,13 @@
             </tr>
             </thead>
             <tbody md-body>
-            <tr md-row  ng-repeat="producto in productos">
-                <td md-cell>{{producto.emp}}</td>
-                <td md-cell>{{producto.codigo}}</td>
-                <td md-cell>{{producto.descripcion}}</td>
-                <td md-cell>{{producto.preneto | currency}}</td>
-                <td md-cell>{{producto.bonif}}</td>
-                <td md-cell>{{producto.preneto_con_descuento | currency}}</td>
+            <tr md-row  ng-repeat="producto in productos track by $index">
+                <td md-cell>{{::producto.emp}}</td>
+                <td md-cell>{{::producto.codigo}}</td>
+                <td md-cell>{{::producto.descripcion}}</td>
+                <td md-cell>{{::producto.preneto | currency}}</td>
+                <td md-cell>{{::producto.bonif}}</td>
+                <td md-cell>{{::producto.preneto_con_descuento | currency}}</td>
 
             </tr>
             </tbody>

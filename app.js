@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageModule', 'angular-loading-bar', 'ngAnimate'])
+angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageModule', 'angular-loading-bar', 'ngAnimate', 'pdf'])
     .constant('config',
         {
             apiUrl: 'http://gruposerin.dyndns.org:8080/servicios/eikon.asmx'
@@ -65,6 +65,10 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
                 templateUrl: 'views/resumendecuenta.html',
                 controller: 'resuCtrl'
             })
+            .when('/pdfviewer/:numero', {
+                templateUrl: 'views/viewer.html',
+                controller: 'pdfviewerCtrl'
+            })
             .otherwise({
                 redirectTo: '/login'
             });
@@ -91,6 +95,12 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
 
 
             $scope.menu = [
+                {
+                    href: './checkout',
+                    title: 'Carro de compras',
+                    icon: 'img/ic_shopping_cart_black_24px.svg'
+
+                },
                 {
                     href: './pedidoporcategoria',
                     title: 'Pedidos por categoria',
@@ -125,12 +135,6 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
                     href: './listaprecios',
                     title: 'Lista de precios',
                     icon: 'img/ic_attach_money_black_24px.svg'
-
-                },
-                {
-                    href: './checkout',
-                    title: 'Carro de compras',
-                    icon: 'img/ic_shopping_cart_black_24px.svg'
 
                 },
                 {

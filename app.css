@@ -85,11 +85,11 @@ md-sidenav.md-locked-open {
 }
 
 .tile {
-    font-style: bold;
+    font-weight: bold;
     vertical-align: top;
     text-align: center;
     border-radius: 25px;
-    background-color: #C06605;
+    background-color: #3F51B5;
     font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
     color: #ffffff;
