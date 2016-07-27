@@ -1,9 +1,8 @@
-angular.module('app').controller('loginCtrl', function ($scope, $location, $http, $routeParams, config, $storage, clientesSrv, $timeout) {
+angular.module('app').controller('loginCtrl', function ($scope, $location, $http, $routeParams, config, $storage, clientesSrv, $timeout, $mdToast) {
 
     $scope.authenticate = function (usuario, pass) {
         $http.get(config.apiUrl + '/Busca_Usuario?usuario=' + usuario + '&pass=' + pass
         ).then(function (data) {
-
             var tablausuario = $storage('tablaUsuario');
             var resultado = data;
             var resp = resultado.data[0].respuesta;
@@ -16,11 +15,8 @@ angular.module('app').controller('loginCtrl', function ($scope, $location, $http
             console.log(resultado.data[0].respuesta);
 
             if (resp != "1" || tipo != "C") {
-                $location.path("/login");
-                console.log("Error login!!");
-                $scope.authenticationError = "Error datos login";
+                $mdToast.show($mdToast.simple().textContent('Datos incorrectos, verifique y reintente.'));
             } else {
-
                 clientesSrv.async(usuario, password, "C", cliente).then(function (d) {
 
                     var respcli = d;
@@ -30,19 +26,17 @@ angular.module('app').controller('loginCtrl', function ($scope, $location, $http
                     tablausuario.setItem('fpago', fpago);
                     tablausuario.setItem('nombre', nombre.trim());
                     tablausuario.setItem('direccion', domicilio);
+                    tablausuario.setItem('usuario', usuario);
+                    tablausuario.setItem('pass', password);
+                    tablausuario.setItem('cliente', cliente);
+
+                    $location.path("/pedidoporcategoria");
 
                 });
 
-                tablausuario.setItem('usuario', usuario);
-                tablausuario.setItem('pass', password);
-                tablausuario.setItem('cliente', cliente);
-                $timeout(function()
-                {
-                    $location.path("/pedidoporcategoria");
-                }, 1500);
             }
-        }).then(function (error) {
-            $scope.authenticationError = error;
+
         });
     };
+
 });
