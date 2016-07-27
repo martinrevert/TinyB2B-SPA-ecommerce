@@ -1,8 +1,8 @@
-<div class="itempedido" ng-repeat="itempedido in cart">
+<div class="itempedido" ng-repeat="itempedido in cart track by $index">
     <div class="descr">{{itempedido.descripcion}}</div>
     <div class="codig">Código {{itempedido.codigo}}</div>
 
-    <md-content layout-align="start">
+    <md-content class="entrada">
         <input class="cantidad" ng-model="itempedido.cantidad" ng-change="updatetotales()" type="number" min="1" max="99999"></input>
         <span>{{itempedido.medida}}</span>
         <span ng-if="itempedido.uventa == '1'">{{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
