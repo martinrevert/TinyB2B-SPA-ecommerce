@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.factory("cartSrv", function ($storage) {
+app.factory("cartSrv", function ($storage, $mdToast) {
 
     var tablausuario = $storage('tablaUsuario');
     var tablanotadeventa = $storage('tablanotadeventa');
@@ -44,7 +44,7 @@ app.factory("cartSrv", function ($storage) {
                 if (cartData.pedido.productos[i].codigo == codigo) {
                     //No se agrega, ya existe
                     addedToExistingItem = true;
-                    console.log("No se ya agrega, codigo de producto ya existe");
+                    $mdToast.show($mdToast.simple().textContent('El producto ya está cargado en su carro de compras.'));
                     break;
                 }
             }
@@ -71,10 +71,62 @@ app.factory("cartSrv", function ($storage) {
             }
         },
 
+        removeNotadeVenta: function () {
+            //ToDo ver como borrar todo y dejar disponible cartData limpio para seguir operando
+
+            //cartData.pedido.productos.lenght = 0;
+            tablanotadeventa.truncate();
+
+         /*   for (var i = 0; i < cartData.pedido.productos.length; i++) {
+                if (cartData.pedido.productos[i].codigo == id) {
+                    cartData.pedido.productos.splice(i, 1);
+                    tablanotadeventa.setItem('cartData', cartData);
+                    break;
+                }
+            }*/
+        },
+
+
+
         changeQuantity: function () {
 
             tablanotadeventa.setItem('cartData', cartData);
-    
+
+        },
+
+        getDomicilio: function () {
+
+            return cartData.pedido.direccionentrega;
+
+        },
+
+        setDomicilio: function (domicilio) {
+
+            cartData.pedido.direccionentrega = domicilio;
+            tablanotadeventa.setItem('cartData', cartData);
+
+        },
+
+        getObservaciones: function () {
+
+            return cartData.pedido.observacionserin;
+
+        },
+
+        setObservaciones: function (observacion) {
+
+            cartData.pedido.observacionserin = observacion;
+            cartData.pedido.observacionservet = observacion;
+            tablanotadeventa.setItem('cartData', cartData);
+
+        },
+
+        setFechas: function (hoy, manana) {
+
+            cartData.pedido.fechaenvio = hoy;
+            cartData.pedido.fechaentrega = manana;
+            tablanotadeventa.setItem('cartData', cartData);
+
         },
 
         getProducts: function () {

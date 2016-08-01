@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageModule', 'angular-loading-bar', 'ngAnimate', 'pdf'])
+angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageModule', 'ngAnimate', 'pdf', 'angular-loading-bar'])
     .constant('config',
         {
             apiUrl: 'http://gruposerin.dyndns.org:8080/servicios/eikon.asmx'
@@ -14,7 +14,12 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
                 }
             });
         };
-    })
+    })/*.config(function($httpProvider){
+     $httpProvider.defaults.headers.common = {};
+     $httpProvider.defaults.headers.post = {};
+     $httpProvider.defaults.headers.put = {};
+     $httpProvider.defaults.headers.patch = {};
+     })*/
     .config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
         cfpLoadingBarProvider.includeSpinner = false;
     }])
@@ -76,7 +81,12 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
         $locationProvider.html5Mode(true);
         //$sceProvider.enabled(false);
     })
-    .controller('indexCtrl', ['$scope', '$mdSidenav', '$routeParams', '$route', function ($scope, $mdSidenav, $route, $routeParams) {
+    .controller('indexCtrl', ['$scope', '$mdSidenav', '$routeParams', '$route','$storage', function ($scope, $mdSidenav, $route, $routeParams, $storage) {
+
+            var tablausuario = $storage('tablaUsuario');
+
+            $scope.usuario = tablausuario.getItem('usuario');
+            $scope.empresa = tablausuario.getItem('nombre');
 
             $scope.showSidebar = function () {
 

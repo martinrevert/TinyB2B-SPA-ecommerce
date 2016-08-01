@@ -25,7 +25,12 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
     // randomColor({luminosity: 'dark'});
     //randomColor({luminosity: 'dark', count: 27});
 
-    //Inicialización totales OJO FALTA FINANCIACION !!!!
+    $scope.showcategorias = function(){
+        $scope.productos = [];
+        $scope.mostrarmarcas = true;
+        $scope.mostrarfloat = false;
+    };
+
     $scope.itemsummary = cartSrv.getItems();
     $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
     $scope.preneto = cartSrv.getPrecioTotalDescuento();
@@ -40,6 +45,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
 
     };
 
+
     $scope.addProduct = function (codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa) {
         cartSrv.addProduct(codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipo_precio, uventa);
         $scope.itemsummary = cartSrv.getItems();
@@ -48,6 +54,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.iva = cartSrv.getIva();
 
     };
+
 
     $scope.buscarpordescripcion = function () {
         $scope.productos = [];

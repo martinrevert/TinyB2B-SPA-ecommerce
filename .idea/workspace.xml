@@ -7,15 +7,23 @@
   <component name="ChangeListManager">
     <list default="true" id="03cfdbbc-0493-4086-8c23-f021b9ca17c2" name="Default" comment="- Uso de LocalStorage como sesión en todos los modulos&#10;- Update cantidades y movimientos de productos sincronizados con cartSrv &#10;&#10;&#10;">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/pdfviewerController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/ic_delete_black_24px.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/ic_delete_white_24px.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/pdfService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.css" afterPath="$PROJECT_DIR$/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/checkoutController.js" afterPath="$PROJECT_DIR$/controllers/checkoutController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/pedidoController.js" afterPath="$PROJECT_DIR$/controllers/pedidoController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/resuController.js" afterPath="$PROJECT_DIR$/controllers/resuController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/cartService.js" afterPath="$PROJECT_DIR$/services/cartService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/enviarpedidoService.js" afterPath="$PROJECT_DIR$/services/enviarpedidoService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/carroitemsndv.html" afterPath="$PROJECT_DIR$/views/carroitemsndv.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/checkout.html" afterPath="$PROJECT_DIR$/views/checkout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/itempedido.html" afterPath="$PROJECT_DIR$/views/itempedido.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pedidoporcategoria.html" afterPath="$PROJECT_DIR$/views/pedidoporcategoria.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pedidopordescripcion.html" afterPath="$PROJECT_DIR$/views/pedidopordescripcion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/producto.html" afterPath="$PROJECT_DIR$/views/producto.html" />
     </list>
     <ignored path="materialSerin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,28 +47,28 @@
       <file leaf-file-name="cartService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/cartService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="53" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="56" />
+            <state relative-caret-position="179">
+              <caret line="111" column="52" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="itempedido.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/itempedido.html">
+      <file leaf-file-name="pedidoController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/pedidoController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="-36">
+              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkoutController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="checkoutController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/checkoutController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -69,8 +77,8 @@
       <file leaf-file-name="checkout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/checkout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="148">
+              <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -78,21 +86,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.css">
+      <file leaf-file-name="loginController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/loginController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="-108">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pedidoporcategoria.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pedidoporcategoria.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="30" column="105" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pedidopordescripcion.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pedidopordescripcion.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="29" column="18" selection-start-line="28" selection-start-column="11" selection-end-line="30" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -126,7 +154,6 @@
         <option value="$PROJECT_DIR$/services/notadeventaService.js" />
         <option value="$PROJECT_DIR$/views/cardItemPedido.html" />
         <option value="$PROJECT_DIR$/cart.js" />
-        <option value="$PROJECT_DIR$/services/enviarpedidoService.js" />
         <option value="$PROJECT_DIR$/services/marcasService.js" />
         <option value="$PROJECT_DIR$/services/resuService.js" />
         <option value="$PROJECT_DIR$/.htaccess" />
@@ -136,33 +163,34 @@
         <option value="$PROJECT_DIR$/views/resumendecuenta.html" />
         <option value="$PROJECT_DIR$/services/oldndvService.js" />
         <option value="$PROJECT_DIR$/bower_components/angular-material-data-table/dist/md-data-table.css" />
-        <option value="$PROJECT_DIR$/views/pedidoporcategoria.html" />
         <option value="$PROJECT_DIR$/views/pedidoporcodigo.html" />
         <option value="&lt;6536213d-41c9-4b4b-973e-56fd3a1f73af&gt;/canales.m3u" />
-        <option value="$PROJECT_DIR$/views/pedidoofertas.html" />
-        <option value="$PROJECT_DIR$/views/pedidopordescripcion.html" />
         <option value="$PROJECT_DIR$/views/pedidomiscomprasfrecuentes.html" />
         <option value="$PROJECT_DIR$/controllers/listadepreciosController.js" />
         <option value="$PROJECT_DIR$/views/consultadepedidos.html" />
         <option value="$PROJECT_DIR$/bower_components/angular-loading-bar/build/loading-bar.css" />
-        <option value="$PROJECT_DIR$/views/carroitemsndv.html" />
         <option value="$PROJECT_DIR$/controllers/oldndvController.js" />
         <option value="$PROJECT_DIR$/services/clientesService.js" />
         <option value="$PROJECT_DIR$/services/productosService.js" />
         <option value="$PROJECT_DIR$/views/listaprecios.html" />
-        <option value="$PROJECT_DIR$/views/producto.html" />
         <option value="$PROJECT_DIR$/services/pdfService.js" />
         <option value="$PROJECT_DIR$/controllers/resuController.js" />
         <option value="$PROJECT_DIR$/views/viewer.html" />
         <option value="$PROJECT_DIR$/controllers/pdfviewerController.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/controllers/pedidoController.js" />
-        <option value="$PROJECT_DIR$/services/cartService.js" />
-        <option value="$PROJECT_DIR$/views/itempedido.html" />
         <option value="$PROJECT_DIR$/app.css" />
         <option value="$PROJECT_DIR$/views/login.html" />
+        <option value="$PROJECT_DIR$/services/enviarpedidoService.js" />
+        <option value="$PROJECT_DIR$/services/cartService.js" />
         <option value="$PROJECT_DIR$/controllers/loginController.js" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/views/pedidopordescripcion.html" />
+        <option value="$PROJECT_DIR$/views/producto.html" />
+        <option value="$PROJECT_DIR$/views/itempedido.html" />
+        <option value="$PROJECT_DIR$/views/pedidoporcategoria.html" />
+        <option value="$PROJECT_DIR$/controllers/pedidoController.js" />
+        <option value="$PROJECT_DIR$/views/pedidoofertas.html" />
+        <option value="$PROJECT_DIR$/views/carroitemsndv.html" />
         <option value="$PROJECT_DIR$/views/checkout.html" />
         <option value="$PROJECT_DIR$/controllers/checkoutController.js" />
       </list>
@@ -208,9 +236,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -265,9 +291,25 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="materialSerin">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="bower_components">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,6 +345,87 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://gruposerin.dyndns.org:8080" />
+          <option name="urlPath" value="/servicios/eikon.asmx/RecibeNotadeVenta2" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{    &quot;pedido&quot;:{       &quot;anticipo&quot;:null,       &quot;area&quot;:&quot;C&quot;,       &quot;codigocliente&quot;:&quot;2314&quot;,       &quot;direccionentrega&quot;:&quot;AVELLANEDA 3183 Bº ALTA CORDOBA CORDOBA - CORDOBA CORDOBA&quot;,       &quot;fechaentrega&quot;:&quot;09/06/2016&quot;,       &quot;fechaenvio&quot;:&quot;09/06/2016&quot;,       &quot;fpago&quot;:&quot;2&quot;,       &quot;observacionserin&quot;:null,       &quot;observacionservet&quot;:null,       &quot;ordendecompraserin&quot;:null,       &quot;ordendecompraservet&quot;:null,       &quot;productos&quot;:[          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:10.0,             &quot;codigo&quot;:&quot;006101&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:680.959370322616,             &quot;preneto&quot;:1148.5231410400002,             &quot;prenetoConDescuento&quot;:562.7763391096,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:0.0,             &quot;bonifmax&quot;:0.0,             &quot;cantidad&quot;:100.0,             &quot;codigo&quot;:&quot;006102&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 1/2 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:1298.5999277679998,             &quot;preneto&quot;:1073.2230808,             &quot;prenetoConDescuento&quot;:1073.2230808,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006106&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 3 1/2 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:576.7847806496775,             &quot;preneto&quot;:972.8196671439999,             &quot;prenetoConDescuento&quot;:476.68163690055997,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006107&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 4 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:576.7847806496775,             &quot;preneto&quot;:972.8196671439999,             &quot;prenetoConDescuento&quot;:476.68163690055997,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006112&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 X 16 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:16.0,             &quot;precioFinalConIva&quot;:570.119920540016,             &quot;preneto&quot;:961.57854704,             &quot;prenetoConDescuento&quot;:471.1734880496,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          }       ],       &quot;usuario&quot;:&quot;roberto&quot;    } }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="OPTIONS" />
+          <option name="urlBase" value="http://gruposerin.dyndns.org:8080" />
+          <option name="urlPath" value="/servicios/eikon.asmx/RecibeNotadeVenta2" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{    &quot;pedido&quot;:{       &quot;anticipo&quot;:null,       &quot;area&quot;:&quot;C&quot;,       &quot;codigocliente&quot;:&quot;2314&quot;,       &quot;direccionentrega&quot;:&quot;AVELLANEDA 3183 Bº ALTA CORDOBA CORDOBA - CORDOBA CORDOBA&quot;,       &quot;fechaentrega&quot;:&quot;09/06/2016&quot;,       &quot;fechaenvio&quot;:&quot;09/06/2016&quot;,       &quot;fpago&quot;:&quot;2&quot;,       &quot;observacionserin&quot;:null,       &quot;observacionservet&quot;:null,       &quot;ordendecompraserin&quot;:null,       &quot;ordendecompraservet&quot;:null,       &quot;productos&quot;:[          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:10.0,             &quot;codigo&quot;:&quot;006101&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:680.959370322616,             &quot;preneto&quot;:1148.5231410400002,             &quot;prenetoConDescuento&quot;:562.7763391096,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:0.0,             &quot;bonifmax&quot;:0.0,             &quot;cantidad&quot;:100.0,             &quot;codigo&quot;:&quot;006102&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 1/2 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:1298.5999277679998,             &quot;preneto&quot;:1073.2230808,             &quot;prenetoConDescuento&quot;:1073.2230808,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006106&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 3 1/2 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:576.7847806496775,             &quot;preneto&quot;:972.8196671439999,             &quot;prenetoConDescuento&quot;:476.68163690055997,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006107&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 4 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:576.7847806496775,             &quot;preneto&quot;:972.8196671439999,             &quot;prenetoConDescuento&quot;:476.68163690055997,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006112&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 X 16 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:16.0,             &quot;precioFinalConIva&quot;:570.119920540016,             &quot;preneto&quot;:961.57854704,             &quot;prenetoConDescuento&quot;:471.1734880496,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          }       ],       &quot;usuario&quot;:&quot;roberto&quot;    } }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://gruposerin.dyndns.org:8080" />
+          <option name="urlPath" value="/servicios/eikon.asmx/RecibeNotadeVenta2" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{    &quot;pedido&quot;:{       &quot;anticipo&quot;:null,       &quot;area&quot;:&quot;C&quot;,       &quot;codigocliente&quot;:&quot;2314&quot;,       &quot;direccionentrega&quot;:&quot;AVELLANEDA 3183 Bº ALTA CORDOBA CORDOBA - CORDOBA CORDOBA&quot;,       &quot;fechaentrega&quot;:&quot;09/06/2016&quot;,       &quot;fechaenvio&quot;:&quot;09/06/2016&quot;,       &quot;fpago&quot;:&quot;2&quot;,       &quot;observacionserin&quot;:null,       &quot;observacionservet&quot;:null,       &quot;ordendecompraserin&quot;:null,       &quot;ordendecompraservet&quot;:null,       &quot;productos&quot;:[          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:10.0,             &quot;codigo&quot;:&quot;006101&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:680.959370322616,             &quot;preneto&quot;:1148.5231410400002,             &quot;prenetoConDescuento&quot;:562.7763391096,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:0.0,             &quot;bonifmax&quot;:0.0,             &quot;cantidad&quot;:100.0,             &quot;codigo&quot;:&quot;006102&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 1/2 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:1298.5999277679998,             &quot;preneto&quot;:1073.2230808,             &quot;prenetoConDescuento&quot;:1073.2230808,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006106&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 3 1/2 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:576.7847806496775,             &quot;preneto&quot;:972.8196671439999,             &quot;prenetoConDescuento&quot;:476.68163690055997,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006107&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 4 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:576.7847806496775,             &quot;preneto&quot;:972.8196671439999,             &quot;prenetoConDescuento&quot;:476.68163690055997,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006112&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 X 16 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:16.0,             &quot;precioFinalConIva&quot;:570.119920540016,             &quot;preneto&quot;:961.57854704,             &quot;prenetoConDescuento&quot;:471.1734880496,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          }       ],       &quot;usuario&quot;:&quot;roberto&quot;    } }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://gruposerin.dyndns.org:8080" />
+          <option name="urlPath" value="/servicios/eikon.asmx/RecibeNotadeVenta2" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{    &quot;pedido&quot;:{       &quot;anticipo&quot;:null,       &quot;area&quot;:&quot;C&quot;,       &quot;codigocliente&quot;:&quot;2314&quot;,       &quot;direccionentrega&quot;:&quot;AVELLANEDA 3183 Bº ALTA CORDOBA CORDOBA - CORDOBA CORDOBA&quot;,       &quot;fechaentrega&quot;:&quot;09/06/2016&quot;,       &quot;fechaenvio&quot;:&quot;09/06/2016&quot;,       &quot;fpago&quot;:&quot;2&quot;,       &quot;observacionserin&quot;:null,       &quot;observacionservet&quot;:null,       &quot;ordendecompraserin&quot;:null,       &quot;ordendecompraservet&quot;:null,       &quot;productos&quot;:[          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:10.0,             &quot;codigo&quot;:&quot;006101&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:680.959370322616,             &quot;preneto&quot;:1148.5231410400002,             &quot;prenetoConDescuento&quot;:562.7763391096,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:0.0,             &quot;bonifmax&quot;:0.0,             &quot;cantidad&quot;:100.0,             &quot;codigo&quot;:&quot;006102&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 1/2 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:1298.5999277679998,             &quot;preneto&quot;:1073.2230808,             &quot;prenetoConDescuento&quot;:1073.2230808,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006106&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 3 1/2 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:576.7847806496775,             &quot;preneto&quot;:972.8196671439999,             &quot;prenetoConDescuento&quot;:476.68163690055997,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006107&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 4 X 20 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:20.0,             &quot;precioFinalConIva&quot;:576.7847806496775,             &quot;preneto&quot;:972.8196671439999,             &quot;prenetoConDescuento&quot;:476.68163690055997,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          },          {             &quot;bonif&quot;:51.0,             &quot;bonifmax&quot;:51.0,             &quot;cantidad&quot;:1.0,             &quot;codigo&quot;:&quot;006112&quot;,             &quot;descripcion&quot;:&quot;CLAVO PTA PARIS 1 X 16 KG ACINDAR&quot;,             &quot;emp&quot;:&quot;S&quot;,             &quot;factor&quot;:1.0,             &quot;iva&quot;:21.0,             &quot;medida&quot;:&quot;UN&quot;,             &quot;medida1&quot;:&quot;UN&quot;,             &quot;medida2&quot;:&quot;UN&quot;,             &quot;peso&quot;:16.0,             &quot;precioFinalConIva&quot;:570.119920540016,             &quot;preneto&quot;:961.57854704,             &quot;prenetoConDescuento&quot;:471.1734880496,             &quot;tipo_precio&quot;:&quot;N&quot;,             &quot;uventa&quot;:&quot;1&quot;          }       ],       &quot;usuario&quot;:&quot;roberto&quot;    } }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="POST" />
           <option name="urlBase" value="http://gruposerin.dyndns.org:8080" />
@@ -524,7 +647,9 @@
       <workItem from="1468532351122" duration="54584000" />
       <workItem from="1468864100355" duration="23880000" />
       <workItem from="1469173980684" duration="7000" />
-      <workItem from="1469174125894" duration="43543000" />
+      <workItem from="1469174125894" duration="49334000" />
+      <workItem from="1469649632726" duration="16352000" />
+      <workItem from="1469788454124" duration="15285000" />
     </task>
     <task id="LOCAL-00001" summary="- Commit inicial">
       <created>1462994259038</created>
@@ -806,11 +931,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469607729202</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="- Fix diseño itemspedido&#10;- Fix carro de compras en Firefox&#10;- Agregado totales en carro de compra&#10;&#10;&#10;&#10;">
+      <created>1469609642618</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1469609642618</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="463648000" />
+    <option name="totallyTimeSpent" value="501076000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -825,17 +957,16 @@
     <frame x="0" y="27" width="1366" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6646434" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20333838" sideWeight="0.49293286" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.204947" sideWeight="0.50714284" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15724382" sideWeight="0.49646106" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24558304" sideWeight="0.49285713" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37809187" sideWeight="0.49646106" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.093639575" sideWeight="0.49285713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.409894" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6646434" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20789075" sideWeight="0.49293286" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32508835" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33990896" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3091873" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.50706714" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44522968" sideWeight="0.49646106" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -843,9 +974,10 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2632509" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44680852" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59893996" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.245827" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32508835" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -887,7 +1019,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="- Buscadores animados y que ocupan la columna&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Solucionado problema de independencia de columnas en pedido&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Mejora en comportamiento dinámico de UI pedido en diversos formatos de browsers&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Mejora en comportamiento dinámico de UI pedido en diversos formatos de browsers, convivencia de cart + productos&#10;&#10;&#10;&#10;" />
@@ -912,13 +1043,104 @@
     <MESSAGE value="- Se mueve Carro de Compras en menu hacia arriba del todo&#10;- Cambio color en categorias/marcas&#10;- Bold fonts categoría/marca&#10;- Agregado servicio para obtener data del cliente&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Modificacion diseño itemspedido&#10;- Add icono tacho de basura para eliminar item&#10;- Fix index producto al borrar&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Agregado mensajes de error en caso de problemas de login&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Agregado mensajes de error en caso de problemas de login&#10;&#10;&#10;" />
+    <MESSAGE value="- Fix diseño itemspedido&#10;- Fix carro de compras en Firefox&#10;- Agregado totales en carro de compra&#10;&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fix diseño itemspedido&#10;- Fix carro de compras en Firefox&#10;- Agregado totales en carro de compra&#10;&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/services/cartService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="19" selection-start-line="4" selection-start-column="2" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/itempedido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/checkoutController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/cartService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1494">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/itempedido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/checkoutController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/enviarpedidoService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/services/cartService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -955,34 +1177,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/loginService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/loginService.js" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1044">
           <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/loginService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/loginService.js" />
     <entry file="file://$PROJECT_DIR$/controllers/oldndvController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -991,19 +1197,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/carroitemsndv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/clientesService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="133" selection-start-line="9" selection-start-column="133" selection-end-line="9" selection-end-column="133" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1011,17 +1208,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pedidopordescripcion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#md-content#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1029,7 +1215,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,7 +1222,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,25 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pedidoporcategoria.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#md-content#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1071,7 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1079,7 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,7 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1095,15 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/enviarpedidoService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,7 +1264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,7 +1271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,7 +1278,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1135,7 +1285,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,47 +1292,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/cartService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/loginController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/pedidoController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/producto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1195,18 +1303,113 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/services/enviarpedidoService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        <state relative-caret-position="72">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pedidopordescripcion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="29" column="18" selection-start-line="28" selection-start-column="11" selection-end-line="30" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/producto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="72" selection-start-line="0" selection-start-column="72" selection-end-line="0" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/itempedido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pedidoofertas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#md-content#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/carroitemsndv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pedidoporcategoria.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="105" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/pedidoController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/loginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/cartService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="111" column="52" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/checkout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="148">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -1215,16 +1418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/checkoutController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/itempedido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        <state relative-caret-position="342">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding />
         </state>
       </provider>

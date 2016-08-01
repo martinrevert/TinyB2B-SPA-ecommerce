@@ -1,4 +1,7 @@
-<md-content flex style="border: 1px solid firebrick;" layout="column" data-ng-init="buscarporcategorias()">
+<div flex layout="column" data-ng-init="buscarporcategorias()">
+ <!--   <md-button ng-show="mostrarfloat" class="md-fab md-primary md-fab-top-left" aria-label="Ver categorias">
+        <md-icon md-svg-src="img/icons/android.svg"></md-icon>
+    </md-button> -->
     <md-toolbar>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
@@ -16,12 +19,18 @@
         </div>
 
     </md-toolbar>
+
     <md-content flex layout-xs="column" layout="row" layout-align="center">
-        <md-button ng-show="mostrarfloat" class="md-fab md-primary md-fab-bottom-right" aria-label="Ver categorias">
-            <md-icon md-svg-src="img/icons/android.svg"></md-icon>
-        </md-button>
+
+
 
         <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" class="productos" layout-margin>
+
+            <div class="back" layout="row" layout-align="center center" flex="none">
+
+                <md-button class="md-raised md-primary" ng-show="mostrarfloat" ng-click="showcategorias()">VER CATEGORIAS</md-button>
+
+            </div>
 
             <md-grid-list ng-show="mostrarmarcas" md-cols-sm="2" md-cols-xs="2" md-cols-gt-sm="3"
                           md-gutter="1em"
@@ -37,9 +46,12 @@
 
         </md-content>
 
+
         <md-content ng-include="'views/carroitemsndv.html'" flex-xs="none" flex-gt-xs="50" layout-align="end"
                     flex-order-xs="-1" layout="column">
 
         </md-content>
 
     </md-content>
+
+</div>

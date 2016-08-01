@@ -5,15 +5,31 @@
         </md-button>
         <h1>Carro de compras</h1>
         <span flex></span>
+        <!-- Activar cuando este disponible funcionalidad de borrado de los productos
+           <md-button md-fab md-primary ng-click="borrarTodo()">
+               <md-icon
+                       md-svg-src="img/ic_delete_white_24px.svg"></md-icon>
+               <md-tooltip md-direction="bottom">
+                   Borrar todo
+               </md-tooltip>
+           </md-button>
+           -->
     </div>
 </md-toolbar>
 
 <div layout="column" style="overflow: auto; height: 100%;">
 
     <md-content class="itemspedido">
+
+        <div md-whiteframe="3" layout="column" layout-padding="" layout-fill layout-align="center center"
+             ng-if="cart == 0">No hay productos cargados en su carro de compras.
+        </div>
+
         <div ng-include="'views/itempedido.html'"></div>
 
-        <div layout="column" layout-align="end end" layout-padding class="totalcheck">
+        <md-divider></md-divider>
+
+        <div md-whiteframe="3" layout="column" layout-align="end end" layout-padding class="totalcheck">
             <div>Neto {{preneto | currency}}</div>
             <div>Iva {{iva | currency}}</div>
             <div>Total {{total | currency}}</div>
@@ -23,22 +39,20 @@
 
         <md-input-container class="md-block">
             <label>Domicilio de entrega</label>
-            <input type="text" ng-bind="direccionentrega"></input>
+            <input type="text" name="direccionentrega" ng-model="direccionentrega" ng-change="cambiarDireccion(direccionentrega)"></input>
         </md-input-container>
 
         <md-input-container class="md-block">
             <label>Observaciones</label>
-            <input type="text"></input>
+            <input name="observaciones" ng-model="observaciones" type="text" ng-change="setObservacion(observaciones)"></input>
         </md-input-container>
 
-        <md-divider>
 
-            <div layout="row" layout-align="center">
-                <md-button class="md-raised" ng-click="checkout()">Enviar pedido</md-button>
-            </div>
+        <div md-whiteframe="3" layout="row" layout-align="center">
+            <md-button class="md-raised" ng-click="checkout()" ng-disabled="cart == 0">Enviar pedido</md-button>
+        </div>
 
-            <md-divider></md-divider>
-
+        <md-divider></md-divider>
     </md-content>
 
 </div>
