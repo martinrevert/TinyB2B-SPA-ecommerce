@@ -734,7 +734,7 @@ var RenderingStates = {
 };
 
 /**
- * Controls rendering of the views for pages and thumbnails.
+ * Controls rendering of the partials for pages and thumbnails.
  * @class
  */
 var PDFRenderingQueue = (function PDFRenderingQueueClosure() {
@@ -825,7 +825,7 @@ var PDFRenderingQueue = (function PDFRenderingQueueClosure() {
         }
       }
 
-      // All the visible views have rendered, try to render next/previous pages.
+      // All the visible partials have rendered, try to render next/previous pages.
       if (scrolledDown) {
         var nextPageIndex = visible.last.id;
         // ID's start at 1 so no need to add 1.
@@ -854,7 +854,7 @@ var PDFRenderingQueue = (function PDFRenderingQueueClosure() {
 
     /**
      * Render a page or thumbnail view. This calls the appropriate function
-     * based on the views state. If the view is already rendered it will return
+     * based on the partials state. If the view is already rendered it will return
      * false.
      * @param {IRenderableView} view
      */

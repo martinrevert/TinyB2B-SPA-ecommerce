@@ -27,51 +27,51 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
 
         $routeProvider
             .when('/', {
-                templateUrl: 'views/login.html',
+                templateUrl: 'partials/login.html',
                 controller: 'loginCtrl'
             })
             .when('/login', {
-                templateUrl: 'views/login.html',
+                templateUrl: 'partials/login.html',
                 controller: 'loginCtrl'
             })
             .when('/pedidoporcategoria', {
-                templateUrl: 'views/pedidoporcategoria.html',
+                templateUrl: 'partials/pedidoporcategoria.html',
                 controller: 'pedidoCtrl'
             })
             .when('/pedidopordescripcion', {
-                templateUrl: 'views/pedidopordescripcion.html',
+                templateUrl: 'partials/pedidopordescripcion.html',
                 controller: 'pedidoCtrl'
             })
             .when('/pedidoporcodigo', {
-                templateUrl: 'views/pedidoporcodigo.html',
+                templateUrl: 'partials/pedidoporcodigo.html',
                 controller: 'pedidoCtrl'
             })
             .when('/pedidoofertas', {
-                templateUrl: 'views/pedidoofertas.html',
+                templateUrl: 'partials/pedidoofertas.html',
                 controller: 'pedidoCtrl'
             })
             .when('/pedidomiscomprasfrecuentes', {
-                templateUrl: 'views/pedidomiscomprasfrecuentes.html',
+                templateUrl: 'partials/pedidomiscomprasfrecuentes.html',
                 controller: 'pedidoCtrl'
             })
             .when('/listaprecios', {
-                templateUrl: 'views/listaprecios.html',
+                templateUrl: 'partials/listaprecios.html',
                 controller: 'listapreciosCtrl'
             })
             .when('/checkout', {
-                templateUrl: 'views/checkout.html',
+                templateUrl: 'partials/checkout.html',
                 controller: 'checkoutCtrl'
             })
             .when('/consultadepedidos', {
-                templateUrl: 'views/consultadepedidos.html',
+                templateUrl: 'partials/consultadepedidos.html',
                 controller: 'oldndvCtrl'
             })
             .when('/resumendecuenta', {
-                templateUrl: 'views/resumendecuenta.html',
+                templateUrl: 'partials/resumendecuenta.html',
                 controller: 'resuCtrl'
             })
             .when('/pdfviewer/:numero', {
-                templateUrl: 'views/viewer.html',
+                templateUrl: 'partials/pdfviewer.html',
                 controller: 'pdfviewerCtrl'
             })
             .otherwise({
@@ -92,7 +92,7 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
 
                 var ruta = $routeParams;
 
-                if (ruta.current.loadedTemplateUrl == 'views/login.html') {
+                if (ruta.current.loadedTemplateUrl == 'partials/login.html') {
                     return false;
                 } else {
                     return true;

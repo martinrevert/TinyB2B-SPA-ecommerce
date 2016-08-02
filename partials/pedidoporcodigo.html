@@ -1,10 +1,10 @@
-<md-content flex style="border: 1px solid firebrick;" layout="column" data-ng-init="buscarporfrecuentes()">
+<md-content flex style="border: 1px solid firebrick;" layout="column" data-ng-init="buscarporcodigo()">
     <md-toolbar>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
                 <md-icon md-svg-src="img/menu.svg"></md-icon>
             </md-button>
-            <h2>Mis compras frecuentes</h2>
+            <h2>Por código</h2>
             <span flex></span>
             <md-button md-fab md-primary href="./checkout">
                 <md-icon class="badge" data-badge="{{itemsummary}}"
@@ -14,18 +14,27 @@
                 </md-tooltip>
             </md-button>
 
-
         </div>
 
     </md-toolbar>
     <md-content flex layout-xs="column" layout="row" layout-align="center">
         <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" class="productos" layout-margin>
 
+            <md-input-container class="md-block">
+                <label>Busque su producto por código</label>
+                <md-icon md-svg-src="img/ic_search_black_24px.svg"></md-icon>
+                <input type="text"
+                       search>
+            </md-input-container>
 
-            <div ng-include="'views/producto.html'"></div>
+            <div layout="column" layout-fill layout-align="center center" ng-if="productos == 0">No hay productos para
+                mostrar
+            </div>
+
+            <div ng-include="'partials/producto.html'"></div>
         </md-content>
 
-        <md-content ng-include="'views/carroitemsndv.html'" flex-xs="none" flex-gt-xs="50" layout-align="end"
+        <md-content ng-include="'partials/carroitemsndv.html'" flex-xs="none" flex-gt-xs="50" layout-align="end"
                     flex-order-xs="-1" layout="column">
 
         </md-content>
