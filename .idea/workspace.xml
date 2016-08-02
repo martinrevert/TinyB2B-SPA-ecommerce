@@ -5,33 +5,13 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03cfdbbc-0493-4086-8c23-f021b9ca17c2" name="Default" comment="- Uso de LocalStorage como sesión en todos los modulos&#10;- Update cantidades y movimientos de productos sincronizados con cartSrv &#10;&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/pdfviewerController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/pdfviewer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/pdfService.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/carroitemsndv.html" afterPath="$PROJECT_DIR$/partials/carroitemsndv.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/checkout.html" afterPath="$PROJECT_DIR$/partials/checkout.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/consultadepedidos.html" afterPath="$PROJECT_DIR$/partials/consultadepedidos.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/itempedido.html" afterPath="$PROJECT_DIR$/partials/itempedido.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/listaprecios.html" afterPath="$PROJECT_DIR$/partials/listaprecios.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/login.html" afterPath="$PROJECT_DIR$/partials/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/pedidomiscomprasfrecuentes.html" afterPath="$PROJECT_DIR$/partials/pedidomiscomprasfrecuentes.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/pedidoofertas.html" afterPath="$PROJECT_DIR$/partials/pedidoofertas.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/pedidoporcategoria.html" afterPath="$PROJECT_DIR$/partials/pedidoporcategoria.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/pedidoporcodigo.html" afterPath="$PROJECT_DIR$/partials/pedidoporcodigo.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/pedidopordescripcion.html" afterPath="$PROJECT_DIR$/partials/pedidopordescripcion.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/producto.html" afterPath="$PROJECT_DIR$/partials/producto.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/resumendecuenta.html" afterPath="$PROJECT_DIR$/partials/resumendecuenta.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/viewer.html" afterPath="$PROJECT_DIR$/partials/viewer.html" />
+    <list default="true" id="03cfdbbc-0493-4086-8c23-f021b9ca17c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-material-data-table/dist/md-data-table.js" afterPath="$PROJECT_DIR$/bower_components/angular-material-data-table/dist/md-data-table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-material-data-table/dist/md-data-table.min.js" afterPath="$PROJECT_DIR$/bower_components/angular-material-data-table/dist/md-data-table.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/bower_components/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jspdf/dist/jspdf.debug.js" afterPath="$PROJECT_DIR$/bower_components/jspdf/dist/jspdf.debug.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jspdf/examples/annotation/test_annotation.html" afterPath="$PROJECT_DIR$/bower_components/jspdf/examples/annotation/test_annotation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/pdfjs-dist/web/pdf_viewer.js" afterPath="$PROJECT_DIR$/bower_components/pdfjs-dist/web/pdf_viewer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/pdfviewerController.js" afterPath="$PROJECT_DIR$/controllers/pdfviewerController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/resuController.js" afterPath="$PROJECT_DIR$/controllers/resuController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/pdfviewer.html" afterPath="$PROJECT_DIR$/partials/pdfviewer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/viewer.html" afterPath="$PROJECT_DIR$/partials/viewer.html" />
     </list>
     <ignored path="materialSerin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,8 +35,8 @@
       <file leaf-file-name="resuController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/resuController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,8 +45,8 @@
       <file leaf-file-name="pdfviewerController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/pdfviewerController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+            <state relative-caret-position="106">
+              <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -82,17 +62,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pdfviewer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pdfviewer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/pdfviewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewer.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="viewer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/viewer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -139,7 +119,6 @@
         <option value="$PROJECT_DIR$/services/productosService.js" />
         <option value="$PROJECT_DIR$/views/listaprecios.html" />
         <option value="$PROJECT_DIR$/services/pdfService.js" />
-        <option value="$PROJECT_DIR$/controllers/resuController.js" />
         <option value="$PROJECT_DIR$/views/viewer.html" />
         <option value="$PROJECT_DIR$/app.css" />
         <option value="$PROJECT_DIR$/views/login.html" />
@@ -165,10 +144,11 @@
         <option value="$PROJECT_DIR$/partials/consultadepedidos.html" />
         <option value="$PROJECT_DIR$/partials/checkout.html" />
         <option value="$PROJECT_DIR$/partials/carroitemsndv.html" />
-        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/controllers/resuController.js" />
         <option value="$PROJECT_DIR$/controllers/pdfviewerController.js" />
-        <option value="$PROJECT_DIR$/partials/viewer.html" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/partials/pdfviewer.html" />
+        <option value="$PROJECT_DIR$/partials/viewer.html" />
       </list>
     </option>
   </component>
@@ -666,7 +646,7 @@
       <workItem from="1469174125894" duration="49334000" />
       <workItem from="1469649632726" duration="16352000" />
       <workItem from="1469788454124" duration="15395000" />
-      <workItem from="1470119167304" duration="7723000" />
+      <workItem from="1470119167304" duration="8001000" />
     </task>
     <task id="LOCAL-00001" summary="- Commit inicial">
       <created>1462994259038</created>
@@ -962,11 +942,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470093903535</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="- PDF Viewer para documentos. Viewer no tiene diseño definitivo.&#10;- Cambio de ruta views a partials para compatibilidad con librería angular-pdf&#10;&#10;&#10;">
+      <created>1470127525486</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1470127525486</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="508909000" />
+    <option name="totallyTimeSpent" value="509187000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1043,7 +1030,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="- Mejora en comportamiento dinámico de UI pedido en diversos formatos de browsers&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Mejora en comportamiento dinámico de UI pedido en diversos formatos de browsers, convivencia de cart + productos&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Cambio de rutas a rutas sin hashtag (pretty urls)&#10;- .htaccess y config específica para ruta en backend (ver etc/apache2/sites-enabled) para configuracion del directorio&#10; - enable &lt;BASE&gt;&lt;/BASE&gt; en HEAD index.html&#10; - enable History API en el location provider&#10; - principio de configuración de vistas con menu navigation drawer&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Acceso a pedido por categorias desde controller&#10;- pedido por categorias view adaptada a nueva navegación&#10;- test exitoso localStorage para datos usuario&#10;&#10;&#10;&#10;" />
@@ -1068,7 +1054,8 @@
     <MESSAGE value="- Agregado mensajes de error en caso de problemas de login&#10;&#10;&#10;" />
     <MESSAGE value="- Fix diseño itemspedido&#10;- Fix carro de compras en Firefox&#10;- Agregado totales en carro de compra&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Checkout: Mejora diseño, envío de cambio de domicilio de entrega y update de observaciones&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Checkout: Mejora diseño, envío de cambio de domicilio de entrega y update de observaciones&#10;&#10;" />
+    <MESSAGE value="- PDF Viewer para documentos. Viewer no tiene diseño definitivo.&#10;- Cambio de ruta views a partials para compatibilidad con librería angular-pdf&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- PDF Viewer para documentos. Viewer no tiene diseño definitivo.&#10;- Cambio de ruta views a partials para compatibilidad con librería angular-pdf&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1419,10 +1406,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/services/pdfService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/resuController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state relative-caret-position="54">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/pdfviewerController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -1435,18 +1438,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/pdfviewerController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/pdfService.js">
+    <entry file="file://$PROJECT_DIR$/partials/pdfviewer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1455,14 +1450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/pdfviewer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>

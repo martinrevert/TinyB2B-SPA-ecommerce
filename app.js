@@ -81,7 +81,7 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
         $locationProvider.html5Mode(true);
         //$sceProvider.enabled(false);
     })
-    .controller('indexCtrl', ['$scope', '$mdSidenav', '$routeParams', '$route','$storage', function ($scope, $mdSidenav, $route, $routeParams, $storage) {
+    .controller('indexCtrl', ['$scope', '$mdSidenav', '$routeParams', '$route', '$storage', function ($scope, $mdSidenav, $route, $routeParams, $storage) {
 
             var tablausuario = $storage('tablaUsuario');
 

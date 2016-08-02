@@ -1,9 +1,6 @@
 /**
  * Created by martin on 22/06/16.
  */
-
-//Todo service para decodificar PDFs
-
 angular.module('app').controller('resuCtrl', function ($scope, resuSrv, $storage, $location) {
     
     var tablausuario = $storage('tablaUsuario');

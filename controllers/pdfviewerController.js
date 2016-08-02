@@ -30,7 +30,7 @@ angular.module('app').controller('pdfviewerCtrl', function ($scope, pdfSrv, $rou
 
         console.log(docu);
 
-        var final = $scope.base64(docu,'application/pdf');
+        var final = $scope.base64(docu, 'application/pdf');
 
         $scope.pdfUrl = URL.createObjectURL(final);
 
