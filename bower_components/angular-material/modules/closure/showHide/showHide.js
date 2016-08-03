@@ -2,10 +2,10 @@
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v1.1.0-rc4-master-c26842a
+ * v1.1.0-rc.5-master-9a2c47d
  */
-goog.provide('ng.material.components.showHide');
-goog.require('ng.material.core');
+goog.provide('ngmaterial.components.showHide');
+goog.require('ngmaterial.core');
 /**
  * @ngdoc module
  * @name material.components.showHide
@@ -30,12 +30,19 @@ function createDirective(name, targetValue) {
         var unregister = $scope.$on('$md-resize-enable', function() {
           unregister();
 
+          var cachedTransitionStyles = window.getComputedStyle($element[0]);
+
           $scope.$watch($attr[name], function(value) {
             if (!!value === targetValue) {
               $mdUtil.nextTick(function() {
                 $scope.$broadcast('$md-resize');
               });
-              $mdUtil.dom.animator.waitTransitionEnd($element).then(function() {
+
+              var opts = {
+                cachedTransitionStyles: cachedTransitionStyles
+              };
+
+              $mdUtil.dom.animator.waitTransitionEnd($element, opts).then(function() {
                 $scope.$broadcast('$md-resize');
               });
             }
@@ -45,4 +52,4 @@ function createDirective(name, targetValue) {
     };
   }];
 }
-ng.material.components.showHide = angular.module("material.components.showHide");
+ngmaterial.components.showHide = angular.module("material.components.showHide");
