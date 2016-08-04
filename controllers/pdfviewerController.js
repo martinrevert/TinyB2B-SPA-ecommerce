@@ -28,15 +28,15 @@ angular.module('app').controller('pdfviewerCtrl', function ($scope, pdfSrv, $rou
 
         docu = d.data[0].archivo;
 
-        console.log(docu);
-
         var final = $scope.base64(docu, 'application/pdf');
+
+        $scope.downloadPdf = function (){
+            saveAs(final, numero + '.pdf');
+        };
 
         $scope.pdfUrl = URL.createObjectURL(final);
 
-    }).then(function (error) {
-        console.log("Error al recuperar pdf de WS");
-    })
+    });
 
 });
 

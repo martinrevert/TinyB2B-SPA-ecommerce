@@ -16,8 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular-indexedDB": "angular-indexed-db#^1.1.3",
-    "angular-material": "^1.0.8",
+    "angular-material": "master",
     "localStorageService": "angular-localStorageService#*",
     "moment": "^2.14.1"
   }

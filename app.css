@@ -1,37 +1,18 @@
-/*
-body {
-    font-family: 'Roboto', sans-serif;
-    background: #f7f7f7;
-}*/
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
 }
-/*
-.login div{
-    display: block;
-    height: 30%;
-    width: 30%;
-}
 
-.login div img {
-    display: block;
-    width: 20% !important;
-    height: 20% !important;
-}
-
-*/
-
-.producto > div.descripcion{
+.producto > div.descripcion {
     font-size: 0.8rem;
     font-weight: bold;
 }
 
-.producto > div.codigo{
+.producto > div.codigo {
     font-size: 0.6rem;
     font-weight: bold;
 }
 
-.producto div .md-button{
+.producto div .md-button {
     font-size: 0.7rem;
 }
 
@@ -41,26 +22,34 @@ body {
 
 }
 
-.itempedido > div.descr{
+.itempedido > div.descr {
     font-size: 0.8rem;
     font-weight: bold;
 }
 
-.itempedido > div.codig{
+.itempedido > div.codig {
     font-size: 0.6rem;
     font-weight: bold;
 }
 
+/* para quitar flechas spinner en input number */
+.pagina input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-
-
+.pagina input[type="number"] {
+    width: 30px;
+    -moz-appearance: textfield;
+}
 
 table.md-table th.md-column {
     color: rgba(0, 0, 0, 0.54);
     font-size: 12px;
     font-weight: bold;
     white-space: nowrap;
-/* Aqui se puede cambiar el color del HD de las tablas */
+    /* Aqui se puede cambiar el color del HD de las tablas */
 }
 
 .totales {
@@ -114,8 +103,6 @@ md-sidenav.md-locked-open {
     font-size: 0.8rem;
     color: #ffffff;
 }
-
-
 
 md-content.md-default-theme, md-content {
     /*  background-color: lightgrey; */

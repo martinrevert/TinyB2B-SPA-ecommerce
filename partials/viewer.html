@@ -1,21 +1,23 @@
-<nav ng-class="getNavStyle(scroll)">
-    <button ng-click="goPrevious()"><</span></button>
-    <button ng-click="goNext()">></span></button>
+<md-toolbar layout="row" layout-align="start center">
+    <md-button class="md-fab md-mini" aria-label="Eat cake" ng-click="zoomIn()">
+        <md-icon md-svg-src="img/ic_zoom_in_white_24px.svg"></md-icon>
+    </md-button>
 
-    <button ng-click="zoomIn()">+</span></button>
-    <button ng-click="fit()">100%</span></button>
-    <button ng-click="zoomOut()">-</span></button>
+    <md-button class="md-fab md-mini" aria-label="Eat cake" ng-click="zoomOut()">
+        <md-icon md-svg-src="img/ic_zoom_out_white_24px.svg"></md-icon>
+    </md-button>
+    <md-button class="md-fab md-mini" aria-label="Eat cake" ng-click="goPrevious()"><</md-button>
+    <md-button class="md-fab md-mini" aria-label="Eat cake" ng-click="goNext()">></md-button>
+    <div class="pagina" layout="row" layout-align="start center">
+        <h6>Pág. </h6>
+        <input type="number" min=1 ng-model="pageNum">
+        <h6> / {{pageCount}}</h6>
+    </div>
+    <md-button class="md-fab md-mini" aria-label="Descarga PDF" ng-click="downloadPdf()">
+        <md-icon md-svg-src="img/ic_cloud_download_white_24px.svg"></md-icon>
+    </md-button>
+</md-toolbar>
 
-
-    <span>Page: </span>
-    <input type="text" min=1 ng-model="pageNum">
-    <span> / {{pageCount}}</span>
-
-</nav>
-
-<hr>
-
-{{loading}}
-<md-content>
-    <canvas id="pdf" class="rotate0"></canvas>
+<md-content layout="column" flex>
+    <canvas layout="column" flex id="pdf" class="rotate0"></canvas>
 </md-content>
