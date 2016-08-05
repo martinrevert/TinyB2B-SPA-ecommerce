@@ -54,10 +54,6 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
                 templateUrl: 'partials/pedidomiscomprasfrecuentes.html',
                 controller: 'pedidoCtrl'
             })
-            .when('/listaprecios', {
-                templateUrl: 'partials/listaprecios.html',
-                controller: 'listapreciosCtrl'
-            })
             .when('/checkout', {
                 templateUrl: 'partials/checkout.html',
                 controller: 'checkoutCtrl'
@@ -73,6 +69,10 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
             .when('/pdfviewer/:numero', {
                 templateUrl: 'partials/pdfviewer.html',
                 controller: 'pdfviewerCtrl'
+            })
+            .when('/listadeprecios', {
+                templateUrl: 'partials/pdfviewer.html',
+                controller: 'pdfviewerlistadepreciosCtrl'
             })
             .otherwise({
                 redirectTo: '/login'
@@ -142,7 +142,7 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
 
                 },
                 {
-                    href: './listaprecios',
+                    href: './listadeprecios',
                     title: 'Lista de precios',
                     icon: 'img/ic_attach_money_black_24px.svg'
 
