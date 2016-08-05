@@ -50,16 +50,21 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
         cartSrv.setFechas(hoy, manana);
         var pedido = cartSrv.getPedido();
 
-        enviarpedidoSrv.async(pedido).then(function (response) {
+        enviarpedidoSrv.async(pedido).then(function successCallback(response) {
             console.log(response);
             //envío de pedido exitoso
             //Todo borrar array memoria
             //Todo borrar tablanotadeventa
             $mdToast.show($mdToast.simple().textContent('Su pedido ha sido enviado exitosamente.'));
 
-        }).then(function (error) {
+        }, function errorCallback(error) {
+
+            var datos = error.statusText;
+
+            console.log(datos);
+
             //envío de pedido no exitoso
-            console.log(error.data);
+            console.log("Bum problemas");
             $mdToast.show($mdToast.simple().textContent('Falló el envío, por favor reintente.'));
         });
     };

@@ -25,7 +25,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
     // randomColor({luminosity: 'dark'});
     //randomColor({luminosity: 'dark', count: 27});
 
-    $scope.showcategorias = function(){
+    $scope.showcategorias = function () {
         $scope.productos = [];
         $scope.mostrarmarcas = true;
         $scope.mostrarfloat = false;

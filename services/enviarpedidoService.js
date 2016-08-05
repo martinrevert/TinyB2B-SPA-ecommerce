@@ -11,10 +11,12 @@ app.factory('enviarpedidoSrv', function ($http, config) {
             var data = angular.toJson(notadeventa);
             var conf = {
                 cache: false,
-                ignoreLoadingBar: true,
-                headers: {
+                ignoreLoadingBar: true
+            /*
+            Solo en caso que se necesiten headers especiales
+            ,headers: {
                     'Content-Type': 'text/plain'
-                }
+                }*/
             };
             var url = config.apiUrl + "/RecibeNotadeVenta2";
 
@@ -22,15 +24,8 @@ app.factory('enviarpedidoSrv', function ($http, config) {
                 url,
                 data,
                 conf
-            )
-                /*.then(function successCallback(response) {
-                 // ok
-                 console.log(response.data);
-                 }, function errorCallback(response) {
-                 console.log(response.data);
-                 }
-                 )*/
-                ;  //This returns promise
+            );
+                
         }
-    };
+    }
 });
