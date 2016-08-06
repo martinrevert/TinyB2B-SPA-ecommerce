@@ -13,12 +13,12 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
     $scope.preneto = cartSrv.getPrecioTotalDescuento();
     $scope.iva = cartSrv.getIva();
 
-    $scope.cambiarDireccion = function(domicilio){
-            cartSrv.setDomicilio(domicilio);
+    $scope.cambiarDireccion = function (domicilio) {
+        cartSrv.setDomicilio(domicilio);
     };
 
-    $scope.setObservacion = function(observaciones){
-            cartSrv.setObservaciones(observaciones);
+    $scope.setObservacion = function (observaciones) {
+        cartSrv.setObservaciones(observaciones);
     };
 
     $scope.eliminarItem = function (id) {
@@ -29,8 +29,7 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
         $scope.iva = cartSrv.getIva();
     };
 
-    $scope.borrarTodo = function () {
-        //ToDo al menos esto debería borrar productos y notificar al scope para que refresque, a partir de alli activar icono view html
+    $scope.borrarCart = function () {
         cartSrv.removeNotadeVenta();
     };
 
@@ -51,20 +50,17 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
         var pedido = cartSrv.getPedido();
 
         enviarpedidoSrv.async(pedido).then(function successCallback(response) {
-            console.log(response);
             //envío de pedido exitoso
-            //Todo borrar array memoria
-            //Todo borrar tablanotadeventa
+            $scope.borrarCart();
+            $scope.updatetotales();
+            $scope.cart = cartSrv.getProducts();
+
             $mdToast.show($mdToast.simple().textContent('Su pedido ha sido enviado exitosamente.'));
 
         }, function errorCallback(error) {
-
-            var datos = error.statusText;
-
-            console.log(datos);
-
             //envío de pedido no exitoso
-            console.log("Bum problemas");
+            var datos = error.statusText;
+            console.log(datos);
             $mdToast.show($mdToast.simple().textContent('Falló el envío, por favor reintente.'));
         });
     };

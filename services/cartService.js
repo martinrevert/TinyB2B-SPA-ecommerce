@@ -8,10 +8,12 @@ app.factory("cartSrv", function ($storage, $mdToast) {
     var cliente = tablausuario.getItem('cliente');
     var direccion = tablausuario.getItem('direccion');
     var fpagocli = tablausuario.getItem('fpago');
+    var cartData = null;
 
-    if (tablanotadeventa.getItem('cartData') == null) {
 
-        var cartData = {
+    function initializeCart(){
+
+         cartData = {
             "pedido": {
                 "anticipo": null,
                 "area": "C",
@@ -29,9 +31,12 @@ app.factory("cartSrv", function ($storage, $mdToast) {
             }
         };
         tablanotadeventa.setItem('cartData', cartData);
+    }
 
+    if (tablanotadeventa.getItem('cartData') == null) {
+        initializeCart();
     } else {
-        var cartData = tablanotadeventa.getItem('cartData');
+        cartData = tablanotadeventa.getItem('cartData');
     }
 
     return {
@@ -72,21 +77,10 @@ app.factory("cartSrv", function ($storage, $mdToast) {
         },
 
         removeNotadeVenta: function () {
-            //ToDo ver como borrar todo y dejar disponible cartData limpio para seguir operando
 
-            //cartData.pedido.productos.lenght = 0;
-            tablanotadeventa.truncate();
+             initializeCart();
 
-         /*   for (var i = 0; i < cartData.pedido.productos.length; i++) {
-                if (cartData.pedido.productos[i].codigo == id) {
-                    cartData.pedido.productos.splice(i, 1);
-                    tablanotadeventa.setItem('cartData', cartData);
-                    break;
-                }
-            }*/
         },
-
-
 
         changeQuantity: function () {
 
