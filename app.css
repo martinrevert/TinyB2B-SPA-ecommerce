@@ -6,6 +6,10 @@
     margin: 2%;
 }
 
+.producto{
+    margin: 1%;
+}
+
 .producto > div.descripcion {
     font-size: 0.8rem;
     font-weight: bold;
@@ -18,6 +22,10 @@
 
 .producto div .md-button {
     font-size: 0.7rem;
+}
+
+.itempedido{
+    margin: 1%;
 }
 
 .itempedido input[type="number"] {
