@@ -2,6 +2,10 @@
     display: none !important;
 }
 
+.grillamarcas{
+    margin: 2%;
+}
+
 .producto > div.descripcion {
     font-size: 0.8rem;
     font-weight: bold;

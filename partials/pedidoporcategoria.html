@@ -1,7 +1,7 @@
 <div flex layout="column" data-ng-init="buscarporcategorias()">
- <!--   <md-button ng-show="mostrarfloat" class="md-fab md-primary md-fab-top-left" aria-label="Ver categorias">
-        <md-icon md-svg-src="img/icons/android.svg"></md-icon>
-    </md-button> -->
+    <!--   <md-button ng-show="mostrarfloat" class="md-fab md-primary md-fab-top-left" aria-label="Ver categorias">
+           <md-icon md-svg-src="img/icons/android.svg"></md-icon>
+       </md-button> -->
     <md-toolbar>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
@@ -23,24 +23,28 @@
     <md-content flex layout-xs="column" layout="row" layout-align="center">
 
 
-
-        <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" class="productos" layout-margin>
+        <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" class="productos">
 
             <div class="back" layout="row" layout-align="center center" flex="none">
 
-                <md-button class="md-raised md-primary" ng-show="mostrarfloat" ng-click="showcategorias()">VER CATEGORIAS</md-button>
+                <md-button class="md-raised md-primary" ng-show="mostrarfloat" ng-click="showcategorias()">VER
+                    CATEGORIAS
+                </md-button>
 
             </div>
 
             <md-grid-list ng-show="mostrarmarcas" md-cols-sm="2" md-cols-xs="2" md-cols-gt-sm="3"
                           md-gutter="1em"
-                          md-row-height="3rem">
+                          md-row-height="3rem"
+                          class="grillamarcas"
+
+            >
                 <md-grid-tile md-ink-ripple class="tile" ng-repeat="tile in marcas | orderBy: 'Descripcion'"
                               ng-click="prodspormarca(tile.Codigo)">
                     {{tile.Descripcion}}
                 </md-grid-tile>
             </md-grid-list>
-
+            <md-divider></md-divider>
             <div ng-include="'partials/producto.html'"></div>
 
 

@@ -18,12 +18,12 @@
 
     </md-toolbar>
     <md-content flex layout-xs="column" layout="row" layout-align="center">
-        <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" class="productos" layout-margin>
+        <md-content flex-gt-xs="50" flex-xs="100" flex-order-xs="-2" class="productos">
 
             <div layout="column" layout-fill layout-align="center center" ng-if="productos == 0">No hay productos para
                 mostrar
             </div>
-
+            <md-divider></md-divider>
             <div ng-include="'partials/producto.html'"></div>
         </md-content>
 
