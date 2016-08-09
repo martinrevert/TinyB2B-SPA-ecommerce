@@ -1,7 +1,9 @@
-angular.module('app').controller('pdfviewerCtrl', function ($scope, pdfSrv, $routeParams) {
+angular.module('app').controller('pdfviewerCtrl', function ($scope, pdfSrv, $routeParams, $mdMedia) {
 
     var numero = $routeParams.numero;
     var docu = "";
+
+    $scope.$mdMedia = $mdMedia;
 
     $scope.base64 = function (base64Data, contentType) {
         contentType = contentType || '';

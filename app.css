@@ -2,11 +2,21 @@
     display: none !important;
 }
 
-.grillamarcas{
+.smalldevice {
+    overflow-y: scroll;
+}
+
+.biggerdevice {
+    height: calc(100vw - 810px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.grillamarcas {
     margin: 2%;
 }
 
-.producto{
+.producto {
     margin: 1%;
 }
 
@@ -24,7 +34,7 @@
     font-size: 0.7rem;
 }
 
-.itempedido{
+.itempedido {
     margin: 1%;
 }
 

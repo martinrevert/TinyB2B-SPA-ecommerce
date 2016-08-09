@@ -1,4 +1,4 @@
-<div layout="column" layout-fill">
+
 <md-toolbar>
     <div class="md-toolbar-tools">
         <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
@@ -8,7 +8,8 @@
         <span flex></span>
     </div>
 </md-toolbar>
-
+<div layout="column" style="overflow: auto; height: 100%;">
+<md-content>
 <md-table-container>
     <table md-table md-row-select ng-model="selected">
         <thead md-head>
@@ -36,6 +37,6 @@
     </table>
 </md-table-container>
 
-
+</md-content>
 
 </div>

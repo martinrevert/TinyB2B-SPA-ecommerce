@@ -1,24 +1,26 @@
-<div layout="column" layout-fill>
-    <md-toolbar layout="row" layout-align="start center">
-        <md-button class="md-fab md-mini md-warning" aria-label="Eat cake" ng-click="zoomIn()">
-            <md-icon md-svg-src="img/ic_zoom_in_white_24px.svg"></md-icon>
-        </md-button>
-        <md-button class="md-fab md-mini" aria-label="Eat cake" ng-click="zoomOut()">
-            <md-icon md-svg-src="img/ic_zoom_out_white_24px.svg"></md-icon>
-        </md-button>
-        <md-button class="md-fab md-mini" aria-label="Eat cake" ng-click="goPrevious()"><</md-button>
-        <md-button class="md-fab md-mini" aria-label="Eat cake" ng-click="goNext()">></md-button>
-        <div class="pagina" layout="row" layout-align="start center">
-            <h6>Pág. </h6>
-            <input type="number" min=1 ng-model="pageNum">
-            <h6> / {{pageCount}}</h6>
-        </div>
-        <md-button class="md-fab md-mini" aria-label="Descarga PDF" ng-click="downloadPdf()">
-            <md-icon md-svg-src="img/ic_cloud_download_white_24px.svg"></md-icon>
-        </md-button>
-    </md-toolbar>
+<md-toolbar flex layout="row" layout-align="start center">
+    <md-button class="md-fab md-mini md-warn" aria-label="Eat cake" ng-click="zoomIn()">
+        <md-icon md-svg-src="img/ic_zoom_in_white_24px.svg"></md-icon>
+    </md-button>
+    <md-button class="md-fab md-mini md-warn" aria-label="Eat cake" ng-click="zoomOut()">
+        <md-icon md-svg-src="img/ic_zoom_out_white_24px.svg"></md-icon>
+    </md-button>
+    <md-button class="md-fab md-mini md-warn" aria-label="Eat cake" ng-click="goPrevious()"><</md-button>
 
-    <md-content layout="column">
-        <canvas layout="column" id="pdf" class="rotate0"></canvas>
-    </md-content>
-</div>
+    <div class="pagina" layout="row" layout-align="start center">
+        <h6>Pág. </h6>
+        <input type="number" min=1 ng-model="pageNum">
+        <h6> / {{pageCount}}</h6>
+    </div>
+    <md-button class="md-fab md-mini md-warn" aria-label="Eat cake" ng-click="goNext()">></md-button>
+    <md-button class="md-fab md-mini md-warn" aria-label="Descarga PDF" ng-click="downloadPdf()">
+        <md-icon md-svg-src="img/ic_cloud_download_white_24px.svg"></md-icon>
+    </md-button>
+</md-toolbar>
+
+
+<md-content flex layout="column"
+            ng-class="{'biggerdevice': $mdMedia('gt-md'), 'smalldevice': $mdMedia('xs')}">
+    <canvas id="pdf"></canvas>
+</md-content>
+

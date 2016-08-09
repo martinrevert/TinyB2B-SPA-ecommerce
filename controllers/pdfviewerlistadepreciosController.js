@@ -1,8 +1,10 @@
-angular.module('app').controller('pdfviewerlistadepreciosCtrl', function ($scope, pdflistaSrv, $storage) {
+angular.module('app').controller('pdfviewerlistadepreciosCtrl', function ($scope, pdflistaSrv, $storage, $mdMedia) {
 
     var tablausuario = $storage('tablaUsuario');
     var cliente = tablausuario.getItem('cliente');
     var hoy = moment().format('DD/MM/YYYY');
+
+    $scope.$mdMedia = $mdMedia;
 
     $scope.base64 = function (base64Data, contentType) {
         contentType = contentType || '';
