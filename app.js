@@ -14,17 +14,17 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
                 }
             });
         };
-    })/*.config(function($httpProvider){
-     $httpProvider.defaults.headers.common = {};
-     $httpProvider.defaults.headers.post = {};
-     $httpProvider.defaults.headers.put = {};
-     $httpProvider.defaults.headers.patch = {};
-     })*/
+    })
+    .config(function ($sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist([
+        'self',
+        'http://gruposerin.com.ar/pedidos/**/'
+        ]);
+})
     .config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
-        cfpLoadingBarProvider.includeSpinner = false;
-    }])
+    cfpLoadingBarProvider.includeSpinner = false;
+}])
     .config(function ($routeProvider, $locationProvider, $sceProvider) {
-
         $routeProvider
             .when('/', {
                 templateUrl: 'partials/login.html',
@@ -79,7 +79,8 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
             });
 
         $locationProvider.html5Mode(true);
-        //$sceProvider.enabled(false);
+        //ToDo revisar la whitelist de la config del $sceDelegateProvider
+        $sceProvider.enabled(false);
     })
     .controller('indexCtrl', ['$scope', '$mdSidenav', '$routeParams', '$route', '$storage', function ($scope, $mdSidenav, $route, $routeParams, $storage) {
 
