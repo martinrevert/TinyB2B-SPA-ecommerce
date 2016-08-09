@@ -7,13 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="03cfdbbc-0493-4086-8c23-f021b9ca17c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.css" afterPath="$PROJECT_DIR$/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/pdfviewerController.js" afterPath="$PROJECT_DIR$/controllers/pdfviewerController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/pdfviewerlistadepreciosController.js" afterPath="$PROJECT_DIR$/controllers/pdfviewerlistadepreciosController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/carroitemsndv.html" afterPath="$PROJECT_DIR$/partials/carroitemsndv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/consultadepedidos.html" afterPath="$PROJECT_DIR$/partials/consultadepedidos.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/resumendecuenta.html" afterPath="$PROJECT_DIR$/partials/resumendecuenta.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/viewer.html" afterPath="$PROJECT_DIR$/partials/viewer.html" />
     </list>
     <ignored path="materialSerin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,8 +60,8 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -572,14 +565,7 @@
       <workItem from="1469788454124" duration="15395000" />
       <workItem from="1470119167304" duration="37111000" />
       <workItem from="1470419762259" duration="8824000" />
-      <workItem from="1470472600101" duration="40183000" />
-    </task>
-    <task id="LOCAL-00004" summary="- Corrección servicio de consulta de productos que no disparaba respuesta.&#10;- Corrección controler de prueba de productos para recibir el resultado del disparo del servicio.">
-      <created>1463114471243</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1463114471243</updated>
+      <workItem from="1470472600101" duration="40252000" />
     </task>
     <task id="LOCAL-00005" summary="- Corrección servicio de productos, ahora solo entrega promise y el controlador es el encargado de abriri los datos del promise result.data o d.data.&#10;- Se agraga librería jspdf para implementar confección de lista total de precios&#10;- Se agrega encriptador sjcl">
       <created>1463186885359</created>
@@ -917,11 +903,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470721455909</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="- Fix viewport en PDF viewer cuando estas en pantallas grandes.&#10;&#10;">
+      <created>1470721501315</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1470721501316</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="587304000" />
+    <option name="totallyTimeSpent" value="587373000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -934,12 +927,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.204947" sideWeight="0.50714284" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24734983" sideWeight="0.49646106" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.59717315" sideWeight="0.49285713" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.59717315" sideWeight="0.49285713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4646643" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -998,7 +991,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="- Implementación consulta de ndv históricas&#10;&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Incorporación libs angular-pdf y pdfjs ( by Mozilla)&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Tooltip en icono carro de compra en views de pedidos&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Fix Tooltips fuera de boton carro compras&#10;&#10;&#10;&#10;" />
@@ -1023,7 +1015,8 @@
     <MESSAGE value="- Margen categorías&#10;- Librería de PDF mas liviana&#10;- Eliminación margen de productos&#10;- TEST algunas tentativas para comportamiento scroll PDF viewer&#10;&#10;" />
     <MESSAGE value="- Margen productos&#10;- Margen itemspedido&#10;&#10;" />
     <MESSAGE value="- Actualización angular material a ultima versión&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Actualización angular material a ultima versión&#10;&#10;" />
+    <MESSAGE value="- Fix viewport en PDF viewer cuando estas en pantallas grandes.&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fix viewport en PDF viewer cuando estas en pantallas grandes.&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1406,8 +1399,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="54">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
