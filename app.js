@@ -16,14 +16,14 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
         };
     })
     .config(function ($sceDelegateProvider) {
-    $sceDelegateProvider.resourceUrlWhitelist([
-        'self',
-        'http://gruposerin.com.ar/pedidos/**/'
+        $sceDelegateProvider.resourceUrlWhitelist([
+            'self',
+            'http://www.gruposerin.com.ar/pedidos/**'
         ]);
-})
+    })
     .config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
-    cfpLoadingBarProvider.includeSpinner = false;
-}])
+        cfpLoadingBarProvider.includeSpinner = false;
+    }])
     .config(function ($routeProvider, $locationProvider, $sceProvider) {
         $routeProvider
             .when('/', {
@@ -79,8 +79,8 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
             });
 
         $locationProvider.html5Mode(true);
-        //ToDo revisar la whitelist de la config del $sceDelegateProvider
-        $sceProvider.enabled(false);
+
+        //$sceProvider.enabled(false);
     })
     .controller('indexCtrl', ['$scope', '$mdSidenav', '$routeParams', '$route', '$storage', function ($scope, $mdSidenav, $route, $routeParams, $storage) {
 
