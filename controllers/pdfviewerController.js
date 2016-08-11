@@ -33,7 +33,7 @@ angular.module('app').controller('pdfviewerCtrl', function ($scope, pdfSrv, $rou
         var final = $scope.base64(docu, 'application/pdf');
 
         $scope.downloadPdf = function (){
-            saveAs(final, numero + '.pdf');
+            saveAs(final, numero.trim() + '.pdf');
         };
 
         $scope.pdfUrl = URL.createObjectURL(final);

@@ -1,10 +1,10 @@
-<md-content layout="column" layout-align="center center" flex hide show-gt-xs class="itemspedido">
+<md-content flex hide show-gt-xs class="itemspedido">
 
-    <div layout="column" layout-align="center center" layout-padding layout-fill  ng-if="cart == 0">No hay productos cargados
+    <div flex layout="row" style="min-height: calc(100vh - 115px)" layout-align="center center" layout-padding ng-if="cart == 0">No hay productos cargados
         en su carro de compras.
     </div>
 
-    <div ng-include="'partials/itempedido.html'"></div>
+    <div flex ng-include="'partials/itempedido.html'"></div>
 
 </md-content>
 
