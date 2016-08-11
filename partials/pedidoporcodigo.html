@@ -1,4 +1,4 @@
-<md-content flex style="border: 1px solid firebrick;" layout="column" data-ng-init="buscarporcodigo()">
+<md-content flex layout="column" data-ng-init="buscarporcodigo()">
     <md-toolbar>
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-md aria-label="Toggle Menu">
@@ -28,7 +28,7 @@
 
             </md-input-container>
 
-            <div layout="column" layout-fill layout-align="center center" ng-if="productos == 0">No hay productos para
+            <div layout="row" style="min-height: calc(100vh - 230px)" layout-align="center center" ng-if="productos == 0">No hay productos para
                 mostrar
             </div>
             <md-divider></md-divider>
