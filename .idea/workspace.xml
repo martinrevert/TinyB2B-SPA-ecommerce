@@ -7,8 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="03cfdbbc-0493-4086-8c23-f021b9ca17c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/carroitemsndv.html" afterPath="$PROJECT_DIR$/partials/carroitemsndv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/itempedido.html" afterPath="$PROJECT_DIR$/partials/itempedido.html" />
     </list>
     <ignored path="materialSerin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,22 +27,22 @@
     <favorites_list name="materialSerin" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+    <leaf>
+      <file leaf-file-name="carroitemsndv.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/partials/carroitemsndv.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1144">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="36">
+              <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="itempedido.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/itempedido.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+            <state relative-caret-position="0">
+              <caret line="0" column="53" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -101,12 +101,10 @@
         <option value="$PROJECT_DIR$/partials/pedidopordescripcion.html" />
         <option value="$PROJECT_DIR$/partials/pedidoporcategoria.html" />
         <option value="$PROJECT_DIR$/partials/producto.html" />
-        <option value="$PROJECT_DIR$/partials/itempedido.html" />
         <option value="$PROJECT_DIR$/partials/resumendecuenta.html" />
         <option value="$PROJECT_DIR$/partials/checkout.html" />
         <option value="$PROJECT_DIR$/partials/consultadepedidos.html" />
         <option value="$PROJECT_DIR$/partials/pedidoofertas.html" />
-        <option value="$PROJECT_DIR$/partials/carroitemsndv.html" />
         <option value="$PROJECT_DIR$/partials/pdfviewer.html" />
         <option value="$PROJECT_DIR$/controllers/pdfviewerController.js" />
         <option value="$PROJECT_DIR$/controllers/pdfviewerlistadepreciosController.js" />
@@ -115,6 +113,8 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/partials/itempedido.html" />
+        <option value="$PROJECT_DIR$/partials/carroitemsndv.html" />
       </list>
     </option>
   </component>
@@ -161,7 +161,6 @@
       <pane id="ProjectPane">
         <subPane />
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -204,6 +203,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -554,14 +554,9 @@
       <workItem from="1470786197164" duration="25000" />
       <workItem from="1470786233086" duration="46000" />
       <workItem from="1470786343005" duration="10000" />
-      <workItem from="1470815702032" duration="2462000" />
-    </task>
-    <task id="LOCAL-00007" summary="- Se agrega librería para spionner de espera&#10;- Se implementa en controlador de productos llamadas a spinner&#10;- Se agrega en index.html llamadas a spinner&#10;- Se corrije diseño horizontal de nota de venta y cart (resta evaluar si en teléfonos se hace columna)&#10;">
-      <created>1463412922346</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1463412922346</updated>
+      <workItem from="1470815702032" duration="2902000" />
+      <workItem from="1470892287455" duration="12000" />
+      <workItem from="1470892386735" duration="3331000" />
     </task>
     <task id="LOCAL-00008" summary="- Update angular a 1.5.6&#10;- Reducción a 1 controlador por módulo, con logica de index por tabs sin usar diferentes controladores.&#10;&#10;">
       <created>1465626526115</created>
@@ -899,11 +894,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470730522806</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="- Se reactiva $sce, solo había que cambiar el &lt;base&gt; del &lt;head&gt; a la ruta genérica sin dominio&#10;&#10;">
+      <created>1470819564813</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1470819564814</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="600392000" />
+    <option name="totallyTimeSpent" value="604175000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -980,7 +982,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="- Tooltip en icono carro de compra en views de pedidos&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Fix Tooltips fuera de boton carro compras&#10;&#10;&#10;&#10;" />
     <MESSAGE value="- implementación Lista de precios total, aun sin emisión de PDF.&#10;- Corrección columnas consulta de ndv&#10;- &#10;&#10;&#10;&#10;" />
     <MESSAGE value="- Cambio de color loading bar&#10;- Agregado de logos Serin&#10;- Centrado boton login&#10;- Fix diseño producto&#10;- md-divider en sidebar&#10;&#10;&#10;&#10;" />
@@ -1005,7 +1006,8 @@
     <MESSAGE value="- Actualización angular material a ultima versión&#10;&#10;" />
     <MESSAGE value="- Fix viewport en PDF viewer cuando estas en pantallas grandes.&#10;&#10;" />
     <MESSAGE value="- Workaround desactivando $sce para poder manejar dominio con y sin www&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Workaround desactivando $sce para poder manejar dominio con y sin www&#10;&#10;" />
+    <MESSAGE value="- Se reactiva $sce, solo había que cambiar el &lt;base&gt; del &lt;head&gt; a la ruta genérica sin dominio&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Se reactiva $sce, solo había que cambiar el &lt;base&gt; del &lt;head&gt; a la ruta genérica sin dominio&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1052,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1044">
           <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1220,27 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/pedidomiscomprasfrecuentes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/itempedido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/carroitemsndv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/pdfviewer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1252,13 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/pedidoofertas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1329,22 +1302,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1144">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+        <state relative-caret-position="1242">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1130">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/pedidomiscomprasfrecuentes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/itempedido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="53" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/pedidoofertas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-388">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#md-content#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/carroitemsndv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
           <folding />
         </state>
       </provider>
