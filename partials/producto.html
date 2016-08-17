@@ -6,22 +6,22 @@
     <div layout="row" layout-align="end end">
         <md-button
                 ng-click="addProduct(producto.codigo, producto.descripcion, producto.bonif, producto.bonif, 1, producto.emp, producto.factor, producto.iva, producto.medida1, producto.medida1, producto.medida2, producto.peso, producto.precio_final_con_iva, producto.preneto, producto.preneto_con_descuento, producto.tipo_precio, producto.uventa)"
-                ng-if="producto.uventa == '1'" class="md-raised">Comprar x {{::producto.medida1}}:
+                ng-if="producto.uventa == '1'" class="md-raised md-warn">Comprar x {{::producto.medida1}}:
             {{::producto.preneto_con_descuento | currency}}
         </md-button>
         <md-button
                 ng-click="addProduct(producto.codigo, producto.descripcion, producto.bonif, producto.bonif, 1, producto.emp, producto.factor, producto.iva, producto.medida2, producto.medida1, producto.medida2, producto.peso, producto.precio_final_con_iva, producto.preneto, producto.preneto_con_descuento, producto.tipo_precio, producto.uventa)"
-                ng-if="producto.uventa == '2'" class="md-raised">Comprar x {{::producto.medida2}}:
+                ng-if="producto.uventa == '2'" class="md-raised md-warn">Comprar x {{::producto.medida2}}:
             {{::producto.preneto_con_descuento * producto.factor | currency}}
         </md-button>
         <md-button
                 ng-click="addProduct(producto.codigo, producto.descripcion, producto.bonif, producto.bonif, 1, producto.emp, producto.factor, producto.iva, producto.medida1, producto.medida1, producto.medida2, producto.peso, producto.precio_final_con_iva, producto.preneto, producto.preneto_con_descuento, producto.tipo_precio, '1')"
-                ng-if="producto.uventa == '3'" class="md-raised">Comprar x {{producto.medida1}}:
+                ng-if="producto.uventa == '3'" class="md-raised md-warn">Comprar x {{producto.medida1}}:
             {{producto.preneto_con_descuento | currency}}
         </md-button>
         <md-button
                 ng-click="addProduct(producto.codigo, producto.descripcion, producto.bonif, producto.bonif, 1, producto.emp, producto.factor, producto.iva, producto.medida2, producto.medida1, producto.medida2, producto.peso, producto.precio_final_con_iva, producto.preneto, producto.preneto_con_descuento, producto.tipo_precio, '2')"
-                ng-if="producto.uventa == '3'" class="md-raised">Comprar x {{::producto.medida2}}:
+                ng-if="producto.uventa == '3'" class="md-raised md-warn">Comprar x {{::producto.medida2}}:
             {{::producto.preneto_con_descuento * producto.factor | currency}}
         </md-button>
     </div>

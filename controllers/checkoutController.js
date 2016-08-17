@@ -2,7 +2,7 @@
  * Created by martin on 29/06/16.
  */
 
-angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, enviarpedidoSrv, $storage, $mdToast) {
+angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, enviarpedidoSrv, $storage, $mdToast, $timeout, $location) {
 
     var tablanotadeventa = $storage('tablanotadeventa');
 
@@ -56,6 +56,11 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
             $scope.cart = cartSrv.getProducts();
 
             $mdToast.show($mdToast.simple().textContent('Su pedido ha sido enviado exitosamente.'));
+
+            $timeout(function() {
+                $location.path('/pedidoporcategoria');
+            }, 5000);
+
 
         }, function errorCallback(error) {
             //envío de pedido no exitoso

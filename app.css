@@ -32,6 +32,7 @@
 
 .producto div .md-button {
     font-size: 0.7rem;
+    width: 150px;
 }
 
 .itempedido {
@@ -75,13 +76,21 @@ table.md-table th.md-column {
 }
 
 .totales {
-    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: red;
     color: white;
     font-size: 0.8rem;
     font-weight: bold;
     word-wrap: break-word;
+    border-radius: 15px;
+}
 
+.totalcheck{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 15px;
 }
 
 .badge {
