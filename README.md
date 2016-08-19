@@ -1,7 +1,7 @@
-# SPA para empresas BtoB #
+# SPA para empresas B2B #
 
 Single Page Application utilizando AngularJS y soporte de componentes UI Angular Material.
-La app es un cliente multiplataforma y multipantalla para e-commerce BtoB. Interactúa con webservices que proveen los productos y los endpoints de comunicación  para recibir información.
+La app es un pequeño cliente frontend multiplataforma y multipantalla para e-commerce B2B. Interactúa con webservices que proveen los productos y los endpoints de comunicación  para recibir información.
 No posee modulos de shipping ni invoicing pero podrían agragarse como nuevos components AngularJS.
 
 Tecnologías utilizadas:
