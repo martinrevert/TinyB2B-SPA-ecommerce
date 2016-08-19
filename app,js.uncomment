@@ -3,7 +3,7 @@
 angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageModule', 'ngAnimate', 'pdf', 'angular-loading-bar'])
     .constant('config',
         {
-            apiUrl: 'http://gruposerin.dyndns.org:8080/servicios/eikon.asmx'
+            apiUrl: 'YOUR API HOST BASE URL HERE'
         })
     .directive('search', function () {
         return function ($scope, element) {
