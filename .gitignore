@@ -49,3 +49,5 @@ fabric.properties
 
 app.js
 /app,js
+.idea/
+app/
