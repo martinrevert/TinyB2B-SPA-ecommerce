@@ -11,4 +11,5 @@ Tecnologías utilizadas:
 * Javascript
 * HTML5
 * CSS3
- 
+
+Librerías (ver cada módulo en el directorio bower_components) 
