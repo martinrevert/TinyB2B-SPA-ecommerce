@@ -4,7 +4,7 @@
 
 angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, enviarpedidoSrv, $storage, $mdToast, $timeout, $location) {
 
-    var tablanotadeventa = $storage('tablanotadeventa');
+    var tablausuario = $storage('tablaUsuario');
 
     $scope.cart = cartSrv.getProducts();
     $scope.direccionentrega = cartSrv.getDomicilio();
@@ -39,6 +39,16 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
         $scope.preneto = cartSrv.getPrecioTotalDescuento();
         $scope.iva = cartSrv.getIva();
         cartSrv.changeQuantity();
+
+    };
+
+    $scope.isFpago = function(){
+
+        if (tablausuario.getItem('fpago') != '4'){
+            return true;
+        }else{
+            return false;
+        }
 
     };
 

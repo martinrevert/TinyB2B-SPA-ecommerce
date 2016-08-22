@@ -29,27 +29,36 @@
 
         <md-divider></md-divider>
 
-        <div md-warn md-whiteframe="3" layout="column" layout-align="end end" layout-padding layout-margin class="totalcheck">
+        <div md-warn md-whiteframe="3" layout="column" layout-align="end end" layout-padding layout-margin
+             class="totalcheck">
             <div>Neto {{preneto | currency}}</div>
             <div>Iva {{iva | currency}}</div>
             <div>Total {{total | currency}}</div>
+            <div ng-if="isFpago()">Se aplicará un recargo del 10% al total de su factura que será descontado si Ud.
+                abona la factura a término.
+            </div>
         </div>
-
         <md-divider></md-divider>
+        <div layout-margin="">
 
-        <md-input-container class="md-block">
-            <label>Domicilio de entrega</label>
-            <input type="text" name="direccionentrega" ng-model="direccionentrega" ng-change="cambiarDireccion(direccionentrega)"></input>
-        </md-input-container>
+            <md-input-container class="md-block">
+                <label>Domicilio de entrega</label>
+                <input type="text" name="direccionentrega" ng-model="direccionentrega"
+                       ng-change="cambiarDireccion(direccionentrega)"></input>
+            </md-input-container>
 
-        <md-input-container class="md-block">
-            <label>Observaciones</label>
-            <input name="observaciones" ng-model="observaciones" type="text" ng-change="setObservacion(observaciones)"></input>
-        </md-input-container>
+            <md-input-container class="md-block" layout-padding>
+                <label>Observaciones</label>
+                <input name="observaciones" ng-model="observaciones" type="text"
+                       ng-change="setObservacion(observaciones)"></input>
+            </md-input-container>
+
+        </div>
 
 
         <div md-whiteframe="3" layout="row" layout-align="center">
-            <md-button class="md-raised md-primary" ng-click="checkout()" ng-disabled="cart == 0">Enviar pedido</md-button>
+            <md-button class="md-raised md-primary" ng-click="checkout()" ng-disabled="cart == 0">Enviar pedido
+            </md-button>
         </div>
 
         <md-divider></md-divider>
