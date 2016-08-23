@@ -182,7 +182,7 @@ app.factory("cartSrv", function ($storage, $mdToast) {
                 if (cartData.pedido.productos[i].uventa == '1') {
                     total += (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].cantidad);
                 } else {
-                    total += (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad);
+                    total += (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].cantidad);
                 }
             }
             return total;
@@ -195,7 +195,7 @@ app.factory("cartSrv", function ($storage, $mdToast) {
                 if (cartData.pedido.productos[i].uventa == '1') {
                     total += (cartData.pedido.productos[i].preneto * cartData.pedido.productos[i].cantidad);
                 } else {
-                    total += (cartData.pedido.productos[i].preneto * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad);
+                    total += (cartData.pedido.productos[i].preneto * cartData.pedido.productos[i].cantidad);
                 }
             }
             return total;
@@ -208,7 +208,7 @@ app.factory("cartSrv", function ($storage, $mdToast) {
                 if (cartData.pedido.productos[i].uventa == '1') {
                     total += (cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].cantidad);
                 } else {
-                    total += (cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad);
+                    total += (cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].cantidad);
                 }
             }
             return total;
@@ -221,7 +221,7 @@ app.factory("cartSrv", function ($storage, $mdToast) {
                 if (cartData.pedido.productos[i].uventa == '1') {
                     total += ((cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].cantidad) - (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].cantidad));
                 } else {
-                    total += ((cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad) - (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].factor * cartData.pedido.productos[i].cantidad));
+                    total += ((cartData.pedido.productos[i].precioFinalConIva * cartData.pedido.productos[i].cantidad) - (cartData.pedido.productos[i].prenetoConDescuento * cartData.pedido.productos[i].cantidad));
                 }
             }
             return total;
