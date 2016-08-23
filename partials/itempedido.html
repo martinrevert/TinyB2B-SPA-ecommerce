@@ -7,7 +7,7 @@
                max="99999"></input>
         <span>{{itempedido.medida}}</span>
         <span ng-if="itempedido.uventa == '1'">{{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
-        <span ng-if="itempedido.uventa == '2'">{{itempedido.prenetoConDescuento * itempedido.factor * itempedido.cantidad| currency}}</span>
+        <span ng-if="itempedido.uventa == '2'">{{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
     </md-content>
 
     <div layout="column" layout-align="end end">

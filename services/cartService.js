@@ -55,12 +55,48 @@ app.factory("cartSrv", function ($storage, $mdToast) {
             }
             if (!addedToExistingItem) {
 
-                cartData.pedido.productos.push({
-                    cantidad: cantidad, codigo: codigo, descripcion: descripcion, bonif: bonif, bonifmax: bonifmax,
-                    emp: emp, factor: factor, iva: iva, medida: medida, medida1: medida1, medida2: medida2, peso: peso,
-                    precioFinalConIva: precioFinalConIva, preneto: preneto, prenetoConDescuento: prenetoConDescuento,
-                    tipo_precio: tipoprecio, uventa: uvent
-                });
+                if (uvent == "1") {
+                    cartData.pedido.productos.push({
+                        cantidad: cantidad,
+                        codigo: codigo,
+                        descripcion: descripcion,
+                        bonif: bonif,
+                        bonifmax: bonifmax,
+                        emp: emp,
+                        factor: factor,
+                        iva: iva,
+                        medida: medida,
+                        medida1: medida1,
+                        medida2: medida2,
+                        peso: peso,
+                        precioFinalConIva: precioFinalConIva,
+                        preneto: preneto,
+                        prenetoConDescuento: prenetoConDescuento,
+                        tipo_precio: tipoprecio,
+                        uventa: uvent
+                    });
+                }else{
+                    cartData.pedido.productos.push({
+                        cantidad: cantidad,
+                        codigo: codigo,
+                        descripcion: descripcion,
+                        bonif: bonif,
+                        bonifmax: bonifmax,
+                        emp: emp,
+                        factor: factor,
+                        iva: iva,
+                        medida: medida,
+                        medida1: medida1,
+                        medida2: medida2,
+                        peso: peso * factor,
+                        precioFinalConIva: precioFinalConIva * factor,
+                        preneto: preneto * factor,
+                        prenetoConDescuento: prenetoConDescuento * factor,
+                        tipo_precio: tipoprecio,
+                        uventa: uvent
+                    });
+
+                }
 
                 tablanotadeventa.setItem('cartData', cartData);
             }
