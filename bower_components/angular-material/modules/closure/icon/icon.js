@@ -2,7 +2,7 @@
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v1.1.0-rc.5-master-9082e4a
+ * v1.1.0-master-0d7fbad
  */
 goog.provide('ngmaterial.components.icon');
 goog.require('ngmaterial.core');
@@ -85,8 +85,8 @@ angular
  * Material Design Icons:
  *
  * <ul>
- * <li>http://www.google.com/design/icons/</li>
- * <li>https://www.google.com/design/icons/#ic_accessibility</li>
+ * <li>https://design.google.com/icons/</li>
+ * <li>https://design.google.com/icons/#ic_accessibility</li>
  * </ul>
  *
  * <h2 id="material_design_icons">Material Design Icons</h2>
@@ -101,7 +101,7 @@ angular
  *
  * <span class="image_caption">
  *  Click on the image above to link to the
- *  <a href="https://www.google.com/design/icons/#ic_accessibility" target="_blank">Material Design Icon-Selector</a>.
+ *  <a href="https://design.google.com/icons/#ic_accessibility" target="_blank">Material Design Icon-Selector</a>.
  * </span>
  *
  * @param {string} md-font-icon String name of CSS icon associated with the font-face will be used
@@ -237,13 +237,6 @@ function mdIconDirective($mdIcon, $mdTheming, $mdAria, $sce) {
     if (attrName) {
       // Use either pre-configured SVG or URL source, respectively.
       attr.$observe(attrName, function(attrVal) {
-
-        // If using svg-src and the value is static (i.e., is exactly equal to the compile-time
-        // `md-svg-src` value), then it is implicitly trusted.
-        if (!isInlineSvg(attrVal) && attrVal === originalSvgSrc) {
-          attrVal = $sce.trustAsResourceUrl(attrVal);
-        }
-
         element.empty();
         if (attrVal) {
           $mdIcon(attrVal)
@@ -296,16 +289,6 @@ function mdIconDirective($mdIcon, $mdTheming, $mdAria, $sce) {
         }
       }
     }
-  }
-
-  /**
-   * Gets whether the given svg src is an inline ("data:" style) SVG.
-   * @param {string} svgSrc The svg src.
-   * @returns {boolean} Whether the src is an inline SVG.
-   */
-  function isInlineSvg(svgSrc) {
-    var dataUrlRegex = /^data:image\/svg\+xml[\s*;\w\-\=]*?(base64)?,(.*)$/i;
-    return dataUrlRegex.test(svgSrc);
   }
 }
 
@@ -411,7 +394,7 @@ function mdIconDirective($mdIcon, $mdTheming, $mdAria, $sce) {
  *
  * </hljs>
  *
- * NOTE: the loaded SVG data is subsequently cached internally for future requests.
+ * > <b>Note:</b> The loaded SVG data is subsequently cached internally for future requests.
  *
  */
 
@@ -587,19 +570,13 @@ function mdIconDirective($mdIcon, $mdTheming, $mdAria, $sce) {
  *
  */
 
-
-/**
- * The configuration for $mdIconProvider. This contains both options for the icon service
- * and acts as a map of iconName -> ConfigurationItem (configuration for a single icon).
- */
-var config;
+var config = {
+  defaultViewBoxSize: 24,
+  defaultFontSet: 'material-icons',
+  fontSets: []
+};
 
 function MdIconProvider() {
-  config = {
-    defaultViewBoxSize: 24,
-    defaultFontSet: 'material-icons',
-    fontSets: []
-  };
 }
 
 MdIconProvider.prototype = {
@@ -711,8 +688,8 @@ function ConfigurationItem(url, viewBoxSize) {
   * };
  * </hljs>
  *
- * NOTE: The `<md-icon />  ` directive internally uses the `$mdIcon` service to query, loaded, and instantiate
- * SVG DOM elements.
+ * > <b>Note:</b> The `<md-icon>` directive internally uses the `$mdIcon` service to query, loaded,
+ *   and instantiate SVG DOM elements.
  */
 
 /* ngInject */
@@ -721,16 +698,6 @@ function MdIconService(config, $templateRequest, $q, $log, $mdUtil, $sce) {
   var svgCache = {};
   var urlRegex = /[-\w@:%\+.~#?&//=]{2,}\.[a-z]{2,4}\b(\/[-\w@:%\+.~#?&//=]*)?/i;
   var dataUrlRegex = /^data:image\/svg\+xml[\s*;\w\-\=]*?(base64)?,(.*)$/i;
-  var configUrls = new Set();
-
-  // Implicity trust all the icon URLs given to MdIconProvider because they are set during
-  // Angular's "config" phase, during which the application is not yet in a state where
-  // user-provided values are generally available.
-  angular.forEach(config, function(configItem) {
-    if (angular.isString(configItem.url)) {
-      configUrls.add(configItem.url);
-    }
-  });
 
   Icon.prototype = {clone: cloneSVG, prepare: prepareAndStyle};
   getIcon.fontSet = findRegisteredFontSet;
@@ -880,10 +847,6 @@ function MdIconService(config, $templateRequest, $q, $log, $mdUtil, $sce) {
             }
             resolve(svgCache[url]);
           };
-
-        if (configUrls.has(url)) {
-          url = $sce.trustAsResourceUrl(url);
-        }
 
         $templateRequest(url, true).then(extractSvg, announceAndReject);
       });

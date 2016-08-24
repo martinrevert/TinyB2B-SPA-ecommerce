@@ -2,7 +2,7 @@
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v1.1.0-rc.5-master-9082e4a
+ * v1.1.0-master-0d7fbad
  */
 (function( window, angular, undefined ){
 "use strict";
@@ -202,7 +202,15 @@ angular.module('material.components.datepicker', [
       $element.attr('tabindex', '-1');
     }
 
-    $element.on('keydown', angular.bind(this, this.handleKeyEvent));
+    var boundKeyHandler = angular.bind(this, this.handleKeyEvent);
+
+    // Bind the keydown handler to the body, in order to handle cases where the focused
+    // element gets removed from the DOM and stops propagating click events.
+    angular.element(document.body).on('keydown', boundKeyHandler);
+
+    $scope.$on('$destroy', function() {
+      angular.element(document.body).off('keydown', boundKeyHandler);
+    });
   }
   CalendarCtrl.$inject = ["$element", "$scope", "$$mdDateUtil", "$mdUtil", "$mdConstant", "$mdTheming", "$$rAF", "$attrs"];
 
@@ -784,7 +792,6 @@ angular.module('material.components.datepicker', [
         monthBodyCtrl.calendarCtrl = calendarCtrl;
         monthBodyCtrl.monthCtrl = monthCtrl;
         monthBodyCtrl.arrowIcon = ARROW_ICON.cloneNode(true);
-        monthBodyCtrl.generateContent();
 
         // The virtual-repeat re-uses the same DOM elements, so there are only a limited number
         // of repeated items that are linked, and then those elements have their bindings updated.
@@ -839,8 +846,9 @@ angular.module('material.components.datepicker', [
   CalendarMonthBodyCtrl.prototype.generateContent = function() {
     var date = this.dateUtil.incrementMonths(this.monthCtrl.firstRenderableDate, this.offset);
 
-    this.$element.empty();
-    this.$element.append(this.buildCalendarForMonth(date));
+    this.$element
+      .empty()
+      .append(this.buildCalendarForMonth(date));
 
     if (this.focusAfterAppend) {
       this.focusAfterAppend.classList.add(this.calendarCtrl.FOCUSED_DATE_CLASS);
@@ -1307,10 +1315,9 @@ angular.module('material.components.datepicker', [
 
         yearBodyCtrl.calendarCtrl = calendarCtrl;
         yearBodyCtrl.yearCtrl = yearCtrl;
-        yearBodyCtrl.generateContent();
 
         scope.$watch(function() { return yearBodyCtrl.offset; }, function(offset, oldOffset) {
-          if (offset != oldOffset) {
+          if (offset !== oldOffset) {
             yearBodyCtrl.generateContent();
           }
         });
@@ -1357,8 +1364,9 @@ angular.module('material.components.datepicker', [
   CalendarYearBodyCtrl.prototype.generateContent = function() {
     var date = this.dateUtil.incrementYears(this.yearCtrl.firstRenderableDate, this.offset);
 
-    this.$element.empty();
-    this.$element.append(this.buildCalendarForYear(date));
+    this.$element
+      .empty()
+      .append(this.buildCalendarForYear(date));
 
     if (this.focusAfterAppend) {
       this.focusAfterAppend.classList.add(this.calendarCtrl.FOCUSED_DATE_CLASS);
@@ -1502,7 +1510,7 @@ angular.module('material.components.datepicker', [
    *
    * @usage
    * <hljs lang="js">
-   *   myAppModule.config(function($mdDateLocaleProvider) {
+   * myAppModule.config(function($mdDateLocaleProvider) {
    *
    *     // Example of a French localization.
    *     $mdDateLocaleProvider.months = ['janvier', 'février', 'mars', ...];
@@ -1540,12 +1548,10 @@ angular.module('material.components.datepicker', [
    *
    *     $mdDateLocaleProvider.msgCalendar = 'Calendrier';
    *     $mdDateLocaleProvider.msgOpenCalendar = 'Ouvrir le calendrier';
-   *
    * });
    * </hljs>
    *
    */
-
   angular.module('material.components.datepicker').config(["$provide", function($provide) {
     // TODO(jelbourn): Assert provided values are correctly formatted. Need assertions.
 
@@ -2134,6 +2140,7 @@ angular.module('material.components.datepicker', [
         // interaction on the text input, and multiple tab stops for one component (picker)
         // may be confusing.
         var hiddenIcons = tAttrs.mdHideIcons;
+        var ariaLabelValue = tAttrs.ariaLabel || tAttrs.mdPlaceholder;
 
         var calendarButton = (hiddenIcons === 'all' || hiddenIcons === 'calendar') ? '' :
           '<md-button class="md-datepicker-button md-icon-button" type="button" ' +
@@ -2151,13 +2158,15 @@ angular.module('material.components.datepicker', [
             '<div class="md-datepicker-expand-triangle"></div>' +
           '</md-button>';
 
-        return '' +
-        calendarButton +
-        '<div class="md-datepicker-input-container" ' +
-            'ng-class="{\'md-datepicker-focused\': ctrl.isFocused}">' +
-          '<input class="md-datepicker-input" aria-haspopup="true" ' +
-              'ng-focus="ctrl.setFocused(true)" ng-blur="ctrl.setFocused(false)">' +
-          triangleButton +
+        return calendarButton +
+        '<div class="md-datepicker-input-container" ng-class="{\'md-datepicker-focused\': ctrl.isFocused}">' +
+          '<input ' +
+            (ariaLabelValue ? 'aria-label="' + ariaLabelValue + '" ' : '') +
+            'class="md-datepicker-input" ' +
+            'aria-haspopup="true" ' +
+            'ng-focus="ctrl.setFocused(true)" ' +
+            'ng-blur="ctrl.setFocused(false)"> ' +
+            triangleButton +
         '</div>' +
 
         // This pane will be detached from here and re-attached to the document body.
@@ -2399,8 +2408,11 @@ angular.module('material.components.datepicker', [
     // Unless the user specifies so, the datepicker should not be a tab stop.
     // This is necessary because ngAria might add a tabindex to anything with an ng-model
     // (based on whether or not the user has turned that particular feature on/off).
-    if (!$attrs.tabindex) {
-      $element.attr('tabindex', '-1');
+    if ($attrs.tabindex) {
+      this.ngInputElement.attr('tabindex', $attrs.tabindex);
+      $attrs.$set('tabindex', null);
+    } else {
+      $attrs.$set('tabindex', '-1');
     }
 
     $mdTheming($element);

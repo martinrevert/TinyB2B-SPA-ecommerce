@@ -2,7 +2,7 @@
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v1.1.0-rc.5-master-9082e4a
+ * v1.1.0-master-0d7fbad
  */
 html, body {
   height: 100%;
@@ -1538,14 +1538,13 @@ md-calendar {
   border-spacing: 0;
   border-collapse: collapse; }
   .md-calendar-day-header th {
-    height: 44px;
+    height: 40px;
     width: 44px;
     text-align: center;
     padding: 0;
     border: none;
     box-sizing: content-box;
-    font-weight: normal;
-    height: 40px; }
+    font-weight: normal; }
     .md-calendar-day-header th:first-child {
       padding-left: 16px; }
       [dir=rtl] .md-calendar-day-header th:first-child {
@@ -2854,6 +2853,8 @@ md-list-item {
       -webkit-box-align: center;
       -webkit-align-items: center;
               align-items: center;
+      -webkit-flex-shrink: 0;
+              flex-shrink: 0;
       margin: auto;
       margin-right: 0;
       margin-left: auto; }
@@ -3186,8 +3187,7 @@ md-menu-content.md-menu-bar-menu.md-dense {
   md-menu-content.md-menu-bar-menu.md-dense md-menu-divider {
     margin: 8px 0; }
   md-menu-content.md-menu-bar-menu.md-dense md-menu-item > .md-button, md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button {
-    text-align: left;
-    text-align: start; }
+    text-align: left; }
     [dir=rtl] md-menu-content.md-menu-bar-menu.md-dense md-menu-item > .md-button, [dir=rtl] md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button {
       text-align: right; }
   md-menu-content.md-menu-bar-menu.md-dense .md-menu {
@@ -3896,9 +3896,9 @@ md-input-container.md-input-has-value .md-select-value > span:not(.md-select-ico
     position: relative;
     top: 2px;
     speak: none;
-    font-size: 16px;
-    -webkit-transform: scaleY(0.6) scaleX(1);
-            transform: scaleY(0.6) scaleX(1); }
+    font-size: 13px;
+    -webkit-transform: scaleY(0.5) scaleX(1);
+            transform: scaleY(0.5) scaleX(1); }
   .md-select-value.md-select-placeholder {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4570,11 +4570,9 @@ md-slider {
     left: auto;
     right: 0; }
     [dir=rtl] md-slider[md-invert]:not([md-vertical]) .md-track-fill {
-      left: auto;
-      right: auto; }
-    [dir=rtl] md-slider[md-invert]:not([md-vertical]) .md-track-fill {
-      right: auto;
       left: 0; }
+    [dir=rtl] md-slider[md-invert]:not([md-vertical]) .md-track-fill {
+      right: auto; }
   md-slider[md-invert][md-vertical] .md-track-fill {
     bottom: auto;
     top: 0; }
@@ -5017,7 +5015,7 @@ md-pagination-wrapper {
     right: 0; }
   md-pagination-wrapper.md-center-tabs {
     position: relative;
-    width: initial;
+    width: auto;
     margin: 0 auto; }
 
 md-tabs-content-wrapper {
@@ -5492,7 +5490,7 @@ md-tooltip {
     md-tooltip .md-content.md-show, md-tooltip .md-content.md-show-add-active {
       -webkit-transform: scale(1);
               transform: scale(1);
-      opacity: 1;
+      opacity: 0.9;
       -webkit-transform-origin: center top;
               transform-origin: center top; }
     md-tooltip .md-content.md-show-remove {

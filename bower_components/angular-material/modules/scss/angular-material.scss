@@ -435,24 +435,24 @@ $checkbox-border-width: 2px !default;
     color: '{{primary-color-0.87}}';
   }
 
-  &:not(.md-checked) ._md-icon {
+  &:not(.md-checked) .md-icon {
     border-color: '{{foreground-2}}';
   }
 
-  &#{$checkedSelector} ._md-icon {
+  &#{$checkedSelector} .md-icon {
     background-color: '{{primary-color-0.87}}';
   }
 
-  &#{$checkedSelector}.md-focused ._md-container:before {
+  &#{$checkedSelector}.md-focused .md-container:before {
     background-color: '{{primary-color-0.26}}';
   }
 
-  &#{$checkedSelector} ._md-icon:after {
+  &#{$checkedSelector} .md-icon:after {
     border-color: '{{primary-contrast-0.87}}';
   }
 
   & .md-indeterminate[disabled] {
-    ._md-container {
+    .md-container {
       color: '{{foreground-3}}';
     }
   }
@@ -2494,10 +2494,9 @@ $md-calendar-height:
     ($md-calendar-weeks-to-show * $md-calendar-cell-size) + $md-calendar-header-height !default;
 
 // Styles for date cells, including day-of-the-week header cells.
-@mixin md-calendar-cell() {
-  height: $md-calendar-cell-size;
+@mixin md-calendar-cell($height: $md-calendar-cell-size) {
+  height: $height;
   width: $md-calendar-cell-size;
-
   text-align: center;
 
   // Remove all padding and borders so we can completely
@@ -2625,9 +2624,8 @@ md-calendar {
   @include md-calendar-table();
 
   th {
-    @include md-calendar-cell();
+    @include md-calendar-cell($md-calendar-header-height);
     font-weight: normal;
-    height: $md-calendar-header-height;
   }
 }
 
@@ -4182,13 +4180,15 @@ md-list-item {
       display: flex;
       align-items: center;
 
-      // The secondary container is now static and needs to be aligned at the end of its parent.
-      // - Using an absolute position will cause much issues with the overflow.
-      // - Using a flex-filler, which pushes the container to the end of the parent is working
-      //   but breaks the users list-item layout.
+      // Per W3C: https://www.w3.org/TR/css-flexbox/#flex-common
+      // By default, flex items won’t shrink below their minimum content size.
+      // Safari doesn't follow that specification due to a bug and expects the developer to
+      // explicitly disable flex shrinking.
+      flex-shrink: 0;
+
       // Using margin auto to move them to the end of the list item is more elegant, because it has
-      // a lower priority than the flex filler and isn't introducing overflow issues again.
-      // The margin on the top is also important to align multiple secondary items vertical correctly.
+      // a lower priority than a flex filler and isn't introducing any overflow issues.
+      // The margin on the top is important to align multiple secondary items vertically.
       margin: auto;
 
       @include rtl(margin-right, 0, auto);
@@ -4540,7 +4540,6 @@ md-menu-content.md-menu-bar-menu.md-dense {
 
   md-menu-item > .md-button, .md-menu > .md-button {
     @include rtl(text-align, left, right);
-    text-align: start;
   }
 
   .md-menu {
@@ -5330,8 +5329,8 @@ md-input-container.md-input-has-value .md-select-value {
     position: relative;
     top: 2px;
     speak: none;
-    font-size: 16px;
-    transform: scaleY(0.6) scaleX(1);
+    font-size: 13px;
+    transform: scaleY(0.5) scaleX(1);
   }
 
   &.md-select-placeholder {
@@ -5991,8 +5990,8 @@ md-slider {
   }
   &[md-invert] {
     &:not([md-vertical]) .md-track-fill {
-      @include rtl-prop(left, right, auto, auto);
-      @include rtl-prop(right, left, 0, auto);
+      @include rtl(left, auto, 0);
+      @include rtl(right, 0, auto);
     }
     &[md-vertical] {
       .md-track-fill {
@@ -6476,7 +6475,7 @@ md-pagination-wrapper {
   transform: translate3d(0, 0, 0);
   &.md-center-tabs {
     position: relative;
-    width: initial;
+    width: auto;
     margin: 0 auto;
   }
 }
@@ -7060,7 +7059,7 @@ md-tooltip {
     }
     &.md-show, &.md-show-add-active {
       transform: scale(1);
-      opacity: 1;
+      opacity: 0.9;
       transform-origin: center top;
     }
     &.md-show-remove {
