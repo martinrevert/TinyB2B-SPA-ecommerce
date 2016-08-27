@@ -2,7 +2,7 @@
  * Created by martin on 22/06/16.
  */
 angular.module('app').controller('resuCtrl', function ($scope, resuSrv, $storage, $location) {
-    
+
     var tablausuario = $storage('tablaUsuario');
     var usuario = tablausuario.getItem('usuario');
     var pass = tablausuario.getItem('pass');
@@ -13,6 +13,20 @@ angular.module('app').controller('resuCtrl', function ($scope, resuSrv, $storage
 
         $scope.comprobantes = d.data;
 
+        var saldo = 0;
+        var descuento = 0;
+
+        for (var i = 0; i < d.data.length; i++) {
+            saldo += (d.data[i].saldo);
+
+        }
+
+        for (var i = 0; i < d.data.length; i++) {
+            descuento += (d.data[i].descuento);
+
+        }
+
+        $scope.saldo = saldo - descuento;
     });
 
     $scope.getPdf = function (numero) {

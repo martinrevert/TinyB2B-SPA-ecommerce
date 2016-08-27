@@ -2,13 +2,16 @@
     <div class="descr">{{itempedido.descripcion}}</div>
     <div class="codig">Código {{itempedido.codigo}}</div>
 
-    <md-content class="entrada">
+    <div layout="row" class="entrada">
         <input class="cantidad" ng-model="itempedido.cantidad" ng-change="updatetotales()" type="number" min="1"
                max="99999"></input>
-        <span>{{itempedido.medida}}</span>
-        <span ng-if="itempedido.uventa == '1'">{{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
-        <span ng-if="itempedido.uventa == '2'">{{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
-    </md-content>
+        <span>{{itempedido.medida}}: </span>
+        <span ng-if="itempedido.uventa == '1'">{{itempedido.prenetoConDescuento | currency}}</span>
+        <span ng-if="itempedido.uventa == '2'">{{itempedido.prenetoConDescuento | currency}}</span>
+        <span flex></span>
+        <span ng-if="itempedido.uventa == '1'">Total {{itempedido.medida}} {{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
+        <span ng-if="itempedido.uventa == '2'">Total {{itempedido.medida}} {{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
+    </div>
 
     <div layout="column" layout-align="end end">
         <md-button ng-click="eliminarItem(itempedido.codigo)" class="md-raised md-primary">
