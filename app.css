@@ -2,6 +2,11 @@
     display: none !important;
 }
 
+md-toolbar.md-tall {
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px; }
+
 .smalldevice {
     overflow-y: scroll;
 }
@@ -115,13 +120,13 @@ table.md-table th.md-column {
 
 md-sidenav {
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: smaller;
+    font-size: small;
 }
 
 md-sidenav.md-locked-open {
-    width: 250px;
-    min-width: 250px;
-    max-width: 250px;
+    width: 256px;
+    min-width: 256px;
+    max-width: 256px;
 }
 
 .tile {

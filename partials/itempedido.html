@@ -9,8 +9,8 @@
         <span ng-if="itempedido.uventa == '1'">{{itempedido.prenetoConDescuento | currency}}</span>
         <span ng-if="itempedido.uventa == '2'">{{itempedido.prenetoConDescuento | currency}}</span>
         <span flex></span>
-        <span ng-if="itempedido.uventa == '1'">Total {{itempedido.medida}} {{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
-        <span ng-if="itempedido.uventa == '2'">Total {{itempedido.medida}} {{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
+        <span ng-if="itempedido.uventa == '1'">Total {{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
+        <span ng-if="itempedido.uventa == '2'">Total {{itempedido.prenetoConDescuento * itempedido.cantidad| currency}}</span>
     </div>
 
     <div layout="column" layout-align="end end">

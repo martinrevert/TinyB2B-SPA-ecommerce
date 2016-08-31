@@ -20,7 +20,7 @@
             </md-input-container>
             <md-input-container class="md-block" layout-margin>
                 <label>Password</label>
-                <input name="password" type="password" class="form-control"
+                <input ng-keyup="$event.keyCode == 13 && authenticate(usuario,password)" name="password" type="password" class="form-control"
                        ng-model="password" required/>
             </md-input-container>
             <div layout="row" layout-align="center center">
@@ -29,6 +29,10 @@
                            class="md-raised md-primary">
                     INGRESAR
                 </md-button>
+            </div>
+            <div layout="row" layout-align="center center">
+                <md-icon md-svg-src="img/ic_call_black_24px.svg"></md-icon>
+                <a style="color: black; font-size: 0.9rem" href="tel:+543514994474">&nbsp;CENTRO DE ATENCION AL CLIENTE: 351-4994474&nbsp;</a>
             </div>
         </form>
     </md-content>

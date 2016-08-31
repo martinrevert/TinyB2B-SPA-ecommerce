@@ -34,12 +34,15 @@
             <div>Neto {{preneto | currency}}</div>
             <div>Iva {{iva | currency}}</div>
             <div>Total {{total | currency}}</div>
-            <div ng-if="isFpago()">Se aplicará un recargo del 10% al total de su factura que será descontado si Ud.
+            <div ng-if="isFpago()">* Se aplicará un recargo del 10% al total de su factura que será descontado si Ud.
                 abona la factura a término.
             </div>
+            <div>* En la factura se aplicarán las percepciones impositivas que correspondan.</div>
+            <div>* En caso de envío se agregará a su factura un costo logístico.</div>
+
         </div>
-        <md-divider></md-divider>
-        <div layout-margin="">
+
+        <div layout-padding>
 
             <md-input-container class="md-block">
                 <label>Domicilio de entrega</label>
