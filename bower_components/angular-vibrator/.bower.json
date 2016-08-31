@@ -1,0 +1,51 @@
+{
+  "name": "angular-vibrator",
+  "description": "Angular wrapper for the vibration API.",
+  "version": "0.2.0",
+  "main": [
+    "src/vibrator.js"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.2.6"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test",
+    "example"
+  ],
+  "keywords": [
+    "angular",
+    "angular-vibrator",
+    "vibration api",
+    "vibration",
+    "vibrator"
+  ],
+  "authors": [
+    {
+      "name": "Cyril F",
+      "email": "cyrilf7x@gmail.com",
+      "homepage": "http://cyrilf.com"
+    }
+  ],
+  "homepage": "https://github.com/cyrilf/angular-vibrator",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cyrilf/angular-vibrator.git"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.6"
+  },
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.0",
+    "commit": "3e106184de043ce5deea0eed296114c05bd63dbe"
+  },
+  "_source": "https://github.com/cyrilf/angular-vibrator.git",
+  "_target": "^0.2.0",
+  "_originalSource": "angular-vibrator",
+  "_direct": true
+}

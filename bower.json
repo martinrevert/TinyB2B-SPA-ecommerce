@@ -19,5 +19,8 @@
     "angular-material": "master",
     "localStorageService": "angular-localStorageService#*",
     "moment": "^2.14.1"
+  },
+  "resolutions": {
+    "angular": "1.5.8"
   }
 }
