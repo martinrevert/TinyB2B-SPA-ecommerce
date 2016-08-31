@@ -2,7 +2,7 @@
  * Created by martin on 29/06/16.
  */
 
-angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, enviarpedidoSrv, $storage, $mdToast, $timeout, $location) {
+angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, enviarpedidoSrv, $storage, $mdToast, $timeout, $location, vibrator) {
 
     var tablausuario = $storage('tablaUsuario');
 
@@ -27,6 +27,7 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
         $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
         $scope.preneto = cartSrv.getPrecioTotalDescuento();
         $scope.iva = cartSrv.getIva();
+        vibrator.vibrate(500);
     };
 
     $scope.borrarCart = function () {
@@ -66,6 +67,7 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
             $scope.cart = cartSrv.getProducts();
 
             $mdToast.show($mdToast.simple().textContent('Su pedido ha sido enviado exitosamente.'));
+            vibrator.vibrate(1000);
 
             $timeout(function() {
                 $location.path('/pedidoporcategoria');
@@ -77,6 +79,7 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
             var datos = error.statusText;
             console.log(datos);
             $mdToast.show($mdToast.simple().textContent('Falló el envío, por favor reintente.'));
+            vibrator.vibrate(2000);
         });
     };
 

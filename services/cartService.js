@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.factory("cartSrv", function ($storage, $mdToast) {
+app.factory("cartSrv", function ($storage, $mdToast, vibrator) {
 
     var tablausuario = $storage('tablaUsuario');
     var tablanotadeventa = $storage('tablanotadeventa');
@@ -50,6 +50,7 @@ app.factory("cartSrv", function ($storage, $mdToast) {
                     //No se agrega, ya existe
                     addedToExistingItem = true;
                     $mdToast.show($mdToast.simple().textContent('El producto ya está cargado en su carro de compras.'));
+                    vibrator.vibrate(2000);
                     break;
                 }
             }

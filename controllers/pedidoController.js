@@ -2,7 +2,7 @@
  * Created by martin on 09/05/16.
  */
 
-angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, marcasSrv, cartSrv, $storage) {
+angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, marcasSrv, cartSrv, $storage, vibrator) {
 
     var tablausuario = $storage('tablaUsuario');
     var usuario = tablausuario.getItem('usuario');
@@ -19,6 +19,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
         $scope.preneto = cartSrv.getPrecioTotalDescuento();
         $scope.iva = cartSrv.getIva();
+        vibrator.vibrate(500);
     };
 
     $scope.marcacolor = '#00FFFF';
@@ -52,6 +53,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.total = cartSrv.getPrecioTotalDescuentoIVA();
         $scope.preneto = cartSrv.getPrecioTotalDescuento();
         $scope.iva = cartSrv.getIva();
+        vibrator.vibrate(500);
 
     };
 

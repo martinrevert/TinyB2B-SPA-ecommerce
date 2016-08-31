@@ -21,7 +21,7 @@
             md-is-locked-open="$mdMedia('gt-md')"
             ng-cloak>
 
-    <md-toolbar class="md-hue-2 md-tall" style="min-height: 15vw">
+    <md-toolbar class="md-hue-2 md-tall">
         <span flex></span>
         <div layout="row" layout-align="center center">
             <img class="logo" src="img/logo_grupo_serin.png"></img>
@@ -30,7 +30,8 @@
         <span flex></span>
         <div class="md-body-2" layout="row" layout-align="center end">Usuario: {{usuario}}</div>
         <div class="md-body-2" layout="row" layout-align="center end">Empresa: {{empresa}}</div>
-        <div style="margin-right: 2rem;" class="md-body-2" layout="row" layout-align="center end"><md-icon md-svg-icon="img/ic_call_white_24px.svg"></md-icon><a style="color: white; font-size: 0.7rem" href="tel:543514994474">ATENCION AL CLIENTE: 351-4994474</a></div>
+        <!-- <md-svg-icon="img/ic_call_white_24px.svg"></md-icon> -->
+        <div class="md-body-2" layout="row" layout-align="center end"><a style="color: white; font-size: 0.9rem" href="tel:+543514994474"><md-svg-icon="img/ic_call_white_24px.svg"></md-icon>ATENCION AL CLIENTE: 351-4994474</a></div>
 
 
     </md-toolbar>
@@ -62,6 +63,7 @@
 <script src="bower_components/angular-pdf/dist/angular-pdf.min.js"></script>
 <script src="bower_components/moment/min/moment.min.js"></script>
 <script src="bower_components/file-saver/FileSaver.min.js"></script>
+<script src="bower_components/angular-vibrator/build/vibrator.min.js"></script>
 
 <script src="app.js"></script>
 <script src="controllers/loginController.js"></script>
