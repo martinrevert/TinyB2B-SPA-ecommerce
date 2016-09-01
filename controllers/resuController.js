@@ -11,22 +11,34 @@ angular.module('app').controller('resuCtrl', function ($scope, resuSrv, $storage
     $scope.selected = [];
     resuSrv.async(usuario, pass, cliente).then(function (d) {
 
-        $scope.comprobantes = d.data;
+        $scope.comprobantesserin = _.where(d.data, {empresa: "SERIN"});
+        $scope.comprobantesservet = _.where(d.data, {empresa: "SERVET"});
 
         var saldo = 0;
         var descuento = 0;
+        var saldoserin = 0;
+        var descuentoserin = 0;
+        var saldoservet = 0;
+        var descuentoservet = 0;
 
         for (var i = 0; i < d.data.length; i++) {
             saldo += (d.data[i].saldo);
-
-        }
-
-        for (var i = 0; i < d.data.length; i++) {
             descuento += (d.data[i].descuento);
+
+            if (d.data[i].empresa == "SERIN") {
+                saldoserin += (d.data[i].saldo);
+                descuentoserin += (d.data[i].descuento);
+
+            } else {
+                saldoservet += (d.data[i].saldo);
+                descuentoservet += (d.data[i].descuento);
+            }
 
         }
 
         $scope.saldo = saldo - descuento;
+        $scope.saldoserin = saldoserin - descuentoserin;
+        $scope.saldoservet = saldoservet - descuentoservet;
     });
 
     $scope.getPdf = function (numero) {

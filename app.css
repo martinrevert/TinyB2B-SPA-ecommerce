@@ -80,6 +80,13 @@ table.md-table th.md-column {
     /* Aqui se puede cambiar el color del HD de las tablas */
 }
 
+.resumentotales{
+    font-weight: bold;
+    color: white !important;
+    background-color: red;
+    border-radius: 15px;
+}
+
 .totales {
     font-family: 'Roboto', sans-serif;
     background-color: red;
