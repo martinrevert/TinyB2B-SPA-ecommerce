@@ -55,6 +55,7 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.iva = cartSrv.getIva();
         vibrator.vibrate(500);
 
+
     };
 
 

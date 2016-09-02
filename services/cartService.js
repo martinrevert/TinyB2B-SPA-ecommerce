@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.factory("cartSrv", function ($storage, $mdToast, vibrator) {
+app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
 
     var tablausuario = $storage('tablaUsuario');
     var tablanotadeventa = $storage('tablanotadeventa');
@@ -50,6 +50,7 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator) {
                     //No se agrega, ya existe
                     addedToExistingItem = true;
                     $mdToast.show($mdToast.simple().textContent('El producto ya está cargado en su carro de compras.'));
+                    ngAudio.play('snd/142608__autistic-lucario__error.mp3');
                     vibrator.vibrate(2000);
                     break;
                 }
@@ -98,7 +99,7 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator) {
                     });
 
                 }
-
+                ngAudio.play('snd/74813__sugu14__shoppingcart1.mp3');
                 tablanotadeventa.setItem('cartData', cartData);
             }
         },
@@ -107,6 +108,7 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator) {
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
                 if (cartData.pedido.productos[i].codigo == id) {
                     cartData.pedido.productos.splice(i, 1);
+                    ngAudio.play('snd/349220__natty23__removing-a-cap-from-an-asthma-inhaler.mp3');
                     tablanotadeventa.setItem('cartData', cartData);
                     break;
                 }

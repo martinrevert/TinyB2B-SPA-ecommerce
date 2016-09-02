@@ -1,4 +1,4 @@
-angular.module('app').controller('loginCtrl', function ($scope, $location, $http, $routeParams, config, $storage, clientesSrv, $timeout, $mdToast, vibrator) {
+angular.module('app').controller('loginCtrl', function ($scope, $location, $http, $routeParams, config, $storage, clientesSrv, $timeout, $mdToast, vibrator, ngAudio) {
 
     $scope.authenticate = function (usuario, pass) {
         $http.get(config.apiUrl + '/Busca_Usuario?usuario=' + usuario + '&pass=' + pass
@@ -17,6 +17,7 @@ angular.module('app').controller('loginCtrl', function ($scope, $location, $http
             if (resp != "1" || tipo != "C") {
                 vibrator.vibrate(2000);
                 $mdToast.show($mdToast.simple().textContent('Datos incorrectos, verifique y reintente.'));
+                ngAudio.play('snd/142608__autistic-lucario__error.mp3');
             } else {
                 clientesSrv.async(usuario, password, "C", cliente).then(function (d) {
 

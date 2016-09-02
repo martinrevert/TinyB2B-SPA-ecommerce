@@ -2,7 +2,7 @@
  * Created by martin on 29/06/16.
  */
 
-angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, enviarpedidoSrv, $storage, $mdToast, $timeout, $location, vibrator) {
+angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, enviarpedidoSrv, $storage, $mdToast, $timeout, $location, vibrator, ngAudio) {
 
     var tablausuario = $storage('tablaUsuario');
 
@@ -68,6 +68,7 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
 
             $mdToast.show($mdToast.simple().textContent('Su pedido ha sido enviado exitosamente.'));
             vibrator.vibrate(1000);
+            ngAudio.play('snd/171670__fins__success-2.mp3');
 
             $timeout(function() {
                 $location.path('/pedidoporcategoria');
@@ -80,6 +81,7 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
             console.log(datos);
             $mdToast.show($mdToast.simple().textContent('Falló el envío, por favor reintente.'));
             vibrator.vibrate(2000);
+            ngAudio.play('snd/142608__autistic-lucario__error.mp3');
         });
     };
 
