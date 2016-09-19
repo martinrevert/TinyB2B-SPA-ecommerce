@@ -34,7 +34,7 @@
             <td md-cell>{{comprobante.saldo | currency}}</td>
             <td md-cell>{{comprobante.descuento | currency}}</td>
         </tr>
-        <tr md-row><td md-cell colspan="7" class="resumentotales">Saldo SERIN: {{saldoserin}}</td></tr>
+        <tr md-row><td md-cell colspan="7" class="resumentotales">Saldo SERIN: {{saldoserin | currency}}</td></tr>
         <tr md-row  ng-click="getPdf(comprobante.numero)" ng-repeat="comprobante in comprobantesservet">
             <td md-cell>{{comprobante.empresa}}</td>
             <td md-cell>{{comprobante.numero}}</td>
@@ -44,7 +44,7 @@
             <td md-cell>{{comprobante.saldo | currency}}</td>
             <td md-cell>{{comprobante.descuento | currency}}</td>
         </tr>
-        <tr md-row><td md-cell colspan="7" class="resumentotales">Saldo SERVET: {{saldoservet}}</td></tr>
+        <tr md-row><td md-cell colspan="7" class="resumentotales">Saldo SERVET: {{saldoservet | currency}}</td></tr>
         </tbody>
     </table>
 

@@ -43,6 +43,9 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
 
         addProduct: function (codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipoprecio, uvent) {
 
+            var agrega = ngAudio.load('snd/74813__sugu14__shoppingcart1.mp3');
+            var error = ngAudio.load('snd/142608__autistic-lucario__error.mp3');
+
             var addedToExistingItem = false;
             console.log("Producto " + codigo + " agregado a cart");
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
@@ -50,7 +53,7 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
                     //No se agrega, ya existe
                     addedToExistingItem = true;
                     $mdToast.show($mdToast.simple().textContent('El producto ya está cargado en su carro de compras.'));
-                    ngAudio.play('snd/142608__autistic-lucario__error.mp3');
+                    error.play();
                     vibrator.vibrate(2000);
                     break;
                 }
@@ -99,7 +102,7 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
                     });
 
                 }
-                ngAudio.play('snd/74813__sugu14__shoppingcart1.mp3');
+                agrega.play();
                 tablanotadeventa.setItem('cartData', cartData);
             }
         },

@@ -5,7 +5,7 @@
     <div layout="row" class="entrada">
         <input class="cantidad" ng-model="itempedido.cantidad" ng-change="updatetotales()" type="number" min="1"
                max="99999"></input>
-        <span>{{itempedido.medida}}: </span>
+        <span>{{itempedido.medida}}&nbsp;</span>
         <span ng-if="itempedido.uventa == '1'">{{itempedido.prenetoConDescuento | currency}}</span>
         <span ng-if="itempedido.uventa == '2'">{{itempedido.prenetoConDescuento | currency}}</span>
         <span flex></span>
