@@ -6,8 +6,8 @@ var app = angular.module('app');
 
 app.factory('pdfSrv', function ($http, config) {
     return {
-        async: function (numero) {
-            return $http.get(config.apiUrl + "/PdfComprobante?documento=" + numero);  //this returns promise
+        async: function (numero, codcliente) {
+            return $http.get(config.apiUrl + "/PdfComprobante2?documento=" + numero + "&codcliente=" + codcliente);  //this returns promise
         }
     };
 });

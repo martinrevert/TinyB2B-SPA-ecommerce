@@ -1,5 +1,6 @@
-angular.module('app').controller('pdfviewerCtrl', function ($scope, pdfSrv, $routeParams, $mdMedia) {
-
+angular.module('app').controller('pdfviewerCtrl', function ($scope, pdfSrv, $routeParams, $mdMedia, $storage) {
+    var tablausuario = $storage('tablaUsuario');
+    var cliente = tablausuario.getItem('cliente');
     var numero = $routeParams.numero;
     var docu = "";
 
@@ -26,7 +27,7 @@ angular.module('app').controller('pdfviewerCtrl', function ($scope, pdfSrv, $rou
         return new Blob(byteArrays, {type: contentType});
     };
 
-    pdfSrv.async(numero).then(function (d) {
+    pdfSrv.async(numero, cliente).then(function (d) {
 
         docu = d.data[0].archivo;
 
