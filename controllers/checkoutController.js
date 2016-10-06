@@ -6,6 +6,8 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
 
     var tablausuario = $storage('tablaUsuario');
 
+    cartSrv.initializeCart();
+
     $scope.cart = cartSrv.getProducts();
     $scope.direccionentrega = cartSrv.getDomicilio();
     $scope.observaciones = cartSrv.getObservaciones();
@@ -31,7 +33,7 @@ angular.module('app').controller('checkoutCtrl', function ($scope, cartSrv, envi
     };
 
     $scope.borrarCart = function () {
-        cartSrv.removeNotadeVenta();
+        cartSrv.resetCart();
     };
 
     $scope.updatetotales = function () {

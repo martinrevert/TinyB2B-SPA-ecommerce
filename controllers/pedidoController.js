@@ -9,6 +9,8 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
     var pass = tablausuario.getItem('pass');
     var cliente = tablausuario.getItem('cliente');
 
+    cartSrv.initializeCart();
+
     console.log(cartSrv.getProducts());
 
     $scope.cart = cartSrv.getProducts();
@@ -21,10 +23,6 @@ angular.module('app').controller('pedidoCtrl', function ($scope, productosSrv, m
         $scope.iva = cartSrv.getIva();
         vibrator.vibrate(500);
     };
-
-    $scope.marcacolor = '#00FFFF';
-    // randomColor({luminosity: 'dark'});
-    //randomColor({luminosity: 'dark', count: 27});
 
     $scope.showcategorias = function () {
         $scope.productos = [];

@@ -2,44 +2,73 @@ var app = angular.module('app');
 
 app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
 
-    var tablausuario = $storage('tablaUsuario');
     var tablanotadeventa = $storage('tablanotadeventa');
-    var usuario = tablausuario.getItem('usuario');
-    var cliente = tablausuario.getItem('cliente');
-    var direccion = tablausuario.getItem('direccion');
-    var fpagocli = tablausuario.getItem('fpago');
-    var cartData = null;
-
-
-    function initializeCart(){
-
-         cartData = {
-            "pedido": {
-                "anticipo": null,
-                "area": "C",
-                "codigocliente": cliente,
-                "direccionentrega": direccion,
-                "fechaentrega": null,
-                "fechaenvio": null,
-                "fpago": fpagocli,
-                "observacionserin": null,
-                "observacionservet": null,
-                "ordendecompraserin": null,
-                "ordendecompraservet": null,
-                "usuario": usuario,
-                "productos": []
-            }
-        };
-        tablanotadeventa.setItem('cartData', cartData);
-    }
-
-    if (tablanotadeventa.getItem('cartData') == null) {
-        initializeCart();
-    } else {
-        cartData = tablanotadeventa.getItem('cartData');
-    }
+    var cartData;
 
     return {
+
+        initializeCart: function () {
+
+            if (tablanotadeventa.getItem('cartData') == null) {
+                var tablausuario = $storage('tablaUsuario');
+                var usuario = tablausuario.getItem('usuario');
+                var cliente = tablausuario.getItem('cliente');
+                var direccion = tablausuario.getItem('direccion');
+                var fpagocli = tablausuario.getItem('fpago');
+
+                cartData = {
+                    "pedido": {
+                        "anticipo": null,
+                        "area": "C",
+                        "codigocliente": cliente,
+                        "direccionentrega": direccion,
+                        "fechaentrega": null,
+                        "fechaenvio": null,
+                        "fpago": fpagocli,
+                        "observacionserin": null,
+                        "observacionservet": null,
+                        "ordendecompraserin": null,
+                        "ordendecompraservet": null,
+                        "usuario": usuario,
+                        "productos": []
+                    }
+                };
+                tablanotadeventa.setItem('cartData', cartData);
+            } else {
+                cartData = tablanotadeventa.getItem('cartData');
+            }
+
+        }
+        ,
+
+        resetCart: function () {
+
+            var tablausuario = $storage('tablaUsuario');
+            var usuario = tablausuario.getItem('usuario');
+            var cliente = tablausuario.getItem('cliente');
+            var direccion = tablausuario.getItem('direccion');
+            var fpagocli = tablausuario.getItem('fpago');
+
+            cartData = {
+                "pedido": {
+                    "anticipo": null,
+                    "area": "C",
+                    "codigocliente": cliente,
+                    "direccionentrega": direccion,
+                    "fechaentrega": null,
+                    "fechaenvio": null,
+                    "fpago": fpagocli,
+                    "observacionserin": null,
+                    "observacionservet": null,
+                    "ordendecompraserin": null,
+                    "ordendecompraservet": null,
+                    "usuario": usuario,
+                    "productos": []
+                }
+            };
+            tablanotadeventa.setItem('cartData', cartData);
+
+        },
 
         addProduct: function (codigo, descripcion, bonif, bonifmax, cantidad, emp, factor, iva, medida, medida1, medida2, peso, precioFinalConIva, preneto, prenetoConDescuento, tipoprecio, uvent) {
 
@@ -80,7 +109,7 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
                         tipo_precio: tipoprecio,
                         uventa: uvent
                     });
-                }else{
+                } else {
                     cartData.pedido.productos.push({
                         cantidad: cantidad,
                         codigo: codigo,
@@ -105,7 +134,8 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
                 agrega.play();
                 tablanotadeventa.setItem('cartData', cartData);
             }
-        },
+        }
+        ,
 
         removeProduct: function (id) {
             for (var i = 0; i < cartData.pedido.productos.length; i++) {
@@ -116,38 +146,37 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
                     break;
                 }
             }
-        },
-
-        removeNotadeVenta: function () {
-
-             initializeCart();
-
-        },
+        }
+        ,
 
         changeQuantity: function () {
 
             tablanotadeventa.setItem('cartData', cartData);
 
-        },
+        }
+        ,
 
         getDomicilio: function () {
 
             return cartData.pedido.direccionentrega;
 
-        },
+        }
+        ,
 
         setDomicilio: function (domicilio) {
 
             cartData.pedido.direccionentrega = domicilio;
             tablanotadeventa.setItem('cartData', cartData);
 
-        },
+        }
+        ,
 
         getObservaciones: function () {
 
             return cartData.pedido.observacionserin;
 
-        },
+        }
+        ,
 
         setObservaciones: function (observacion) {
 
@@ -155,7 +184,8 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
             cartData.pedido.observacionservet = observacion;
             tablanotadeventa.setItem('cartData', cartData);
 
-        },
+        }
+        ,
 
         setFechas: function (hoy, manana) {
 
@@ -163,23 +193,27 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
             cartData.pedido.fechaentrega = manana;
             tablanotadeventa.setItem('cartData', cartData);
 
-        },
+        }
+        ,
 
         getProducts: function () {
             return cartData.pedido.productos;
-        },
+        }
+        ,
 
 
         getPedido: function () {
             return cartData;
-        },
+        }
+        ,
 
         getItems: function () {
             var ittot = cartData.pedido.productos.length;
             console.log("items totales servicio: " + ittot);
             return ittot;
 
-        },
+        }
+        ,
 
         getPrecioTotalDescuento: function () {
 
@@ -193,7 +227,8 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
             }
             return total;
 
-        },
+        }
+        ,
         getPrecioNeto: function () {
 
             var total = 0;
@@ -206,7 +241,8 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
             }
             return total;
 
-        },
+        }
+        ,
         getPrecioTotalDescuentoIVA: function () {
 
             var total = 0;
@@ -219,7 +255,8 @@ app.factory("cartSrv", function ($storage, $mdToast, vibrator, ngAudio) {
             }
             return total;
 
-        },
+        }
+        ,
         getIva: function () {
 
             var total = 0;
