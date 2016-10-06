@@ -2,7 +2,7 @@
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v1.1.0-master-0d7fbad
+ * v1.1.1-master-bee04f3
  */
 goog.provide('ngmaterial.components.navBar');
 goog.require('ngmaterial.core');
@@ -12,6 +12,10 @@ goog.require('ngmaterial.core');
  */
 
 
+MdNavBarController.$inject = ["$element", "$scope", "$timeout", "$mdConstant"];
+MdNavItem.$inject = ["$$rAF"];
+MdNavItemController.$inject = ["$element"];
+MdNavBar.$inject = ["$mdAria", "$mdTheming"];
 angular.module('material.components.navBar', ['material.core'])
     .controller('MdNavBarController', MdNavBarController)
     .directive('mdNavBar', MdNavBar)
@@ -132,7 +136,6 @@ function MdNavBar($mdAria, $mdTheming) {
     },
   };
 }
-MdNavBar.$inject = ["$mdAria", "$mdTheming"];
 
 /**
  * Controller for the nav-bar component.
@@ -186,7 +189,6 @@ function MdNavBarController($element, $scope, $timeout, $mdConstant) {
     }
   });
 }
-MdNavBarController.$inject = ["$element", "$scope", "$timeout", "$mdConstant"];
 
 
 
@@ -195,7 +197,7 @@ MdNavBarController.$inject = ["$element", "$scope", "$timeout", "$mdConstant"];
  * @private
  */
 MdNavBarController.prototype._initTabs = function() {
-  this._inkbar = angular.element(this._navBarEl.getElementsByTagName('md-nav-ink-bar')[0]);
+  this._inkbar = angular.element(this._navBarEl.querySelector('md-nav-ink-bar'));
 
   var self = this;
   this._$timeout(function() {
@@ -267,7 +269,7 @@ MdNavBarController.prototype._getTabs = function() {
   var linkArray = Array.prototype.slice.call(
       this._navBarEl.querySelectorAll('.md-nav-item'));
   return linkArray.map(function(el) {
-    return angular.element(el).controller('mdNavItem')
+    return angular.element(el).controller('mdNavItem');
   });
 };
 
@@ -290,7 +292,7 @@ MdNavBarController.prototype._getTabByName = function(name) {
  */
 MdNavBarController.prototype._getSelectedTab = function() {
   return this._findTab(function(tab) {
-    return tab.isSelected()
+    return tab.isSelected();
   });
 };
 
@@ -300,7 +302,7 @@ MdNavBarController.prototype._getSelectedTab = function() {
  */
 MdNavBarController.prototype.getFocusedTab = function() {
   return this._findTab(function(tab) {
-    return tab.hasFocus()
+    return tab.hasFocus();
   });
 };
 
@@ -447,7 +449,6 @@ function MdNavItem($$rAF) {
     }
   };
 }
-MdNavItem.$inject = ["$$rAF"];
 
 /**
  * Controller for the nav-item component.
@@ -487,7 +488,6 @@ function MdNavItemController($element) {
         'md-nav-sref for nav-item directive');
   }
 }
-MdNavItemController.$inject = ["$element"];
 
 /**
  * Returns a map of class names and values for use by ng-class.
