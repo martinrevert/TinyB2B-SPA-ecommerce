@@ -2,7 +2,7 @@
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v1.1.1-master-bee04f3
+ * v1.1.1
  */
 (function( window, angular, undefined ){
 "use strict";
@@ -36,7 +36,7 @@ angular
  * @usage
  * <hljs lang="js">
  * (function(angular, undefined) {
- *   'use strict';
+ *   ‘use strict’;
  *
  *   angular
  *       .module('demoApp', ['ngMaterial'])
@@ -74,9 +74,11 @@ angular
  *         });
  *   }
  *
- *   function DialogController(MdPanelRef) {
+ *   function DialogController(MdPanelRef, toppings) {
+ *     var toppings;
+ *
  *     function closeDialog() {
- *       if (MdPanelRef) MdPanelRef.close();
+ *       MdPanelRef && MdPanelRef.close();
  *     }
  *   }
  * })(angular);
@@ -363,47 +365,6 @@ angular
  * @param {!MdPanelPosition} position
  */
 
-/**
- * @ngdoc method
- * @name MdPanelRef#registerInterceptor
- * @description
- *
- * Registers an interceptor with the panel. The callback should return a promise,
- * which will allow the action to continue when it gets resolved, or will
- * prevent an action if it is rejected. The interceptors are called sequentially
- * and it reverse order. `type` must be one of the following
- * values available on `$mdPanel.interceptorTypes`:
- * * `CLOSE` - Gets called before the panel begins closing.
- *
- * @param {string} type Type of interceptor.
- * @param {!angular.$q.Promise<any>} callback Callback to be registered.
- * @returns {!MdPanelRef}
- */
-
-/**
- * @ngdoc method
- * @name MdPanelRef#removeInterceptor
- * @description
- *
- * Removes a registered interceptor.
- *
- * @param {string} type Type of interceptor to be removed.
- * @param {function(): !angular.$q.Promise<any>} callback Interceptor to be removed.
- * @returns {!MdPanelRef}
- */
-
-/**
- * @ngdoc method
- * @name MdPanelRef#removeAllInterceptors
- * @description
- *
- * Removes all interceptors. If a type is supplied, only the
- * interceptors of that type will be cleared.
- *
- * @param {string=} type Type of interceptors to be removed.
- * @returns {!MdPanelRef}
- */
-
 
 /*****************************************************************************
  *                               MdPanelPosition                            *
@@ -577,10 +538,8 @@ angular
  * xPosition must be one of the following values available on
  * $mdPanel.xPosition:
  *
- *
  * CENTER | ALIGN_START | ALIGN_END | OFFSET_START | OFFSET_END
  *
- * <pre>
  *    *************
  *    *           *
  *    *   PANEL   *
@@ -593,14 +552,12 @@ angular
  * C: CENTER
  * D: ALIGN_END (for LTR displays)
  * E: OFFSET_END (for LTR displays)
- * </pre>
  *
  * yPosition must be one of the following values available on
  * $mdPanel.yPosition:
  *
  * CENTER | ALIGN_TOPS | ALIGN_BOTTOMS | ABOVE | BELOW
  *
- * <pre>
  *   F
  *   G *************
  *     *           *
@@ -614,7 +571,6 @@ angular
  * H: CENTER
  * I: ALIGN_BOTTOMS
  * J: ABOVE
- * </pre>
  *
  * @param {string} xPosition
  * @param {string} yPosition
@@ -646,27 +602,24 @@ angular
  *                               MdPanelAnimation                            *
  *****************************************************************************/
 
+
 /**
- * @ngdoc type
+ * @ngdoc object
  * @name MdPanelAnimation
- * @module material.components.panel
  * @description
  * Animation configuration object. To use, create an MdPanelAnimation with the
  * desired properties, then pass the object as part of $mdPanel creation.
  *
- * @usage
+ * Example:
  *
- * <hljs lang="js">
  * var panelAnimation = new MdPanelAnimation()
  *     .openFrom(myButtonEl)
- *     .duration(1337)
  *     .closeTo('.my-button')
  *     .withAnimation($mdPanel.animation.SCALE);
  *
  * $mdPanel.create({
  *   animation: panelAnimation
  * });
- * </hljs>
  */
 
 /**
@@ -712,18 +665,6 @@ angular
  * "transition: opacity 1ms" is added to the to custom class.
  *
  * @param {string|{open: string, close: string}} cssClass
- * @returns {!MdPanelAnimation}
- */
-
-/**
- * @ngdoc method
- * @name MdPanelAnimation#duration
- * @description
- * Specifies the duration of the animation in milliseconds. The `duration`
- * method accepts either a number or an object with separate open and close
- * durations.
- *
- * @param {number|{open: number, close: number}} duration
  * @returns {!MdPanelAnimation}
  */
 
@@ -809,12 +750,6 @@ function MdPanelService($rootElement, $rootScope, $injector, $window) {
    * @type {enum}
    */
   this.yPosition = MdPanelPosition.yPosition;
-
-  /**
-   * Possible values for the interceptors that can be registered on a panel.
-   * @type {enum}
-   */
-  this.interceptorTypes = MdPanelRef.interceptorTypes;
 }
 
 
@@ -842,7 +777,6 @@ MdPanelService.prototype.create = function(config) {
 
   var panelRef = new MdPanelRef(this._config, this._$injector);
   this._trackedPanels[config.id] = panelRef;
-  this._config.scope.$on('$destroy', angular.bind(panelRef, panelRef.detach));
 
   return panelRef;
 };
@@ -985,18 +919,7 @@ function MdPanelRef(config, $injector) {
 
   /** @private {Function?} */
   this._restoreScroll = null;
-
-  /**
-   * Keeps track of all the panel interceptors.
-   * @private {!Object}
-   */
-  this._interceptors = Object.create(null);
 }
-
-
-MdPanelRef.interceptorTypes = {
-  CLOSE: 'onClose'
-};
 
 
 /**
@@ -1028,15 +951,13 @@ MdPanelRef.prototype.close = function() {
   var self = this;
 
   return this._$q(function(resolve, reject) {
-    self._callInterceptors(MdPanelRef.interceptorTypes.CLOSE).then(function() {
-      var done = self._done(resolve, self);
-      var detach = self._simpleBind(self.detach, self);
+    var done = self._done(resolve, self);
+    var detach = self._simpleBind(self.detach, self);
 
-      self.hide()
-          .then(detach)
-          .then(done)
-          .catch(reject);
-    }, reject);
+    self.hide()
+        .then(detach)
+        .then(done)
+        .catch(reject);
   });
 };
 
@@ -1128,7 +1049,6 @@ MdPanelRef.prototype.detach = function() {
 MdPanelRef.prototype.destroy = function() {
   this.config.scope.$destroy();
   this.config.locals = null;
-  this._interceptors = null;
 };
 
 
@@ -1424,12 +1344,6 @@ MdPanelRef.prototype._updatePosition = function(init) {
   var positionConfig = this.config['position'];
 
   if (positionConfig) {
-    // Use the vendor prefixed version of transform.
-    // Note that the offset should be assigned before the position, in
-    // order to avoid tiny jumps in the panel's position, on slower browsers.
-    var prefixedTransform = this._$mdConstant.CSS.TRANSFORM;
-    this.panelEl.css(prefixedTransform, positionConfig.getTransform());
-
     positionConfig._setPanelPosition(this.panelEl);
 
     // Hide the panel now that position is known.
@@ -1453,6 +1367,10 @@ MdPanelRef.prototype._updatePosition = function(init) {
       MdPanelPosition.absPosition.RIGHT,
       positionConfig.getRight()
     );
+
+    // Use the vendor prefixed version of transform.
+    var prefixedTransform = this._$mdConstant.CSS.TRANSFORM;
+    this.panelEl.css(prefixedTransform, positionConfig.getTransform());
   }
 };
 
@@ -1491,11 +1409,6 @@ MdPanelRef.prototype._createBackdrop = function() {
             open: '_md-opaque-enter',
             close: '_md-opaque-leave'
           });
-
-      if (this.config.animation) {
-        backdropAnimation.duration(this.config.animation._rawDuration);
-      }
-
       var backdropConfig = {
         animation: backdropAnimation,
         attachTo: this.config.attachTo,
@@ -1503,7 +1416,6 @@ MdPanelRef.prototype._createBackdrop = function() {
         panelClass: '_md-panel-backdrop',
         zIndex: this.config.zIndex - 1
       };
-
       this._backdropRef = this._$mdPanel.create(backdropConfig);
     }
     if (!this._backdropRef.isAttached) {
@@ -1641,7 +1553,7 @@ MdPanelRef.prototype._configureScrollListener = function() {
  * @private
  */
 MdPanelRef.prototype._configureTrapFocus = function() {
-  // Focus doesn't remain inside of the panel without this.
+  // Focus doesn't remain instead of the panel without this.
   this.panelEl.attr('tabIndex', '-1');
   if (this.config['trapFocus']) {
     var element = this.panelEl;
@@ -1732,106 +1644,6 @@ MdPanelRef.prototype._animateClose = function() {
     animationConfig.animateClose(self.panelEl)
         .then(done, warnAndClose);
   });
-};
-
-/**
- * Registers a interceptor with the panel. The callback should return a promise,
- * which will allow the action to continue when it gets resolved, or will
- * prevent an action if it is rejected.
- * @param {string} type Type of interceptor.
- * @param {!angular.$q.Promise<!any>} callback Callback to be registered.
- * @returns {!MdPanelRef}
- */
-MdPanelRef.prototype.registerInterceptor = function(type, callback) {
-  var error = null;
-
-  if (!angular.isString(type)) {
-    error = 'Interceptor type must be a string, instead got ' + typeof type;
-  } else if (!angular.isFunction(callback)) {
-    error = 'Interceptor callback must be a function, instead got ' + typeof callback;
-  }
-
-  if (error) {
-    throw new Error('MdPanel: ' + error);
-  }
-
-  var interceptors = this._interceptors[type] = this._interceptors[type] || [];
-
-  if (interceptors.indexOf(callback) === -1) {
-    interceptors.push(callback);
-  }
-
-  return this;
-};
-
-/**
- * Removes a registered interceptor.
- * @param {string} type Type of interceptor to be removed.
- * @param {Function} callback Interceptor to be removed.
- * @returns {!MdPanelRef}
- */
-MdPanelRef.prototype.removeInterceptor = function(type, callback) {
-  var index = this._interceptors[type] ?
-    this._interceptors[type].indexOf(callback) : -1;
-
-  if (index > -1) {
-    this._interceptors[type].splice(index, 1);
-  }
-
-  return this;
-};
-
-
-/**
- * Removes all interceptors.
- * @param {string=} type Type of interceptors to be removed.
- *     If ommited, all interceptors types will be removed.
- * @returns {!MdPanelRef}
- */
-MdPanelRef.prototype.removeAllInterceptors = function(type) {
-  if (type) {
-    this._interceptors[type] = [];
-  } else {
-    this._interceptors = Object.create(null);
-  }
-
-  return this;
-};
-
-
-/**
- * Invokes all the interceptors of a certain type sequantially in
- *     reverse order. Works in a similar way to `$q.all`, except it
- *     respects the order of the functions.
- * @param {string} type Type of interceptors to be invoked.
- * @returns {!angular.$q.Promise<!MdPanelRef>}
- * @private
- */
-MdPanelRef.prototype._callInterceptors = function(type) {
-  var self = this;
-  var $q = self._$q;
-  var interceptors = self._interceptors && self._interceptors[type] || [];
-
-  return interceptors.reduceRight(function(promise, interceptor) {
-    var isPromiseLike = interceptor && angular.isFunction(interceptor.then);
-    var response = isPromiseLike ? interceptor : null;
-
-    /**
-    * For interceptors to reject/cancel subsequent portions of the chain, simply
-    * return a `$q.reject(<value>)`
-    */
-    return promise.then(function() {
-      if (!response) {
-        try {
-          response = interceptor(self);
-        } catch(e) {
-          response = $q.reject(e);
-        }
-      }
-
-     return response;
-    });
-  }, $q.resolve(self));
 };
 
 
@@ -2198,7 +2010,7 @@ MdPanelPosition.prototype._validateXPosition = function(xPosition) {
 /**
  * Sets the value of the offset in the x-direction. This will add to any
  * previously set offsets.
- * @param {string|function(MdPanelPosition): string} offsetX
+ * @param {string} offsetX
  * @returns {!MdPanelPosition}
  */
 MdPanelPosition.prototype.withOffsetX = function(offsetX) {
@@ -2210,7 +2022,7 @@ MdPanelPosition.prototype.withOffsetX = function(offsetX) {
 /**
  * Sets the value of the offset in the y-direction. This will add to any
  * previously set offsets.
- * @param {string|function(MdPanelPosition): string} offsetY
+ * @param {string} offsetY
  * @returns {!MdPanelPosition}
  */
 MdPanelPosition.prototype.withOffsetY = function(offsetY) {
@@ -2312,11 +2124,8 @@ MdPanelPosition.prototype.getActualPosition = function() {
 MdPanelPosition.prototype._reduceTranslateValues =
     function(translateFn, values) {
       return values.map(function(translation) {
-        // TODO(crisbeto): this should add the units after #9609 is merged.
-        var translationValue = angular.isFunction(translation) ?
-            translation(this) : translation;
-        return translateFn + '(' + translationValue + ')';
-      }, this).join(' ');
+        return translateFn + '(' + translation + ')';
+      }).join(' ');
     };
 
 
@@ -2480,15 +2289,6 @@ function MdPanelAnimation($injector) {
 
   /** @private {string|{open: string, close: string}} */
   this._animationClass = '';
-
-  /** @private {number} */
-  this._openDuration;
-
-  /** @private {number} */
-  this._closeDuration;
-
-  /** @private {number|{open: number, close: number}} */
-  this._rawDuration;
 }
 
 
@@ -2536,30 +2336,6 @@ MdPanelAnimation.prototype.closeTo = function(closeTo) {
   return this;
 };
 
-/**
- * Specifies the duration of the animation in milliseconds.
- * @param {number|{open: number, close: number}} duration
- * @returns {!MdPanelAnimation}
- */
-MdPanelAnimation.prototype.duration = function(duration) {
-  if (duration) {
-    if (angular.isNumber(duration)) {
-      this._openDuration = this._closeDuration = toSeconds(duration);
-    } else if (angular.isObject(duration)) {
-      this._openDuration = toSeconds(duration.open);
-      this._closeDuration = toSeconds(duration.close);
-    }
-  }
-
-  // Save the original value so it can be passed to the backdrop.
-  this._rawDuration = duration;
-
-  return this;
-
-  function toSeconds(value) {
-    if (angular.isNumber(value)) return value / 1000;
-  }
-};
 
 /**
  * Returns the element and bounds for the animation target.
@@ -2662,8 +2438,6 @@ MdPanelAnimation.prototype.animateOpen = function(panelEl) {
       }
   }
 
-  animationOptions.duration = this._openDuration;
-
   return animator
       .translate3d(panelEl, openFrom, openTo, animationOptions);
 };
@@ -2726,8 +2500,6 @@ MdPanelAnimation.prototype.animateClose = function(panelEl) {
         };
       }
   }
-
-  reverseAnimationOptions.duration = this._closeDuration;
 
   return animator
       .translate3d(panelEl, closeFrom, closeTo, reverseAnimationOptions);

@@ -2,7 +2,7 @@
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v1.1.1-master-bee04f3
+ * v1.1.1
  */
 goog.provide('ngmaterial.components.sidenav');
 goog.require('ngmaterial.components.backdrop');
@@ -15,8 +15,8 @@ goog.require('ngmaterial.core');
  * A Sidenav QP component.
  */
 SidenavService.$inject = ["$mdComponentRegistry", "$mdUtil", "$q", "$log"];
-SidenavDirective.$inject = ["$mdMedia", "$mdUtil", "$mdConstant", "$mdTheming", "$animate", "$compile", "$parse", "$log", "$q", "$document", "$window"];
-SidenavController.$inject = ["$scope", "$attrs", "$mdComponentRegistry", "$q", "$interpolate"];
+SidenavDirective.$inject = ["$mdMedia", "$mdUtil", "$mdConstant", "$mdTheming", "$animate", "$compile", "$parse", "$log", "$q", "$document"];
+SidenavController.$inject = ["$scope", "$element", "$attrs", "$mdComponentRegistry", "$q"];
 angular
   .module('material.components.sidenav', [
     'material.core',
@@ -255,8 +255,7 @@ function SidenavFocusDirective() {
  *   - `<md-sidenav md-is-locked-open="$mdMedia('min-width: 1000px')"></md-sidenav>`
  *   - `<md-sidenav md-is-locked-open="$mdMedia('sm')"></md-sidenav>` (locks open on small screens)
  */
-function SidenavDirective($mdMedia, $mdUtil, $mdConstant, $mdTheming,
-  $animate, $compile, $parse, $log, $q, $document, $window) {
+function SidenavDirective($mdMedia, $mdUtil, $mdConstant, $mdTheming, $animate, $compile, $parse, $log, $q, $document) {
   return {
     restrict: 'E',
     scope: {
@@ -264,7 +263,8 @@ function SidenavDirective($mdMedia, $mdUtil, $mdConstant, $mdTheming,
     },
     controller: '$mdSidenavController',
     compile: function(element) {
-      element.addClass('md-closed').attr('tabIndex', '-1');
+      element.addClass('md-closed');
+      element.attr('tabIndex', '-1');
       return postLink;
     }
   };
@@ -280,7 +280,6 @@ function SidenavDirective($mdMedia, $mdUtil, $mdConstant, $mdTheming,
     var previousContainerStyles;
     var promise = $q.when(true);
     var isLockedOpenParsed = $parse(attr.mdIsLockedOpen);
-    var ngWindow = angular.element($window);
     var isLocked = function() {
       return isLockedOpenParsed(scope.$parent, {
         $media: function(arg) {
@@ -378,8 +377,6 @@ function SidenavDirective($mdMedia, $mdUtil, $mdConstant, $mdTheming,
       ]).then(function() {
         // Perform focus when animations are ALL done...
         if (scope.isOpen) {
-          // Notifies child components that the sidenav was opened.
-          ngWindow.triggerHandler('resize');
           focusEl && focusEl.focus();
         }
 
@@ -509,8 +506,9 @@ function SidenavDirective($mdMedia, $mdUtil, $mdConstant, $mdTheming,
  * @ngdoc controller
  * @name SidenavController
  * @module material.components.sidenav
+ *
  */
-function SidenavController($scope, $attrs, $mdComponentRegistry, $q, $interpolate) {
+function SidenavController($scope, $element, $attrs, $mdComponentRegistry, $q) {
 
   var self = this;
 
@@ -532,23 +530,7 @@ function SidenavController($scope, $attrs, $mdComponentRegistry, $q, $interpolat
   self.toggle = function() { return self.$toggleOpen( !$scope.isOpen );  };
   self.$toggleOpen = function(value) { return $q.when($scope.isOpen = value); };
 
-  // Evaluate the component id.
-  var rawId = $attrs.mdComponentId;
-  var hasDataBinding = rawId && rawId.indexOf($interpolate.startSymbol()) > -1;
-  var componentId = hasDataBinding ? $interpolate(rawId)($scope.$parent) : rawId;
-
-  // Register the component.
-  self.destroy = $mdComponentRegistry.register(self, componentId);
-
-  // Watch and update the component, if the id has changed.
-  if (hasDataBinding) {
-    $attrs.$observe('mdComponentId', function(id) {
-      if (id && id !== self.$$mdHandle) {
-        self.destroy(); // `destroy` only deregisters the old component id so we can add the new one.
-        self.destroy = $mdComponentRegistry.register(self, id);
-      }
-    });
-  }
+  self.destroy = $mdComponentRegistry.register(self, $attrs.mdComponentId);
 }
 
 ngmaterial.components.sidenav = angular.module("material.components.sidenav");

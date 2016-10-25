@@ -2,7 +2,7 @@
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v1.1.1-master-bee04f3
+ * v1.1.1
  */
 (function( window, angular, undefined ){
 "use strict";
@@ -591,8 +591,7 @@ function inputTextareaDirective($mdUtil, $window, $mdAria, $timeout, $mdGesture)
 
         function onDrag(ev) {
           if (!isDragging) return;
-
-          element.css('height', (startHeight + ev.pointer.distanceY) + 'px');
+          element.css('height', startHeight + (ev.pointer.y - dragStart) - $mdUtil.scrollTop() + 'px');
         }
 
         function onDragEnd(ev) {
@@ -951,7 +950,7 @@ function ngMessagesAnimation($$AnimateRunner, $animateCss, $mdUtil) {
         done();
       }
     }
-  };
+  }
 }
 
 function ngMessageAnimation($$AnimateRunner, $animateCss, $mdUtil) {
@@ -969,7 +968,7 @@ function ngMessageAnimation($$AnimateRunner, $animateCss, $mdUtil) {
 
       animator.start().done(done);
     }
-  };
+  }
 }
 
 function showInputMessages(element, done) {
@@ -1027,7 +1026,7 @@ function hideMessage(element) {
   var styles = window.getComputedStyle(element[0]);
 
   // If we are already hidden, just return an empty animation
-  if (parseInt(styles.opacity) === 0) {
+  if (styles.opacity == 0) {
     return $animateCss(element, {});
   }
 
