@@ -1,4 +1,4 @@
-angular.module('app').controller('pdfviewerlistadepreciosCtrl', function ($scope, pdflistaSrv, $storage, $mdMedia) {
+angular.module('app').controller('pdfviewerlistadepreciosCtrl', function ($scope, pdflistaSrv,excellistaSrv, $storage, $mdMedia) {
 
     var tablausuario = $storage('tablaUsuario');
     var cliente = tablausuario.getItem('cliente');
@@ -38,6 +38,18 @@ angular.module('app').controller('pdfviewerlistadepreciosCtrl', function ($scope
         };
 
         $scope.pdfUrl = URL.createObjectURL(final);
+
+    });
+    
+    excellistaSrv.async('PreciosE' + cliente, cliente).then(function(d){
+
+        docu = d.data[0].archivo;
+
+        var excelfinal = $scope.base64(docu, 'application/vnd.ms-excel'); //MIME de Excel oficial de Microsoft
+
+        $scope.downloadExcel = function (){
+            saveAs(excelfinal, 'ListaPreciosGrupoSerin' + hoy + '.xls');
+        }
 
     });
 
