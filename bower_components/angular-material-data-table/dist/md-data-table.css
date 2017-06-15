@@ -258,7 +258,6 @@ table.md-table th.md-column {
   font-size: 12px;
   font-weight: bold;
   white-space: nowrap;
-
 }
 table.md-table th.md-column.md-sort {
   cursor: pointer;

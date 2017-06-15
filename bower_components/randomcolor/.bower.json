@@ -1,37 +1,15 @@
 {
   "name": "randomcolor",
-  "homepage": "http://llllll.li/randomColor/",
-  "version": "0.4.4",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/davidmerfield/randomColor.git"
-  },
-  "authors": [
-    "David Merfield"
-  ],
-  "description": "For generating attractive random colors",
-  "license": "MIT",
-  "main": "randomColor.js",
-  "keywords": [
-    "attractive",
-    "random",
-    "color",
-    "generator"
-  ],
-  "ignore": [
-    "*",
-    "!randomColor.js",
-    "!LICENSE",
-    "!README.md"
-  ],
-  "_release": "0.4.4",
+  "homepage": "https://github.com/davidmerfield/randomColor",
+  "version": "0.5.2",
+  "_release": "0.5.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.4",
-    "commit": "48d239f00fd365a9c4971df84f6c9b5456356f83"
+    "tag": "0.5.2",
+    "commit": "d3bd5bbdfad8e4a9e19604cefe33f34e95da9f81"
   },
   "_source": "https://github.com/davidmerfield/randomColor.git",
-  "_target": "^0.4.4",
-  "_originalSource": "randomColor",
+  "_target": "^0.5.2",
+  "_originalSource": "randomcolor",
   "_direct": true
 }

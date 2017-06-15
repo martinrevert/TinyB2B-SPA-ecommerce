@@ -14,9 +14,9 @@ angular.module('md-table-pagination.html', []).run(['$templateCache', function($
     '<div class="page-select" ng-if="$pagination.showPageSelect()">\n' +
     '  <div class="label">{{$pagination.label.page}}</div>\n' +
     '\n' +
-    '  <md-select virtual-page-select total="{{$pagination.partials()}}" class="md-table-select" ng-model="$pagination.page" md-container-class="md-pagination-select" ng-change="$pagination.onPaginationChange()" ng-disabled="$pagination.disabled" aria-label="Page">\n' +
+    '  <md-select virtual-page-select total="{{$pagination.pages()}}" class="md-table-select" ng-model="$pagination.page" md-container-class="md-pagination-select" ng-change="$pagination.onPaginationChange()" ng-disabled="$pagination.disabled" aria-label="Page">\n' +
     '    <md-content>\n' +
-    '      <md-option ng-repeat="page in $pageSelect.partials" ng-value="page">{{page}}</md-option>\n' +
+    '      <md-option ng-repeat="page in $pageSelect.pages" ng-value="page">{{page}}</md-option>\n' +
     '    </md-content>\n' +
     '  </md-select>\n' +
     '</div>\n' +
@@ -1127,7 +1127,7 @@ function mdTable() {
     
     if(tAttrs.hasOwnProperty('mdProgress')) {
       var body = tElement.find('tbody')[0];
-      var progress = angular.element('<thead class="md-table-progress">');
+      var progress = angular.element('<thead class="md-table-progress" md-table-progress>');
       
       if(body) {
         tElement[0].insertBefore(progress[0], body);
@@ -1419,7 +1419,7 @@ function mdTableProgress() {
   return {
     link: postLink,
     require: '^^mdTable',
-    restrict: 'C',
+    restrict: 'A',
     scope: {},
     templateUrl: 'md-table-progress.html'
   };

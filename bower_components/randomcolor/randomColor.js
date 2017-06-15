@@ -1,13 +1,10 @@
-// randomColor by David Merfield under the MIT license
+// randomColor by David Merfield under the CC0 license
 // https://github.com/davidmerfield/randomColor/
+
 ;(function(root, factory) {
 
-  // Support AMD
-  if (typeof define === 'function' && define.amd) {
-    define([], factory);
-
   // Support CommonJS
-  } else if (typeof exports === 'object') {
+  if (typeof exports === 'object') {
     var randomColor = factory();
 
     // Support NodeJS & Component, which allow module.exports to be a function
@@ -17,6 +14,10 @@
 
     // Support CommonJS 1.1.1 spec
     exports.randomColor = randomColor;
+
+  // Support AMD
+  } else if (typeof define === 'function' && define.amd) {
+    define([], factory);
 
   // Support vanilla script loading
   } else {
@@ -40,7 +41,7 @@
 
     // Check if there is a seed and ensure it's an
     // integer. Otherwise, reset the seed value.
-    if (options.seed && options.seed === parseInt(options.seed, 10)) {
+    if (options.seed !== undefined && options.seed !== null && options.seed === parseInt(options.seed, 10)) {
       seed = options.seed;
 
     // A string was passed as a seed
@@ -49,7 +50,7 @@
 
     // Something was passed as a seed but it wasn't an integer or string
     } else if (options.seed !== undefined && options.seed !== null) {
-      throw new TypeError('The seed value must be an integer');
+      throw new TypeError('The seed value must be an integer or string');
 
     // No seed, reset the value outside.
     } else {
@@ -109,12 +110,12 @@
 
   function pickSaturation (hue, options) {
 
-    if (options.luminosity === 'random') {
-      return randomWithin([0,100]);
-    }
-
     if (options.hue === 'monochrome') {
       return 0;
+    }
+
+    if (options.luminosity === 'random') {
+      return randomWithin([0,100]);
     }
 
     var saturationRange = getSaturationRange(hue);
@@ -181,7 +182,8 @@
 
       case 'hsla':
         var hslColor = HSVtoHSL(hsv);
-        return 'hsla('+hslColor[0]+', '+hslColor[1]+'%, '+hslColor[2]+'%, ' + Math.random() + ')';
+        var alpha = options.alpha || Math.random();
+        return 'hsla('+hslColor[0]+', '+hslColor[1]+'%, '+hslColor[2]+'%, ' + alpha + ')';
 
       case 'rgbArray':
         return HSVtoRGB(hsv);
@@ -192,7 +194,8 @@
 
       case 'rgba':
         var rgbColor = HSVtoRGB(hsv);
-        return 'rgba(' + rgbColor.join(', ') + ', ' + Math.random() + ')';
+        var alpha = options.alpha || Math.random();
+        return 'rgba(' + rgbColor.join(', ') + ', ' + alpha + ')';
 
       default:
         return HSVtoHex(hsv);
@@ -242,6 +245,9 @@
       if (colorDictionary[colorInput]) {
         var color = colorDictionary[colorInput];
         if (color.hueRange) {return color.hueRange;}
+      } else if (colorInput.match(/^#?([0-9A-F]{3}|[0-9A-F]{6})$/i)) {
+        const hue = HexToHSB(colorInput)[0];
+        return [ hue, hue ];
       }
     }
 
@@ -400,6 +406,25 @@
 
     var result = [Math.floor(r*255), Math.floor(g*255), Math.floor(b*255)];
     return result;
+  }
+
+  function HexToHSB (hex) {
+    hex = hex.replace(/^#/, '');
+    hex = hex.length === 3 ? hex.replace(/(.)/g, '$1$1') : hex;
+
+    const red = parseInt(hex.substr(0, 2), 16) / 255,
+          green = parseInt(hex.substr(2, 2), 16) / 255,
+          blue = parseInt(hex.substr(4, 2), 16) / 255;
+
+    const cMax = Math.max(red, green, blue),
+          delta = cMax - Math.min(red, green, blue),
+          saturation = cMax ? (delta / cMax) : 0;
+
+    switch (cMax) {
+      case red: return [ 60 * (((green - blue) / delta) % 6) || 0, saturation, cMax ];
+      case green: return [ 60 * (((blue - red) / delta) + 2) || 0, saturation, cMax ];
+      case blue: return [ 60 * (((red - green) / delta) + 4) || 0, saturation, cMax ];
+    }
   }
 
   function HSVtoHSL (hsv) {

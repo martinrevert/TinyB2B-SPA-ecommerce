@@ -1,21 +1,22 @@
 # [Random Color](http://llllll.li/randomColor)
 
-A tiny script for generating attractive random colors. See the results on [the demo](http://llllll.li/randomColor/).
+A tiny script for generating attractive random colors. See the demo for [an explanation](http://llllll.li/randomColor/) and [some samples](http://llllll.li/randomColor/).
 
 [![Demo](http://i.imgur.com/lOLCqvu.gif)](http://llllll.li/randomColor)
 
-randomColor is available [minified on cdnjs](http://cdnjs.com/libraries/randomcolor). It is also distributed on [npm](https://www.npmjs.org/package/randomcolor) and bower.
+randomColor is available [minified on cdnjs](http://cdnjs.com/libraries/randomcolor). It is also distributed on [npm](https://www.npmjs.org/package/randomcolor).
 
 ```javascript
 npm install randomcolor
 ```
-randomColor has been ported to [C#](https://github.com/nathanpjones/randomColorSharped), [Go](https://github.com/hansrodtang/randomcolor), [PHP](https://github.com/mistic100/RandomColor.php), [Python](https://github.com/kevinwuhoo/randomcolor-py), [Swift](https://github.com/onevcat/RandomColorSwift), [Objective-C](https://github.com/yageek/randomColor) and [Java](https://github.com/lzyzsd/AndroidRandomColor).
+randomColor has been ported to [C#](https://github.com/nathanpjones/randomColorSharped), [C++](https://github.com/xuboying/randomcolor-cpp), [Go](https://github.com/hansrodtang/randomcolor), [PHP](https://github.com/mistic100/RandomColor.php), [Python](https://github.com/kevinwuhoo/randomcolor-py), [Swift](https://github.com/onevcat/RandomColorSwift), [Objective-C](https://github.com/yageek/randomColor), [Java](https://github.com/lzyzsd/AndroidRandomColor) and 
+[R](https://github.com/ronammar/randomcoloR).
  
 ### Options
 
 You can pass an options object to influence the type of color it produces. The options object accepts the following properties:
 
-**Hue** – Controls the hue of the generated color. You can pass a string representing a color name: ```red```, ```orange```, ```yellow```, ```green```, ```blue```, ```purple```, ```pink``` and ```monochrome``` are currently supported.
+**Hue** – Controls the hue of the generated color. You can pass a string representing a color name: ```red```, ```orange```, ```yellow```, ```green```, ```blue```, ```purple```, ```pink``` and ```monochrome``` are currently supported. If you pass a  hexidecimal color string such as ```#00FFFF```, randomColor will extract its hue value and use that to generate colors.
 
 **Luminosity** – Controls the luminosity of the generated color. You can specify a string containing ```bright```, ```light``` or ```dark```.
 
@@ -23,7 +24,9 @@ You can pass an options object to influence the type of color it produces. The o
 
 **Seed** - An integer or string which when passed will cause randomColor to return the same color each time.
 
-**Format** – A string which specifies the format of the generated color. Possible values are ```rgb```, ```rgbArray```, ```hsl```, ```hslArray``` and ```hex``` (default).
+**Format** – A string which specifies the format of the generated color. Possible values are ```rgb```, ```rgba```, ```rgbArray```, ```hsl```, ```hsla```, ```hslArray``` and ```hex``` (default).
+
+**Alpha** – A decimal between 0 and 1. Only relevant when using a format with an alpha channel (```rgba``` and ```hsla```). Defaults to a random value.
 
 ### Examples
 
@@ -60,6 +63,13 @@ randomColor({
 randomColor({
    luminosity: 'dark',
    format: 'rgba' // e.g. 'rgba(9, 1, 107, 0.6482447960879654)'
+});
+
+// Returns a dark RGB color with specified alpha
+randomColor({
+   luminosity: 'dark',
+   format: 'rgba',
+   alpha: 0.5 // e.g. 'rgba(9, 1, 107, 0.5)',
 });
 
 // Returns a light HSL color with random alpha

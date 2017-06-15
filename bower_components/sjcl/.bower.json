@@ -12,6 +12,6 @@
     "commit": "51ae8f8c920dd25b601091dd01b294709838d88c"
   },
   "_source": "https://github.com/bitwiseshiftleft/sjcl.git",
-  "_target": "^1.0.3",
+  "_target": "^1.0.6",
   "_originalSource": "sjcl"
 }

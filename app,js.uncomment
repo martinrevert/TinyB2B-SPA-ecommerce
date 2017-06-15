@@ -3,7 +3,7 @@
 angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageModule', 'ngAnimate', 'pdf', 'angular-loading-bar'])
     .constant('config',
         {
-            apiUrl: 'YOUR API HOST BASE URL HERE'
+            apiUrl: 'YOUR API HOST BASE URL HERE WITHOUT WWW'
         })
     .directive('search', function () {
         return function ($scope, element) {
@@ -18,7 +18,7 @@ angular.module('app', ['ngMaterial', 'md.data.table', 'ngRoute', 'localStorageMo
     .config(function ($sceDelegateProvider) {
         $sceDelegateProvider.resourceUrlWhitelist([
             'self',
-            'http://www.gruposerin.com.ar/pedidos/**'
+            'http://wwww.YOURHOSTWITHWWW/**'
         ]);
     })
     .config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
